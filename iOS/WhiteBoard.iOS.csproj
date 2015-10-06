@@ -4,11 +4,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{F080511D-32C7-4258-BF4C-0E4E4261E7AC}</ProjectGuid>
+    <ProjectGuid>{6B36F6A2-E49A-4EA4-A258-6F13664E3B12}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WhiteBoard.App.iOS</RootNamespace>
+    <RootNamespace>WhiteBoard.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>WhiteBoard.App.iOS</AssemblyName>
+    <AssemblyName>WhiteBoard.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -79,9 +79,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WhiteBoard.App\WhiteBoard.App.csproj">
-      <Project>{516A857E-FF3F-4725-A047-18D0D72C1594}</Project>
-      <Name>WhiteBoard.App</Name>
+    <ProjectReference Include="..\WhiteBoard.csproj">
+      <Project>{20562867-344B-4FE3-BB00-07E4BF5CCC7D}</Project>
+      <Name>WhiteBoard</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

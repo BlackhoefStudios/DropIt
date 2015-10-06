@@ -4,17 +4,17 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{F567E3AE-072D-44E0-9943-BA16814ED9A1}</ProjectGuid>
+    <ProjectGuid>{FA82D86B-07CA-4929-A276-E4914058F058}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WhiteBoard.App.Droid</RootNamespace>
+    <RootNamespace>WhiteBoard.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <AssemblyName>WhiteBoard.App.Droid</AssemblyName>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AssemblyName>WhiteBoard.Droid</AssemblyName>
     <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -59,9 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WhiteBoard.App\WhiteBoard.App.csproj">
-      <Project>{516A857E-FF3F-4725-A047-18D0D72C1594}</Project>
-      <Name>WhiteBoard.App</Name>
+    <ProjectReference Include="..\WhiteBoard.csproj">
+      <Project>{20562867-344B-4FE3-BB00-07E4BF5CCC7D}</Project>
+      <Name>WhiteBoard</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

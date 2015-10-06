@@ -4,7 +4,7 @@ using System.Linq;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
-namespace WhiteBoard.App.UITests
+namespace WhiteBoard.UITests
 {
 	public class AppInitializer
 	{

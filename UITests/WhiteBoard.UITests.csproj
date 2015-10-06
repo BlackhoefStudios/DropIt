@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2229D60-539D-499A-B856-4ACED869F578}</ProjectGuid>
+    <ProjectGuid>{3994575E-B855-4BD7-8896-A2F8AEA8AA36}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WhiteBoard.App.UITests</RootNamespace>
-    <AssemblyName>WhiteBoard.App.UITests</AssemblyName>
+    <RootNamespace>WhiteBoard.UITests</RootNamespace>
+    <AssemblyName>WhiteBoard.UITests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -37,15 +37,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iOS\WhiteBoard.App.iOS.csproj">
-      <Project>{F080511D-32C7-4258-BF4C-0E4E4261E7AC}</Project>
-      <Name>WhiteBoard.App.iOS</Name>
+    <ProjectReference Include="..\iOS\WhiteBoard.iOS.csproj">
+      <Project>{6B36F6A2-E49A-4EA4-A258-6F13664E3B12}</Project>
+      <Name>WhiteBoard.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Droid\WhiteBoard.App.Droid.csproj">
-      <Project>{F567E3AE-072D-44E0-9943-BA16814ED9A1}</Project>
-      <Name>WhiteBoard.App.Droid</Name>
+    <ProjectReference Include="..\Droid\WhiteBoard.Droid.csproj">
+      <Project>{FA82D86B-07CA-4929-A276-E4914058F058}</Project>
+      <Name>WhiteBoard.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>

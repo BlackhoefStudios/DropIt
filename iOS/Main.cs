@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace WhiteBoard.App.iOS
+namespace WhiteBoard.iOS
 {
 	public class Application
 	{

@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace WhiteBoard.App
+namespace WhiteBoard
 {
 	public class App : Application
 	{
@@ -32,7 +32,7 @@ namespace WhiteBoard.App
 			// Handle when your app sleeps
 		}
 
-		protected override void OnResume () 
+		protected override void OnResume ()
 		{
 			// Handle when your app resumes
 		}

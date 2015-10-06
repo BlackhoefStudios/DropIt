@@ -5,7 +5,7 @@ using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
-namespace WhiteBoard.App.UITests
+namespace WhiteBoard.UITests
 {
 	[TestFixture (Platform.Android)]
 	[TestFixture (Platform.iOS)]
