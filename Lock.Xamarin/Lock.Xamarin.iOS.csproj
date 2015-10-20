@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{C6DC6098-43E5-4E00-984A-C6095FE07BFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Auth0</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Lock.Xamarin</AssemblyName>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Auth0.bundle\" />
+    <Folder Include="Resources\Auth0.SMS.bundle\" />
+    <Folder Include="Resources\Auth0.TouchID.bundle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libLock.linkwith.cs">
+      <DependentUpon>libLock.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libLock.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Auth0.bundle\Services.plist">
+      <Link>Resources\Auth0.bundle\Services.plist</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\close.png">
+      <Link>Resources\Auth0.bundle\close.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\close%402x.png">
+      <Link>Resources\Auth0.bundle\close%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\close%403x.png">
+      <Link>Resources\Auth0.bundle\close%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\lock.png">
+      <Link>Resources\Auth0.bundle\lock.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\lock%402x.png">
+      <Link>Resources\Auth0.bundle\lock%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\lock%403x.png">
+      <Link>Resources\Auth0.bundle\lock%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\mail.png">
+      <Link>Resources\Auth0.bundle\mail.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\mail%402x.png">
+      <Link>Resources\Auth0.bundle\mail%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\mail%403x.png">
+      <Link>Resources\Auth0.bundle\mail%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\people.png">
+      <Link>Resources\Auth0.bundle\people.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\people%402x.png">
+      <Link>Resources\Auth0.bundle\people%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\people%403x.png">
+      <Link>Resources\Auth0.bundle\people%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\person.png">
+      <Link>Resources\Auth0.bundle\person.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\person%402x.png">
+      <Link>Resources\Auth0.bundle\person%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\person%403x.png">
+      <Link>Resources\Auth0.bundle\person%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\secondary_button_highlighted.png">
+      <Link>Resources\Auth0.bundle\secondary_button_highlighted.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\secondary_button_highlighted%402x.png">
+      <Link>Resources\Auth0.bundle\secondary_button_highlighted%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\secondary_button_highlighted%403x.png">
+      <Link>Resources\Auth0.bundle\secondary_button_highlighted%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\secondary_button_normal.png">
+      <Link>Resources\Auth0.bundle\secondary_button_normal.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\secondary_button_normal%402x.png">
+      <Link>Resources\Auth0.bundle\secondary_button_normal%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\secondary_button_normal%403x.png">
+      <Link>Resources\Auth0.bundle\secondary_button_normal%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.bundle\z-social.ttf">
+      <Link>Resources\Auth0.bundle\z-social.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.SMS.bundle\CountryCodes.plist">
+      <Link>Resources\Auth0.SMS.bundle\CountryCodes.plist</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.SMS.bundle\cellphone.png">
+      <Link>Resources\Auth0.SMS.bundle\cellphone.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.SMS.bundle\cellphone%402x.png">
+      <Link>Resources\Auth0.SMS.bundle\cellphone%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.SMS.bundle\cellphone%403x.png">
+      <Link>Resources\Auth0.SMS.bundle\cellphone%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.TouchID.bundle\touchid.png">
+      <Link>Resources\Auth0.TouchID.bundle\touchid.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.TouchID.bundle\touchid%402x.png">
+      <Link>Resources\Auth0.TouchID.bundle\touchid%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.TouchID.bundle\touchid%403x.png">
+      <Link>Resources\Auth0.TouchID.bundle\touchid%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.TouchID.bundle\touchid_selected.png">
+      <Link>Resources\Auth0.TouchID.bundle\touchid_selected.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.TouchID.bundle\touchid_selected%402x.png">
+      <Link>Resources\Auth0.TouchID.bundle\touchid_selected%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Auth0.TouchID.bundle\touchid_selected%403x.png">
+      <Link>Resources\Auth0.TouchID.bundle\touchid_selected%403x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0ActiveDirectoryViewController.nib">
+      <Link>Resources\A0ActiveDirectoryViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0ChangePasswordViewController.nib">
+      <Link>Resources\A0ChangePasswordViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0CountryCodeTableViewCell.nib">
+      <Link>Resources\A0CountryCodeTableViewCell.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0CountryCodeTableViewController.nib">
+      <Link>Resources\A0CountryCodeTableViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0DatabaseLoginViewController.nib">
+      <Link>Resources\A0DatabaseLoginViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0EnterpriseLoginViewController.nib">
+      <Link>Resources\A0EnterpriseLoginViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0FullActiveDirectoryViewController.nib">
+      <Link>Resources\A0FullActiveDirectoryViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0FullLoginViewController.nib">
+      <Link>Resources\A0FullLoginViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0LoadingViewController.nib">
+      <Link>Resources\A0LoadingViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0LockSignUpViewController.nib">
+      <Link>Resources\A0LockSignUpViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0LockViewController.nib">
+      <Link>Resources\A0LockViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0SMSCodeViewController.nib">
+      <Link>Resources\A0SMSCodeViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0SMSLockViewController.nib">
+      <Link>Resources\A0SMSLockViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0SMSSendCodeViewController.nib">
+      <Link>Resources\A0SMSSendCodeViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0ServiceCollectionViewCell.nib">
+      <Link>Resources\A0ServiceCollectionViewCell.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0ServiceTableViewCell.nib">
+      <Link>Resources\A0ServiceTableViewCell.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0SignUpViewController.nib">
+      <Link>Resources\A0SignUpViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0SocialLoginViewController.nib">
+      <Link>Resources\A0SocialLoginViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0TitleView.nib">
+      <Link>Resources\A0TitleView.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0TouchIDLockViewController.nib">
+      <Link>Resources\A0TouchIDLockViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0TouchIDRegisterViewController.nib">
+      <Link>Resources\A0TouchIDRegisterViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0TouchIDSignUpViewController.nib">
+      <Link>Resources\A0TouchIDSignUpViewController.nib</Link>
+    </BundleResource>
+    <BundleResource Include="Nibs\A0WebViewController.nib">
+      <Link>Resources\A0WebViewController.nib</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

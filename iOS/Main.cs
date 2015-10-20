@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace WhiteBoard.iOS
+namespace DropIt.iOS
 {
 	public class Application
 	{

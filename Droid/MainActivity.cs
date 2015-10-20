@@ -7,13 +7,33 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using DropIt.Data.Interfaces.Services;
+using DropIt.Data.Interfaces.Users;
+using System.Threading.Tasks;
+using DropIt.Droid.Dependencies;
+using DropIt.Data;
+using Xamarin.Forms;
+using Application = Android.App.Application;
 
-namespace WhiteBoard.Droid
+namespace DropIt.Droid
 {
-	[Activity (Label = "WhiteBoard.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class TestLogin : ILoginService
+    {
+        public TestLogin()
+        {
+                
+        }
+        public async Task Login(INavigation navigation)
+        {
+            var client = new LoginServiceHelper();
+            var user = await client.LoginAsync(Application.Context, withRefreshToken: true, title: "Login");
+        }
+    }
+
+	[Activity (Label = "DropIt.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
-		protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
