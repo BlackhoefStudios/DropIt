@@ -1,7 +1,7 @@
 #Autosave files
 *~
 
-#build
+#build[Cc]omponents
 [Oo]bj/
 [Bb]in/
 packages/
