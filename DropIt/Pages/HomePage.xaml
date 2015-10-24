@@ -4,4 +4,6 @@
              x:Class="DropIt.Pages.HomePage">
   <ActivityIndicator IsVisible="{Binding IsLoggingIn}" IsRunning="{Binding IsLoggingIn}"
                      VerticalOptions="Center" HorizontalOptions="Center" />
+
+  <Entry Keyboard="Telephone" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" />
 </ContentPage>

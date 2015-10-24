@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="12d4b86d-d2e2-4dd9-9834-118dc9d3a55e" name="DropIt" linkedPackageId="1b74b125-82fc-463b-a303-9fe800098d39" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="7ef766ac-34e0-4478-aed4-0fda11a9435f" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d335f89d-08aa-45ba-b777-87e33b45d5d2" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="852f8d19-a61e-40f4-8efa-6acff1e01d20">
+          <propertyInstance Id="025adf54-271d-4e44-904d-2809ecfd649e" name="BaseName">
+            <elementDefinition Id="8f919c97-7741-414b-bbc5-b37205d062cf" />
+          </propertyInstance>
+          <elementDefinition Id="f632270c-6858-4caa-a63b-8b5fa12dc8e7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="44b9b2e0-6afd-41ab-92ec-18a68e73736e">
+          <propertyInstance Id="3503f126-e527-4509-ba26-28a89bb63577" name="ClrAttributes">
+            <elementDefinition Id="73df1cbd-002b-4532-b909-95d23b5a2fe5" />
+          </propertyInstance>
+          <elementDefinition Id="8e72a556-a9eb-4b97-9b86-d342384bd976" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="78b34e2f-502b-4320-ad8c-38f5bd6f577c">
+          <propertyInstance Id="e4f2f7d2-b28a-476a-b58d-f7b904e3e4d6" name="Usings">
+            <elementDefinition Id="b624e893-4c64-4bc2-bc51-0c9a30a5945d" />
+          </propertyInstance>
+          <elementDefinition Id="23a55045-2091-4227-9a21-5e552b585e72" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="93ab1b79-8a4c-466f-a36b-5b32cc7c88d4" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="385fbe02-8fbe-4b33-87fa-ff470caafa37" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="72fa9d89-5043-46cd-ba4c-89bb7f0894f0">
+          <propertyInstance Id="deb21910-700f-4102-905f-d36adb3251bd" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="16837944-f673-41bd-b1e4-4d7bea2f0c16" />
+          </propertyInstance>
+          <elementDefinition Id="ddbd2294-7dcc-4b4c-896f-97537d4a141e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f979e31f-3ac1-4cea-9f0c-243b5585f352">
+          <propertyInstance Id="3b8328a2-3801-43c2-ac3f-949e8497a08d" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="6fa3d6da-2185-4438-8299-fcfeb3e0de1e" />
+          </propertyInstance>
+          <elementDefinition Id="3c96f943-145f-4a57-ae97-e817558b8beb" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="80a6d04e-dedd-46b5-9289-3056fc2a813c">
+          <propertyInstance Id="3ac06b05-d2e0-4482-b8f3-f73b6737e61c" name="ProjectPath" value="ClassTemplate=..\DesignsLib\DesignsLib.csproj|EnumTemplate=..\DesignsLib\DesignsLib.csproj|InterfaceTemplate=..\DesignsLib\DesignsLib.csproj|StructTemplate=..\DesignsLib\DesignsLib.csproj">
+            <elementDefinition Id="fd57be94-ab71-4027-a561-c492351dc1e8" />
+          </propertyInstance>
+          <elementDefinition Id="e0b78421-9f9b-4c93-a5dc-ca4a735ec5ad" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="23bef102-2246-4665-93f2-461a4a063ca4">
+          <propertyInstance Id="6cf2f2bc-7982-4a11-af13-89e9ae4bc664" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="67c27021-3bc3-4732-af84-dbb0ee0bc32b" />
+          </propertyInstance>
+          <elementDefinition Id="1187d179-b43c-4267-83c6-fa64147211b1" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ee1d741e-1b2c-4e85-a32d-d1d2ba02517d">
+          <propertyInstance Id="f774ab93-f2a7-4a78-963f-862b117f013d" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="daa131d3-e996-41cf-934b-a2b1c737be75" />
+          </propertyInstance>
+          <elementDefinition Id="0771e53e-9d61-4a6e-9882-a38f63fa8a9a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5a6f0ea7-74a7-4f28-adcf-bdb597c00792">
+          <propertyInstance Id="d2693e55-32f3-43af-90a2-86c8160d0f00" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9283217e-4536-4922-b83e-50fd360d3398" />
+          </propertyInstance>
+          <elementDefinition Id="181d58c9-5213-4538-91f6-8cd419aa6161" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="03649bb1-d44b-4e6e-8d82-6adbc8121837">
+          <propertyInstance Id="b2b15081-e3cf-4ed8-997b-ae3f539d5c80" name="Parameters">
+            <elementDefinition Id="7f0c3a78-c3c4-444c-82f3-07e0b3b6daad" />
+          </propertyInstance>
+          <elementDefinition Id="53bc716f-771f-4c26-82cc-7f6748a1278b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="cf6c52a0-4c6f-4773-9321-2f569e692d0f">
+      <profileInstance Id="d3a70736-a578-4e42-87a1-92a072aa98dd" name="CSharpProfile">
+        <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
+      </profileInstance>
+      <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b040d748-c929-4611-b72f-3695a3ad06e4">
+      <profileInstance Id="e9bdc311-5125-43d8-9ffd-a8cfd0e6a109" name="TextTemplateBindings">
+        <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
+      </profileInstance>
+      <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="16d32e75-6ed7-4884-83f5-25ccd19f6923" name="DropIt.Data" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="01575e77-bfb3-42c3-8e9b-521ece91d1dc" />
+        <ownedAttributesInternal>
+          <providedInterface Id="978248d9-8dfa-4ad1-b11c-12b3a579dc4e" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="231a551b-e517-4c09-8ae3-a760df51bb1f" />
+            <type_NamedElement>
+              <interfaceMoniker Id="c93476de-ea9f-49d9-b7f0-56eaf506c2c8" LastKnownName="View Models" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4a49af58-11e0-4d32-8e60-e8ec629b3310" name="DropIt.iOS" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d5d1c927-d27f-41e6-9dfc-b0b4df016a0a" />
+        <suppliersInternal>
+          <dependency Id="96dc54d8-fbb4-4e6c-9b08-01a296df7138">
+            <providedInterfaceMoniker Id="b4246dc1-d399-4736-9a0f-099adfcdc212" LastKnownName="Port1" />
+            <elementDefinition Id="74a30c8a-2c00-43a2-9eca-220a35655f10" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="f681d41d-6aa0-48c3-858b-1cd8e98fec7a" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="08a66992-afd9-4d7c-8ff4-e9c7a49dbc5d" />
+            <type_NamedElement>
+              <interfaceMoniker Id="f598548e-85bb-41a8-8a5c-e10a4a644b03" LastKnownName="Native API's" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b7dfb185-8985-4329-a4b4-908fcb06fb20" name="DropIt.Droid" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="90aa490f-22a3-4463-ba94-d14d749562ea" />
+        <suppliersInternal>
+          <dependency Id="dda47d17-931d-45e0-8a21-c5f82a5eb98d">
+            <providedInterfaceMoniker Id="b4246dc1-d399-4736-9a0f-099adfcdc212" LastKnownName="Port1" />
+            <elementDefinition Id="fe2c411a-97a3-4185-a73a-ad3243122982" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="bdea3150-2f81-4e60-bcb7-3bdd382800b9" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="3e6fda5b-d1cd-41d4-a3e1-39e906eb83fa" />
+            <type_NamedElement>
+              <interfaceMoniker Id="0c2d808b-4636-433e-bcb5-d0d66c1bdc64" LastKnownName="Native API's" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="34de4937-3d4b-4575-959b-98609649bf45" name="DropIt.Tests" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e117046e-6ffe-4c61-aed3-f8fdb19ec57b" />
+        <suppliersInternal>
+          <dependency Id="0bf40d17-6c55-42fe-bf04-a1f86d7040f9">
+            <providedInterfaceMoniker Id="b4246dc1-d399-4736-9a0f-099adfcdc212" LastKnownName="Port1" />
+            <elementDefinition Id="48f6f2dd-9c55-4447-bb47-50be4a4a7ee4" />
+          </dependency>
+          <dependency Id="014e8226-b7ce-4c16-8744-8efef760df11">
+            <componentMoniker Id="16d32e75-6ed7-4884-83f5-25ccd19f6923" LastKnownName="DropIt.Data" />
+            <elementDefinition Id="3a8058a3-de5e-4e40-91cf-2b8cd7fc39a1" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="0daa457e-b929-4dde-aa50-36e659317b4e" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="fac520c6-11ad-45c9-855f-e8caf8761567" />
+            <type_NamedElement>
+              <interfaceMoniker Id="c0fffe21-ab88-44d1-b2a9-9f9759d52b42" LastKnownName="Native API's" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="c37d1019-d422-4053-ba90-17764ab07f6b" name="DropIt" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="21c8006c-2e70-404e-ba53-2d9b02cab539" />
+        <suppliersInternal>
+          <dependency Id="21aad008-3507-4bd8-840c-3f41e1ac3532">
+            <providedInterfaceMoniker Id="0daa457e-b929-4dde-aa50-36e659317b4e" LastKnownName="Port1" />
+            <elementDefinition Id="acbe2e1e-49fd-4c40-905a-8b511bded708" />
+          </dependency>
+          <dependency Id="cc3d6260-37b7-4c1f-9330-e12613b7c3d2">
+            <providedInterfaceMoniker Id="f681d41d-6aa0-48c3-858b-1cd8e98fec7a" LastKnownName="Port2" />
+            <elementDefinition Id="6c0813ea-3a99-48f7-ad41-e452da25e636" />
+          </dependency>
+          <dependency Id="e3847af7-6a2c-4b6c-80a0-8e19ef77b0c6">
+            <providedInterfaceMoniker Id="bdea3150-2f81-4e60-bcb7-3bdd382800b9" LastKnownName="Port1" />
+            <elementDefinition Id="64baec54-569b-44e3-b7a8-7945d37fcd7f" />
+          </dependency>
+          <dependency Id="094dcc02-a050-44bf-abb1-a101064c9099">
+            <providedInterfaceMoniker Id="978248d9-8dfa-4ad1-b11c-12b3a579dc4e" LastKnownName="Port1" />
+            <elementDefinition Id="2d343b68-91ec-4073-9d41-7a8c8da994ea" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="b4246dc1-d399-4736-9a0f-099adfcdc212" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="043c639c-1b45-4b86-bb66-c764d8a217c9" />
+            <type_NamedElement>
+              <interfaceMoniker Id="8927aea8-c406-46f8-8ffd-e227c9ad68c1" LastKnownName="UI" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="c0fffe21-ab88-44d1-b2a9-9f9759d52b42" name="Native API's" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aac3dad6-ad68-414d-aaab-d3af2906df83" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="f598548e-85bb-41a8-8a5c-e10a4a644b03" name="Native API's" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="79c28516-c5fc-468d-a402-34218b5e29d3" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="0c2d808b-4636-433e-bcb5-d0d66c1bdc64" name="Native API's" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="61a22fba-b49d-41b1-9912-e5821aebcafb" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="c93476de-ea9f-49d9-b7f0-56eaf506c2c8" name="View Models" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ce9ba854-4339-4c62-84c1-3afba3a18bb9" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="8927aea8-c406-46f8-8ffd-e227c9ad68c1" name="UI" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3d30af8e-4f6e-45a1-afce-9c1c4eafe1f4" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="1b74b125-82fc-463b-a303-9fe800098d39" name="Designs">
+    <elementDefinition Id="3d630edb-3337-47c3-962c-dff5243b7e0c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c5f78eed-5007-4808-b0ee-32c2236087f0">
+        <profileInstance Id="af4be489-5b2b-44b5-9d83-5a0f3522a43d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="aaab1120-7e0a-4551-acc9-97497c7d79c1">
+        <profileInstance Id="28f19c58-b8fa-412e-8c12-8d507b5b1fe1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>

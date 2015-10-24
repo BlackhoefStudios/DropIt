@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="213e3122-a434-4f60-b221-48f087bd6abf"
+  name="Data.User" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <importedPackagesInternal>
+    <packageImport
+      Id="492a0f8b-6ef3-462a-967c-6bc111a4acc4"
+      visibility="Public">
+      <packageMoniker
+        Id="9a4f2de7-3176-43e1-8072-be0f88d1cee9"
+        LastKnownName="Data.Interfaces"
+        LastKnownLocation="Package_2105.uml" />
+    </packageImport>
+    <packageImport
+      Id="3c0132fe-8cfc-4e0f-acaa-1c4d7096df7e"
+      visibility="Public">
+      <packageMoniker
+        Id="94d53e90-d775-43cd-b1e0-af5c698a0dc3"
+        LastKnownName="Data.Base"
+        LastKnownLocation="Package_2113.uml" />
+    </packageImport>
+  </importedPackagesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="bb9e2c2c-3192-4869-aca2-eb5e6ced937f"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="43f92907-64e1-421b-8cfe-438c01273185">
+            <interfaceMoniker
+              Id="5536dfad-b96f-48f7-9be7-7fc94367be65"
+              LastKnownName="IUser"
+              LastKnownLocation="Package_2105.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="3c9a79b4-09a0-4d4e-a5f3-83df5820b3ac"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dc0ec1a0-7ef9-4d6e-87ea-8d5941f76386"
+              LastKnownName="DataObject"
+              LastKnownLocation="Package_2113.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="22f514c4-4eee-44c5-a916-3595b2b1be3c"
+        name="Admin"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="e7a850ea-2d47-4ee5-a2bb-9028e015bc38">
+            <interfaceMoniker
+              Id="a84f6276-ca41-4ef1-9c1d-92cf6e1468a6"
+              LastKnownName="IAdminUser"
+              LastKnownLocation="Package_2105.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="7f25a3ac-1e52-45f1-8776-6172ce689998"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dc0ec1a0-7ef9-4d6e-87ea-8d5941f76386"
+              LastKnownName="DataObject"
+              LastKnownLocation="Package_2113.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e110e3e8-5a88-4753-ab40-1e48d9708008"
+        name="id" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

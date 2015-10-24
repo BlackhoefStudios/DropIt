@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="0e5ba23a-0958-4900-8b6c-55e7c9f1b932"
+  name="Data.Project" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <importedPackagesInternal>
+    <packageImport
+      Id="9bbf5f4d-72e3-4bc0-9b97-caee9eb5d1f3"
+      visibility="Public">
+      <packageMoniker
+        Id="9a4f2de7-3176-43e1-8072-be0f88d1cee9"
+        LastKnownName="Data.Interfaces"
+        LastKnownLocation="Package_2105.uml" />
+    </packageImport>
+    <packageImport
+      Id="e651a697-0eb6-43ab-b573-1255b88917cd"
+      visibility="Public">
+      <packageMoniker
+        Id="94d53e90-d775-43cd-b1e0-af5c698a0dc3"
+        LastKnownName="Data.Base"
+        LastKnownLocation="Package_2113.uml" />
+    </packageImport>
+  </importedPackagesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c48be021-8d76-4a70-b662-35f92f3cd29d"
+        name="ChatLog"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="55935f4b-67ab-47de-b528-91540a8c545d">
+            <interfaceMoniker
+              Id="dc9c3df9-cd12-42b7-8b4d-29e5cb71008e"
+              LastKnownName="IChatLog"
+              LastKnownLocation="Package_2105.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="e95fce61-2120-414a-b07b-fd4e8f81b3ba"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dc0ec1a0-7ef9-4d6e-87ea-8d5941f76386"
+              LastKnownName="DataObject"
+              LastKnownLocation="Package_2113.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2004c527-9331-4887-aca3-d8837d5c2f54"
+        name="Task"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0e671cb6-1f3e-4ed2-b6be-8fe54ab4e561">
+            <interfaceMoniker
+              Id="78b55d21-fcd1-4146-a9f9-91c04611ec2e"
+              LastKnownName="ITask"
+              LastKnownLocation="Package_2105.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="a14b4784-288b-453e-90e7-caaa53389153"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dc0ec1a0-7ef9-4d6e-87ea-8d5941f76386"
+              LastKnownName="DataObject"
+              LastKnownLocation="Package_2113.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bf9e6f78-f1e8-4794-9ec1-c450f8533fea"
+        name="Category"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="73c90fc1-2b92-429d-b7fd-1e49677e27c2">
+            <interfaceMoniker
+              Id="26c155c5-cbd6-422a-a8ec-9db89f81ec55"
+              LastKnownName="ICategory"
+              LastKnownLocation="Package_2105.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="ba473a60-9c00-47b6-a446-41ad3d064761"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dc0ec1a0-7ef9-4d6e-87ea-8d5941f76386"
+              LastKnownName="DataObject"
+              LastKnownLocation="Package_2113.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="4e2fce26-101a-4e61-b5c3-adfbdcac2bb0"
+            isDerived="false"
+            sourceEndRoleName="Category"
+            targetEndRoleName="IProject"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="1494d50b-4d0d-4594-b856-008f8ae2026f"
+              LastKnownName="IProject"
+              LastKnownLocation="Package_2105.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8773b3ef-7b7c-48c2-8b3a-ecdd72cd6b7a"
+                  name="Category"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e41c09a-a4e1-41bc-aada-1e5be35dc86e"
+                  name="IProject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6f3dfcd8-40af-46c0-bfed-4106cdbbe5bc"
+        name="Project"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="d1734b95-21a6-4c6d-a5fb-4310c89f6d84">
+            <interfaceMoniker
+              Id="1494d50b-4d0d-4594-b856-008f8ae2026f"
+              LastKnownName="IProject"
+              LastKnownLocation="Package_2105.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="42ac8454-525f-49f3-9af0-e42bf8d048b6"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dc0ec1a0-7ef9-4d6e-87ea-8d5941f76386"
+              LastKnownName="DataObject"
+              LastKnownLocation="Package_2113.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

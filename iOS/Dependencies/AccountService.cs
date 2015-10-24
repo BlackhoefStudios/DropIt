@@ -41,9 +41,6 @@ namespace DropIt.iOS.Dependencies
             }
             catch(Exception e)
             {
-#if DEBUG
-                Debugger.Break();
-#endif
             }
             return null;
         }
