@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="3d630edb-3337-47c3-962c-dff5243b7e0c"
   name="Designs" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -27,6 +27,11 @@
     <comment
       Id="a8a5f9c4-580a-4aa8-b150-4bce6104ca35">
       <body>This final section reprsents Use Cases # 2 and #3.</body>
+    </comment>
+    <comment
+      Id="c8299651-c257-4e73-af62-8ce80813de32">
+      <body>The ISecureStorage interface should be pulled from GitHub at: https://github.com/XLabs/Xamarin-Forms-Labs/blob/master/src/Platform/XLabs.Platform/Services/ISecureStorage.cs
+</body>
     </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
@@ -6268,6 +6273,530 @@
       <executionEvent
         Id="534ced1d-5933-427a-99f6-8be55360dab4"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0e9d4798-89fa-43b6-aac0-df7c256f0d15"
+        LastKnownName="DropIt.Interfaces.Services"
+        LastKnownLocation="Package_2157.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="68f56656-c78c-4d1e-9e43-ef1e76ac8372"
+        LastKnownName="DropIt.iOS.Dependencies"
+        LastKnownLocation="Package_2200.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3a2c5e66-0495-4929-8660-904a32aa07f7"
+        LastKnownName="DropIt.Droid.Dependencies"
+        LastKnownLocation="Package_2201.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9bf214a3-e266-4c6c-b13c-6c6fe0fd61b9"
+        LastKnownName="DropIt.Data.Interfaces.Services"
+        LastKnownLocation="Package2_2204.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5acb519a-14c5-4dc0-a5c4-d99aec49a1bd"
+        LastKnownName="DropIt.iOS.Dependencies"
+        LastKnownLocation="Package_2213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f8786066-54a6-4e0e-8d09-21842f8a31e7"
+        LastKnownName="DropIt.Droid.Dependencies"
+        LastKnownLocation="Package_2220.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="19165703-b387-4e16-a635-44ab1b934092"
+        LastKnownName="DropIt.Data.Interfaces.Services"
+        LastKnownLocation="Package_2224.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3379b6a2-16eb-493c-88f1-9fade41c905f"
+        LastKnownName="DropIt.iOS.Dependencies"
+        LastKnownLocation="Package_2225.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6b5f378c-d855-4923-9f33-a72ab690d384"
+        LastKnownName="DropIt.Droid.Dependencies"
+        LastKnownLocation="Package1_2225.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="484feacc-8b41-4fdc-907a-9c20f1629232"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="783aac2f-185f-464a-ae89-277dd67f60e3"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="923aa2cc-a60a-4a12-9d7d-6a3343658cf7"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="efdb80a7-8240-43d0-b9be-97e8c0c43e8b"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <decisionNode
+            Id="efdb80a7-8240-43d0-b9be-97e8c0c43e8b"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f2d4ff73-b174-4208-89c3-5fec1238c375"
+                guard="Doesn't have an account"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="fef2d2e0-7c3d-419a-9f06-fa44446ae9e3"
+                  LastKnownName="Create Account"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="fe825a11-f06b-4c33-9000-c36117815b89"
+                guard="Has an account"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="6b5665bc-bc3d-4edb-a681-a668eecf4322"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="fef2d2e0-7c3d-419a-9f06-fa44446ae9e3"
+            name="Create Account"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ea279536-6606-4ddf-9bb5-c432cd6dd483"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="fbb4d49c-544c-42bf-b6ad-f91ef72a1d6e"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4e28d968-bd74-4c5e-8480-fb333f694b1d"
+            name="Sign In"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="83ec3567-4a9f-4791-afdc-91c8ba943dcd"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="937e47d0-d1f4-4ef8-a174-cbfdee14458c"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="6b5665bc-bc3d-4edb-a681-a668eecf4322"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ec30b9cc-7176-4b1d-b683-402560e44b7b"
+                guard="Knows Password"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="fbb4d49c-544c-42bf-b6ad-f91ef72a1d6e"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="5caf483f-0e1a-4c47-9b61-6b12c3dc79ed"
+                guard="Lost Password"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="36998e59-a2bf-4879-8f68-26a424029305"
+                  LastKnownName="Reset Password"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode
+            Id="fbb4d49c-544c-42bf-b6ad-f91ef72a1d6e"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c34532ae-d7ab-4671-be3b-fa8b74b98a96"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4e28d968-bd74-4c5e-8480-fb333f694b1d"
+                  LastKnownName="Sign In"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction
+            Id="36998e59-a2bf-4879-8f68-26a424029305"
+            name="Reset Password"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="09e599bc-3615-4858-ae5d-6c7fcc71dce0"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="fbb4d49c-544c-42bf-b6ad-f91ef72a1d6e"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="937e47d0-d1f4-4ef8-a174-cbfdee14458c"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9905a073-500d-46c3-aa86-da54105a9d6f"
+                guard="Login Failed"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="449a2eec-e6a6-4f1d-8773-ea8cbbd39105"
+                  LastKnownName="Invalid Login"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <objectFlowTargets>
+              <objectFlow
+                Id="fe57181e-82fa-4cce-ab3e-f66c30d6335e"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="beb727e9-b530-47bb-aaee-6902bdc18129"
+                  LastKnownLocation="Designs.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <sendSignalAction
+            Id="449a2eec-e6a6-4f1d-8773-ea8cbbd39105"
+            name="Invalid Login"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5e54ea76-7051-4c37-a4ea-0f508e52b36d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4e28d968-bd74-4c5e-8480-fb333f694b1d"
+                  LastKnownName="Sign In"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <activityFinalNode
+            Id="7ed5b099-c2a4-435f-9ab2-40755bd74b78"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <objectNode
+            Id="312a4e34-be99-4def-8e8e-40313653fc63"
+            name="User"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="5536dfad-b96f-48f7-9be7-7fc94367be65"
+                LastKnownName="IUser"
+                LastKnownLocation="Package_2105.uml" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger
+                Id="15c02056-216d-472f-a658-3fb24f667ba9"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <callOperationAction
+            Id="8b3901d9-c5f4-427c-9ecb-5b82300fb1c8"
+            name="Save Credentials"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0e0bb46b-bb9c-467d-b3aa-fd0b9d85dfac"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="7ed5b099-c2a4-435f-9ab2-40755bd74b78"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <callOperationActionHasTarget>
+                <inputPin
+                  Id="beb727e9-b530-47bb-aaee-6902bdc18129"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="70b8da6d-2b21-46c5-adaa-44def7a79cb4"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </callOperationActionHasTarget>
+            </pins>
+            <operation>
+              <operationMoniker
+                Id="d9b40a87-2b4a-46e7-a5a2-d91cb8d7fc4d"
+                LastKnownName="StoreCredentials"
+                LastKnownLocation="Package_2213.uml" />
+            </operation>
+          </callOperationAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="301d1630-5d28-4eec-b719-1888225e1e46"
+        name="HomePage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="25ac0c50-b81e-4d3b-82a2-cc939ead496a"
+            name="Initial1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="2862f8df-df6a-440f-9807-91c61b305a10"
+        name="SaveCredentials"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="1890f59b-634d-4e6f-ba01-bae2dda8073e"
+            name="Initial1"
+            isLeaf="false" />
+          <objectNode
+            Id="6dd1b48e-e1f1-4be6-ab82-168e403be9ea"
+            name="User Credentials"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="5536dfad-b96f-48f7-9be7-7fc94367be65"
+                LastKnownName="IUser"
+                LastKnownLocation="Package_2105.uml" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger
+                Id="ec42fd81-debf-4045-82c5-993c741f2e5f"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <callOperationAction
+            Id="4998137d-b9a9-46bc-b0c3-185779dc9bed"
+            name="Save Credentials"
+            isLeaf="false">
+            <operation>
+              <operationMoniker
+                Id="d9b40a87-2b4a-46e7-a5a2-d91cb8d7fc4d"
+                LastKnownName="StoreCredentials"
+                LastKnownLocation="Package_2213.uml" />
+            </operation>
+          </callOperationAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="085cf7da-0bc4-43bc-91a8-7d98974bf060"
+        name="StartUp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="704d9b7a-bd55-4853-9752-502328d6ec10"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f1e8e806-eddb-4756-a5db-4ab059a385e9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="62f69b33-de67-4fb6-b183-006858e8251f"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <callOperationAction
+            Id="bd22de21-c935-45c6-a63e-90b1e1d33d64"
+            name="Load Stored Credentials"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="03a5eed8-778b-4c74-b796-7cfac3822b95"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="2eb2da26-cef7-406b-b8aa-2cffa6f65b05"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <operation>
+              <operationMoniker
+                Id="3144623a-92c1-4ea9-ba53-7b869f1f5070"
+                LastKnownName="LoadCredentials"
+                LastKnownLocation="Package_2220.uml" />
+            </operation>
+          </callOperationAction>
+          <callOperationAction
+            Id="74d9faa4-bff1-4d2b-b1e3-13cee2f23422"
+            name="Login"
+            isLeaf="false"
+            isSynchronous="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4058138f-4494-4742-aabb-1b7a41a1129a"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="ab12021c-fe15-40c1-8ef0-832797e621c1"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <operation>
+              <operationMoniker
+                Id="96b6cc1b-2577-4bda-b2b1-8067326143c0"
+                LastKnownName="Login"
+                LastKnownLocation="Package_2201.uml" />
+            </operation>
+          </callOperationAction>
+          <mergeNode
+            Id="ab12021c-fe15-40c1-8ef0-832797e621c1"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4d5d295b-67c5-4e60-9610-199157aa4477"
+                isLeaf="false">
+                <callBehaviorActionMoniker
+                  Id="a8d48497-a1ac-4820-bc03-11c3dabfb832"
+                  LastKnownName="View Home Page"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode
+            Id="62f69b33-de67-4fb6-b183-006858e8251f"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0e130b27-7bfe-4196-a64b-16442bacc387"
+                guard="Has ran before"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="bd22de21-c935-45c6-a63e-90b1e1d33d64"
+                  LastKnownName="Load Stored Credentials"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="e7630971-ac44-44b7-ab0f-4b6bcae75570"
+                guard="Is first time running app"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="74d9faa4-bff1-4d2b-b1e3-13cee2f23422"
+                  LastKnownName="Login"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="2eb2da26-cef7-406b-b8aa-2cffa6f65b05"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c7b8ebdc-88e0-43e6-8255-0a3178f1a59a"
+                guard="Credentials null"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="74d9faa4-bff1-4d2b-b1e3-13cee2f23422"
+                  LastKnownName="Login"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="a11a05e1-2700-463c-b954-5ca5530f039f"
+                guard="Credentials not null"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="ab12021c-fe15-40c1-8ef0-832797e621c1"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <callBehaviorAction
+            Id="a8d48497-a1ac-4820-bc03-11c3dabfb832"
+            name="View Home Page"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f1abbb06-0884-4266-aa49-209920a2a485"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="140d617d-1eea-4b41-87f7-1be7f6c6a31a"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <behavior>
+              <activityMoniker
+                Id="301d1630-5d28-4eec-b719-1888225e1e46"
+                LastKnownName="HomePage"
+                LastKnownLocation="Designs.uml" />
+            </behavior>
+          </callBehaviorAction>
+          <activityFinalNode
+            Id="140d617d-1eea-4b41-87f7-1be7f6c6a31a"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="950a3328-3211-4415-9ec2-edf5e89978f4" name="Login" linkedPackageId="e0422911-19c2-498f-a3f5-fa0b27d928f0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="2067dd7f-4cab-46c3-b477-218493d8e45e" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d335f89d-08aa-45ba-b777-87e33b45d5d2" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9459d793-d897-4def-89b9-4fbebc968e58">
+          <propertyInstance Id="bd086695-f6ed-4c09-84b5-8063c633310b" name="BaseName">
+            <elementDefinition Id="8f919c97-7741-414b-bbc5-b37205d062cf" />
+          </propertyInstance>
+          <elementDefinition Id="f632270c-6858-4caa-a63b-8b5fa12dc8e7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d5d9ec9c-ee5a-4e78-885f-05cfcfac3293">
+          <propertyInstance Id="ab9cae7d-e5e1-4619-913a-746d0e231238" name="ClrAttributes">
+            <elementDefinition Id="73df1cbd-002b-4532-b909-95d23b5a2fe5" />
+          </propertyInstance>
+          <elementDefinition Id="8e72a556-a9eb-4b97-9b86-d342384bd976" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="92d28918-d558-4ca0-bf54-5bbee5f2ac77">
+          <propertyInstance Id="f8aead41-46d4-437c-a03e-a0db2497bc7d" name="Usings">
+            <elementDefinition Id="b624e893-4c64-4bc2-bc51-0c9a30a5945d" />
+          </propertyInstance>
+          <elementDefinition Id="23a55045-2091-4227-9a21-5e552b585e72" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="b1161463-795b-40ea-984f-fce566a2b21f" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="385fbe02-8fbe-4b33-87fa-ff470caafa37" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="6cf14422-e78e-43f8-8ed9-c3c5e9dd2783">
+          <propertyInstance Id="4b67bb0d-be80-4df1-9f80-c2fc3cea9796" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="16837944-f673-41bd-b1e4-4d7bea2f0c16" />
+          </propertyInstance>
+          <elementDefinition Id="ddbd2294-7dcc-4b4c-896f-97537d4a141e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ece856c2-391c-4282-a71c-064d2d31c598">
+          <propertyInstance Id="6807c688-43b1-4274-bc8c-9b0b1dfc4917" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="6fa3d6da-2185-4438-8299-fcfeb3e0de1e" />
+          </propertyInstance>
+          <elementDefinition Id="3c96f943-145f-4a57-ae97-e817558b8beb" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="bfe0e44f-8d0a-4cca-adb3-7979292cb525">
+          <propertyInstance Id="a9bfc8a7-1123-49cc-b395-da07fe96deb3" name="ProjectPath" value="ClassTemplate=..\DesignsLib\DesignsLib.csproj|EnumTemplate=..\DesignsLib\DesignsLib.csproj|InterfaceTemplate=..\DesignsLib\DesignsLib.csproj|StructTemplate=..\DesignsLib\DesignsLib.csproj">
+            <elementDefinition Id="fd57be94-ab71-4027-a561-c492351dc1e8" />
+          </propertyInstance>
+          <elementDefinition Id="e0b78421-9f9b-4c93-a5dc-ca4a735ec5ad" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="158ff8ca-ffb6-4a90-a3bd-d417a75c819f">
+          <propertyInstance Id="bc90c79a-e35c-4937-9efb-2d87d31d718e" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="67c27021-3bc3-4732-af84-dbb0ee0bc32b" />
+          </propertyInstance>
+          <elementDefinition Id="1187d179-b43c-4267-83c6-fa64147211b1" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d14cde86-a377-4221-a061-587b56661cc7">
+          <propertyInstance Id="1a729842-efb9-41a2-b426-54dd1e370326" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="daa131d3-e996-41cf-934b-a2b1c737be75" />
+          </propertyInstance>
+          <elementDefinition Id="0771e53e-9d61-4a6e-9882-a38f63fa8a9a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3c996028-de48-4a7d-a0f8-829704336087">
+          <propertyInstance Id="a5caf1d6-f4ce-4a55-a421-f7cd09764df7" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9283217e-4536-4922-b83e-50fd360d3398" />
+          </propertyInstance>
+          <elementDefinition Id="181d58c9-5213-4538-91f6-8cd419aa6161" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c020c70c-ce96-497e-bf97-d5892e41f518">
+          <propertyInstance Id="ed0c138e-81e8-4d7f-a30d-190b3d466787" name="Parameters">
+            <elementDefinition Id="7f0c3a78-c3c4-444c-82f3-07e0b3b6daad" />
+          </propertyInstance>
+          <elementDefinition Id="53bc716f-771f-4c26-82cc-7f6748a1278b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="8de64062-cce7-4adb-935e-1ab4147e18c6" name="DropIt.Interfaces.Services">
+        <elementDefinition Id="0e9d4798-89fa-43b6-aac0-df7c256f0d15" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="2cbffb05-9168-458e-8661-d6f7d6d85537" name="ILoginService" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="a6f73134-47f9-409f-90c8-15e91b446838" />
+              <ownedOperations>
+                <operation Id="d60221c1-141a-4166-b357-2ad620ec3dd0" name="Login" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c777cffc-b54d-41e0-94a2-f5016af623de" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="bd0f58ed-44e5-4b8b-a768-996ee26cb2b4" direction="Return">
+                        <elementDefinition Id="d9223f7d-d9ea-47cb-a589-8fd81a7e7776" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a41795a5-1186-442c-8e1d-01095760ca00" LastKnownName="Task" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c1cd26dd-ed35-41ef-80a0-bdc7abc7bc12" name="SetUser" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8d6b330e-9298-4c74-b165-ce806e442cd5" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1adfa01b-84ad-4955-8ae1-8a785ce724c6" name="user" direction="In">
+                        <elementDefinition Id="1fdb99b6-82c6-445c-a87b-71ec27673c13" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="4bb3ea7d-374b-4672-ac06-fea90ef6b3c8" LastKnownName="IUser" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c7e5a390-634c-432e-a428-b4e35d950622" direction="Return" isUnique="false">
+                        <elementDefinition Id="f21b2d63-f430-41d3-a6be-819186a9b6ac" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="44c2746c-a257-4f44-98a4-b0658b194ada" LastKnownName="void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="44c2746c-a257-4f44-98a4-b0658b194ada" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="a5ccf624-b9e2-42ea-9f83-df7cf338c350" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="694857df-0dfc-405b-8d1b-535d0e18cb9b" name="DropIt.iOS.Dependencies">
+        <elementDefinition Id="68f56656-c78c-4d1e-9e43-ef1e76ac8372" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="8d6aa388-0137-4cb4-ada7-0860937a3ff1" name="LoginService" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="4020ea2b-f9f8-4df5-ac90-d88cc9d8756b" />
+              <suppliersInternal>
+                <interfaceRealization Id="5963f87e-8000-484c-aa3f-db8b489227b3">
+                  <interfaceMoniker Id="2cbffb05-9168-458e-8661-d6f7d6d85537" LastKnownName="ILoginService" />
+                  <elementDefinition Id="fa10cd45-cece-4cec-8894-b8f3e8f7bedf" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="fad698d3-d76e-4225-8633-9f26d5eb1dec" name="Login" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="1abb2dce-9157-4b9f-ad36-6ae92a002d22" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9e8d380d-5072-48b8-bc54-117dc5eda9f3" direction="Return">
+                        <elementDefinition Id="68d65f5d-4d76-40c3-b547-c20686e335bf" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a41795a5-1186-442c-8e1d-01095760ca00" LastKnownName="Task" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="9f2e3429-7f8d-41ad-8dbf-003ff8ab5023" name="SetUser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="991432fe-3b2d-4ca1-a6b8-d84407ef94c9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7813fc74-d997-44ec-b648-d5685cddc0f8" name="user" direction="In">
+                        <elementDefinition Id="adace061-ca83-46ce-85e6-e3807bcc1417" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="4bb3ea7d-374b-4672-ac06-fea90ef6b3c8" LastKnownName="IUser" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d9efbebe-85d9-4f4d-85dd-19360244e436" direction="Return" isUnique="false">
+                        <elementDefinition Id="aa134b81-246c-4bde-92b1-95eee2571120" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="44c2746c-a257-4f44-98a4-b0658b194ada" LastKnownName="void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="645f69a0-65bd-41bb-9daa-3f3cc1da035f" name="DropIt.Droid.Dependencies">
+        <elementDefinition Id="3a2c5e66-0495-4929-8660-904a32aa07f7" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="d8e10194-c5f2-485a-bc22-be7e6f28aa7e" name="LoginService" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3a949dbc-4cbb-47ec-a5f2-fbb3ae9040cb" />
+              <suppliersInternal>
+                <interfaceRealization Id="30b9f60b-56c4-4559-b4b0-22df3a0bbaa8">
+                  <interfaceMoniker Id="2cbffb05-9168-458e-8661-d6f7d6d85537" LastKnownName="ILoginService" />
+                  <elementDefinition Id="ca95a7ad-6f63-401f-8f08-e409cea24281" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="ef2c0508-8c05-4dc6-a4de-542e16e03c1b" name="Login" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="96b6cc1b-2577-4bda-b2b1-8067326143c0" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="094ef800-5e74-456a-b24d-5da0998df178" direction="Return">
+                        <elementDefinition Id="0c264779-54af-4d14-89c4-00c410286676" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a41795a5-1186-442c-8e1d-01095760ca00" LastKnownName="Task" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="193fe6d1-36a7-4577-aea3-50d677ebc1ce" name="SetUser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ff3a4c35-a73a-43dc-b351-0680cf2ee46e" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d3fe161b-5975-4a8c-89b4-e46d352c6740" name="user" direction="In">
+                        <elementDefinition Id="e8b076c3-3c32-4969-89a3-1ecf0ca05a73" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="4bb3ea7d-374b-4672-ac06-fea90ef6b3c8" LastKnownName="IUser" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="a824730b-96e7-4854-818f-154d32450d6f" direction="Return" isUnique="false">
+                        <elementDefinition Id="c14972b1-87cc-4370-9fab-08c14d7383f7" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="44c2746c-a257-4f44-98a4-b0658b194ada" LastKnownName="void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="4bb3ea7d-374b-4672-ac06-fea90ef6b3c8" name="IUser" isAbstract="false" isLeaf="false" cachedFullName="Designs::Data.Interfaces::IUser">
+        <elementDefinition Id="5536dfad-b96f-48f7-9be7-7fc94367be65" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a41795a5-1186-442c-8e1d-01095760ca00" name="Task" isAbstract="false" isLeaf="false" cachedFullName="Task">
+        <elementDefinition Id="6cb2f6a5-58a3-4c7c-861f-ba01fd479650" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="e0422911-19c2-498f-a3f5-fa0b27d928f0" name="Designs">
+    <elementDefinition Id="3d630edb-3337-47c3-962c-dff5243b7e0c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e51bc7dd-c0e1-4c89-b2d9-ef71f50f6aa4">
+        <profileInstance Id="aec41ed9-3f42-4f41-b062-c39e5046cea8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9aeadde3-fc5c-4d3e-bc1a-c3ed49407ec2">
+        <profileInstance Id="3725a1c4-5287-43c0-bf81-d312927cafb2" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c187e3e3-1a27-4980-82d0-4f2ee8264e99">
+        <profileInstance Id="17fed1a6-f0ea-4de6-975c-e9f4b5058ded" name="CSharpProfile">
+          <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
+        </profileInstance>
+        <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="85874968-711e-456e-adec-e4b4dc18a118">
+        <profileInstance Id="3664877d-0d5e-43da-ac59-4af4fe447a1c" name="TextTemplateBindings">
+          <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
+        </profileInstance>
+        <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

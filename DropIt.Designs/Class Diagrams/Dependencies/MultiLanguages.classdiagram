@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="0bed6a2f-9e1f-407c-af95-1a15c22787cb" name="MultiLanguages" linkedPackageId="1cf8a81a-eec4-4839-8c86-b77249a20072" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="4b28926b-4a73-4c63-8697-363d3be8f74e" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d335f89d-08aa-45ba-b777-87e33b45d5d2" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a156178f-4994-482d-b884-137328e5a111">
+          <propertyInstance Id="40ccfaf0-c690-4926-adec-3589f5904a3a" name="BaseName">
+            <elementDefinition Id="8f919c97-7741-414b-bbc5-b37205d062cf" />
+          </propertyInstance>
+          <elementDefinition Id="f632270c-6858-4caa-a63b-8b5fa12dc8e7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0c0b6771-b54c-4b84-b2ed-6df0e587486e">
+          <propertyInstance Id="a13fcf57-f804-4de6-8e92-cda7cb63cbfa" name="ClrAttributes">
+            <elementDefinition Id="73df1cbd-002b-4532-b909-95d23b5a2fe5" />
+          </propertyInstance>
+          <elementDefinition Id="8e72a556-a9eb-4b97-9b86-d342384bd976" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c4fe0dd5-857c-4a06-8204-fbd0dce025ea">
+          <propertyInstance Id="b911b5d2-d8f4-4dc5-85e2-d0c4e48aba91" name="Usings">
+            <elementDefinition Id="b624e893-4c64-4bc2-bc51-0c9a30a5945d" />
+          </propertyInstance>
+          <elementDefinition Id="23a55045-2091-4227-9a21-5e552b585e72" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="98ffbdd7-46ec-4324-bc46-e265cfb9e6d1" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="385fbe02-8fbe-4b33-87fa-ff470caafa37" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="cad26130-04f2-44b9-8b95-d44fb9253853">
+          <propertyInstance Id="db006748-aa9c-4080-8341-8e19e86a41b3" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="16837944-f673-41bd-b1e4-4d7bea2f0c16" />
+          </propertyInstance>
+          <elementDefinition Id="ddbd2294-7dcc-4b4c-896f-97537d4a141e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="06b20807-00f1-4bfd-9a0b-ba5a811b2a37">
+          <propertyInstance Id="4335d78d-2c6a-43a4-aad7-a67c93696354" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="6fa3d6da-2185-4438-8299-fcfeb3e0de1e" />
+          </propertyInstance>
+          <elementDefinition Id="3c96f943-145f-4a57-ae97-e817558b8beb" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="305db49f-014c-4b7b-aa14-da4674006a58">
+          <propertyInstance Id="f25fbe34-95a7-47ff-9169-0dfb8becbdfd" name="ProjectPath" value="ClassTemplate=..\DesignsLib\DesignsLib.csproj|EnumTemplate=..\DesignsLib\DesignsLib.csproj|InterfaceTemplate=..\DesignsLib\DesignsLib.csproj|StructTemplate=..\DesignsLib\DesignsLib.csproj">
+            <elementDefinition Id="fd57be94-ab71-4027-a561-c492351dc1e8" />
+          </propertyInstance>
+          <elementDefinition Id="e0b78421-9f9b-4c93-a5dc-ca4a735ec5ad" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="4f1932d6-29d1-425f-a040-a4003478d80a">
+          <propertyInstance Id="e0ec68f1-87e8-47f6-96ea-7c246d39f740" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="67c27021-3bc3-4732-af84-dbb0ee0bc32b" />
+          </propertyInstance>
+          <elementDefinition Id="1187d179-b43c-4267-83c6-fa64147211b1" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e3ea9f4c-dbe9-4137-8dc9-7e38020c05c4">
+          <propertyInstance Id="ec33768d-8979-47ab-8cb0-b3b85fbe492f" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="daa131d3-e996-41cf-934b-a2b1c737be75" />
+          </propertyInstance>
+          <elementDefinition Id="0771e53e-9d61-4a6e-9882-a38f63fa8a9a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b81eaee2-31f8-496c-86db-a968255be945">
+          <propertyInstance Id="ebca8a15-4290-4658-8426-14d4a5708d5f" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9283217e-4536-4922-b83e-50fd360d3398" />
+          </propertyInstance>
+          <elementDefinition Id="181d58c9-5213-4538-91f6-8cd419aa6161" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="59fe66a4-49d2-435e-8b7f-d8ac12593103">
+          <propertyInstance Id="05532af8-916d-41af-9a69-4be1f78a76cf" name="Parameters">
+            <elementDefinition Id="7f0c3a78-c3c4-444c-82f3-07e0b3b6daad" />
+          </propertyInstance>
+          <elementDefinition Id="53bc716f-771f-4c26-82cc-7f6748a1278b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="a9ee7d03-d421-4958-9ff3-195d28cf0d65">
+      <profileInstance Id="f0e487a1-7bd8-4e6c-9950-c4f1ae86f263" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f62914f8-ebd2-4b49-829b-e70270624a58">
+      <profileInstance Id="6de7af23-84a6-4577-a904-6bbe5df5b44d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="276e1eb3-1fb9-43fa-9245-23d9ca903c55">
+      <profileInstance Id="7a294d08-83fb-4a2c-8467-66f8ba112a89" name="CSharpProfile">
+        <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
+      </profileInstance>
+      <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="95d97c9b-5e78-4005-a01f-6523768967bb">
+      <profileInstance Id="e0056273-96f9-4ed2-8d8f-68adb648beb7" name="TextTemplateBindings">
+        <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
+      </profileInstance>
+      <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="ce39bdfe-7a2b-4d0f-a4d3-749134bc5c41" name="DropIt.Data.Interfaces.Services">
+        <elementDefinition Id="19165703-b387-4e16-a635-44ab1b934092" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="16e8424f-57f4-4e16-a0bc-c493154c5645" name="ITranslator" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="a9c00b14-d87e-4ef3-8445-94ad3e72f377" />
+              <ownedOperations>
+                <operation Id="c221d1fa-b3db-40af-a3cf-e685ea90d38f" name="Translate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3658f606-69bc-4160-be59-ff5ae13a133f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="143a6b73-3b0e-4cfd-93ef-0dfdf43e6965" name="string toTranslate" direction="In" isUnique="false">
+                        <elementDefinition Id="288f66bb-76b0-4a4b-b5c6-76067064ed29" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="50bd1233-489b-40ae-9b6e-7e2defdef9d2" direction="Return" isUnique="false">
+                        <elementDefinition Id="f9692dec-c23d-4bee-8160-8a7c5879a27c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="10b6bab2-decf-4e9c-9a9a-0af097036225" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="10b6bab2-decf-4e9c-9a9a-0af097036225" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="1d854a88-e79b-4b20-8637-0b7822fe405e" name="DropIt.iOS.Dependencies">
+        <elementDefinition Id="3379b6a2-16eb-493c-88f1-9fade41c905f" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="cffe839a-0c3d-4252-b293-e0841b379007" name="Translator" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="21253c49-2d88-4dc7-aaa7-fc3dd2b8f673" />
+              <suppliersInternal>
+                <interfaceRealization Id="ffa082bd-d4c8-41d8-b377-859face1cc7c">
+                  <interfaceMoniker Id="16e8424f-57f4-4e16-a0bc-c493154c5645" LastKnownName="ITranslator" />
+                  <elementDefinition Id="a32b1707-df70-4eb6-84a3-dcc5c2ee0415" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="eeeb0a29-8e82-4c13-8f24-0d16aa937e66" name="Translate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="48bb2bef-bb1a-4876-9cd4-941b1201d96b" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3cc54fe8-dd6f-4073-aa0c-bc5d29f85a4b" name="string toTranslate" direction="In" isUnique="false">
+                        <elementDefinition Id="dffd94c7-6ce7-4749-8156-64fe009b1b15" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="41092ece-b1e3-49b7-80c5-af53af87a1eb" direction="Return" isUnique="false">
+                        <elementDefinition Id="35e3a852-3c24-416d-9eed-d0e1147d49f5" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="10b6bab2-decf-4e9c-9a9a-0af097036225" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="a1524215-34f2-463e-a580-f58a38013c33" name="DropIt.Droid.Dependencies">
+        <elementDefinition Id="6b5f378c-d855-4923-9f33-a72ab690d384" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="f66d2021-6dd1-4bd1-b191-a59089c5808f" name="Translator" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7945a041-46bd-4621-9621-0a72f958ab89" />
+              <suppliersInternal>
+                <interfaceRealization Id="25b05469-6513-4f2e-8452-9e9c0a46411e">
+                  <interfaceMoniker Id="16e8424f-57f4-4e16-a0bc-c493154c5645" LastKnownName="ITranslator" />
+                  <elementDefinition Id="ee21d4fd-6efb-4093-9945-1c943fb5d032" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="07275219-1a52-4c4e-b1a3-1e6aea644659" name="Translate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3acef958-c7e9-4778-804d-f9c1fd7c25da" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b976d10c-0c14-4c88-be3c-ad7c89e59068" name="string toTranslate" direction="In" isUnique="false">
+                        <elementDefinition Id="e585371e-a273-450b-88fb-09e51b0c04d1" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7109870a-ee66-4a6b-ba8f-74ee307bf69b" direction="Return" isUnique="false">
+                        <elementDefinition Id="b7b81dad-472e-482f-bd62-5f7a7a6d4426" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="10b6bab2-decf-4e9c-9a9a-0af097036225" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="1cf8a81a-eec4-4839-8c86-b77249a20072" name="Designs">
+    <elementDefinition Id="3d630edb-3337-47c3-962c-dff5243b7e0c" />
+  </package>
+</logicalClassDesignerModel>

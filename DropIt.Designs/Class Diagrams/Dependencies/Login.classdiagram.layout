@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Login">
+  <logicalClassDesignerModelMoniker Id="950a3328-3211-4415-9ec2-edf5e89978f4" />
+  <nestedChildShapes>
+    <packageShape Id="144d20ae-53ab-4db2-b406-8aae88d9abc8" absoluteBounds="3.25, 1.5, 4.625, 2" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="8de64062-cce7-4adb-935e-1ab4147e18c6" LastKnownName="DropIt.Interfaces.Services" />
+      <nestedChildShapes>
+        <interfaceShape Id="aeacaea0-482e-463e-a8b4-acc460b8c076" absoluteBounds="3.875, 2.125, 1.75, 1.2226562251647315" hideQualifiedName="false" increaseHeight="0" customColor="207, 223, 191">
+          <interfaceMoniker Id="2cbffb05-9168-458e-8661-d6f7d6d85537" LastKnownName="ILoginService" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="18b697cd-b2fb-48e8-96f1-c0b7ba604d68" absoluteBounds="3.89, 2.515, 1.7200000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="97c30ca5-3c1e-4567-b01e-b46fc38f1654" absoluteBounds="3.89, 2.7261718675494193, 1.7200000000000002, 0.521484357615312" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </interfaceShape>
+      </nestedChildShapes>
+    </packageShape>
+    <packageShape Id="87b007f4-6fe4-4f17-8dd0-822d820cde65" absoluteBounds="0.75, 4.25, 3.375, 2.25" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="694857df-0dfc-405b-8d1b-535d0e18cb9b" LastKnownName="DropIt.iOS.Dependencies" />
+      <nestedChildShapes>
+        <classShape Id="d96bae6c-ed0c-449c-930c-442a4563d760" absoluteBounds="1.625, 5.125, 1.5, 1.2226562251647311" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="8d6aa388-0137-4cb4-ada7-0860937a3ff1" LastKnownName="LoginService" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="308bccc6-6b67-4780-a700-2b04f471ecb3" absoluteBounds="1.6400000000000001, 5.515, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="a77da6c7-e5bf-4bd4-b1cc-3de10a0b22a8" absoluteBounds="1.6400000000000001, 5.72617186754942, 1.4700000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <realizationConnector edgePoints="[(3.04062139673988 : 5.125); (3.04062139673988 : 3.72265622516473); (4.75 : 3.72265622516473); (4.75 : 3.34765622516473)]" fixedFrom="Caller" fixedTo="NotFixed" customColor="113, 111, 110" showAsLollipop="false">
+      <interfaceRealizationMoniker Id="5963f87e-8000-484c-aa3f-db8b489227b3" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="d96bae6c-ed0c-449c-930c-442a4563d760" />
+        <interfaceShapeMoniker Id="aeacaea0-482e-463e-a8b4-acc460b8c076" />
+      </nodes>
+    </realizationConnector>
+    <packageShape Id="87c62325-9359-472e-b8a8-852168818bde" absoluteBounds="6.125, 4.125, 3.375, 2.375" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="645f69a0-65bd-41bb-9daa-3f3cc1da035f" LastKnownName="DropIt.Droid.Dependencies" />
+      <nestedChildShapes>
+        <classShape Id="4118e5d0-de8c-4dfd-82e0-3a5b4e194155" absoluteBounds="7.125, 5.125, 1.5, 1.2226562251647311" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="d8e10194-c5f2-485a-bc22-be7e6f28aa7e" LastKnownName="LoginService" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="c7b210cb-44eb-4516-97d7-1eebccea5888" absoluteBounds="7.14, 5.515, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="cd0bc4df-cbbc-444d-b851-eb5284929f6f" absoluteBounds="7.14, 5.72617186754942, 1.4700000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <realizationConnector edgePoints="[(8.40316718561009 : 5.125); (8.40316718561009 : 3.72265622516473); (4.75 : 3.72265622516473); (4.75 : 3.34765622516473)]" fixedFrom="Caller" fixedTo="NotFixed" customColor="113, 111, 110" showAsLollipop="false">
+      <interfaceRealizationMoniker Id="30b9f60b-56c4-4559-b4b0-22df3a0bbaa8" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="4118e5d0-de8c-4dfd-82e0-3a5b4e194155" />
+        <interfaceShapeMoniker Id="aeacaea0-482e-463e-a8b4-acc460b8c076" />
+      </nodes>
+    </realizationConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

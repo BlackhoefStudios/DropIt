@@ -15,7 +15,7 @@ namespace DropIt.iOS.Dependencies
     /// <summary>
     /// Implements <see cref="ISecureStorage"/> for iOS using <see cref="SecKeyChain"/>.
     /// </summary>
-    public class SecureStorage : ISecureStorage
+    public abstract class SecureStorage : ISecureStorage
     {
         #region ISecureStorage Members
 

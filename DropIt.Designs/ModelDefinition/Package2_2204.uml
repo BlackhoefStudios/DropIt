@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="9bf214a3-e266-4c6c-b13c-6c6fe0fd61b9"
+  name="DropIt.Data.Interfaces.Services" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="26642a89-0ce1-44c1-b069-b65761e019ec"
+        name="ISecureStorage"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="fb0b21cc-f9cd-4439-ad82-40f01852f8fe"
+            name="Store"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f6162593-a612-4d89-a7d8-49bd2a07f96f"
+                  name="string key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ed094994-04d5-4759-8c86-2e0e804f82c0"
+                  name="byte[] dataBytes"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="17719353-f0ba-420e-bd92-10cf5d3a2036"
+            name="Retrieve"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1aa742d2-4608-495b-9cfa-95a2f3082786"
+                  name="string key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7015388e-175b-421c-be0f-4d89e77ca490"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="df8a374a-ce57-493e-adc8-2af2e010efb3"
+                      LastKnownName="byte[]"
+                      LastKnownLocation="Package2_2204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ef1868d7-330e-4138-929f-4b0071d81a2a"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74cbbd6f-12d9-49d5-9ea4-5343f2a62c19"
+                  name="string key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="14635f93-b609-420d-91e2-b1fa7778d6ca"
+            name="Contains"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="427223b6-c90b-4e3b-a930-406f848bc4da"
+                  name="string key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43424b64-ddb1-49df-83f3-311677ce3913"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Designs.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="df8a374a-ce57-493e-adc8-2af2e010efb3"
+        name="byte[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8818d358-6408-4ced-a02e-87ff2cc9eb3b"
+        name="IAccountService"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="10735a6f-27c9-403a-9da9-b48dd5d77142"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="26642a89-0ce1-44c1-b069-b65761e019ec"
+              LastKnownName="ISecureStorage"
+              LastKnownLocation="Package2_2204.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation
+            Id="429ce647-e595-478c-8255-594d4e35cd67"
+            name="StoreCredentials"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9f5503a3-511e-49be-8e4a-0cfe74fb9bb7"
+                  name="IUser toStore"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c3d0b6d7-897b-4cca-adaa-2babad043b21"
+            name="LoadCredentials"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="df965bea-d686-4e3f-b01c-9eb57a52f9e0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="5536dfad-b96f-48f7-9be7-7fc94367be65"
+                      LastKnownName="IUser"
+                      LastKnownLocation="Package_2105.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="26c861ba-3b31-4290-ba2a-3282ecf3e755"
+        name="IUser" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

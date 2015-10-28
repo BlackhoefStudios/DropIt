@@ -11,7 +11,7 @@ using DropIt.Services;
 [assembly: Xamarin.Forms.Dependency(typeof(AccountService))]
 namespace DropIt.iOS.Dependencies
 {
-    public class AccountService : SecureStorage, IAccountService
+    public sealed class AccountService : SecureStorage, IAccountService
     {
         public void StoreCredentials(IUser toStore)
         {
