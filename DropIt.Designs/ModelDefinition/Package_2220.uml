@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="f8786066-54a6-4e0e-8d09-21842f8a31e7"
   name="DropIt.Droid.Dependencies" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -26,16 +26,6 @@
               LastKnownLocation="Package2_2204.uml" />
           </interfaceRealization>
         </suppliersInternal>
-        <generalsInternal>
-          <generalization
-            Id="925adb9b-ddf9-4b25-9254-d6240139be5c"
-            isSubstitutable="false">
-            <classMoniker
-              Id="7e442ad7-48ca-477a-bc68-549ccf3c46a8"
-              LastKnownName="SecureStorage"
-              LastKnownLocation="Package_2220.uml" />
-          </generalization>
-        </generalsInternal>
         <ownedOperationsInternal>
           <operation
             Id="b3a3d6dd-9226-492a-9747-dc66f03ead2a"
@@ -77,111 +67,23 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="70af45ec-38a7-45e2-be4d-a7337b895c65"
-            name="Store"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c2178448-5032-4673-8d88-253dd8c3c8d4"
-                  name="string key"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2f42b694-50ff-4663-b82e-9b1f1208f81b"
-                  name="byte[] dataBytes"
+                  Id="5002ae27-59d3-4ca8-8848-86dd7e3ebc3b"
+                  name="Designs::Data.Interfaces::IUser user"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
-            Id="27b6c69c-bade-4287-bcf7-88075bf4c01e"
-            name="Retrieve"
+            Id="ee3320a1-3ff0-43a6-868a-9679fa7f2919"
+            name="ClearCredentials"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="3fea53ce-e459-487e-a550-2490241dfebc"
-                  name="string key"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="38453f1b-364d-4741-886c-40f1e15197ef"
-                  direction="Return">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="df8a374a-ce57-493e-adc8-2af2e010efb3"
-                      LastKnownName="byte[]"
-                      LastKnownLocation="Package2_2204.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="42d39767-cd11-4e21-8e61-1ae25c3c35a6"
-            name="Delete"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b57d452e-c22f-42d5-8116-65974188413f"
-                  name="string key"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="2e647740-ffe6-41b1-ad52-55061e0942eb"
-            name="Contains"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d9a81ea4-9eb4-4f4a-bddb-5e2c66067cb1"
-                  name="string key"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="47c1198f-bb1f-41f5-b666-05fa542547a2"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="Designs.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>

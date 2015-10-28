@@ -2,8 +2,9 @@
 using System.ComponentModel;
 using DropIt.Data.Interfaces.Pages;
 using Xamarin.Forms;
+using System.Collections.ObjectModel;
 
-namespace DropIt.Data.ViewModels
+namespace DropIt.Data.ViewModels.Bases
 {
 	public abstract class BaseViewModel : INotifyPropertyChanged 
 	{
@@ -76,5 +77,6 @@ namespace DropIt.Data.ViewModels
 			}
 		}
 	}
+
 }
 

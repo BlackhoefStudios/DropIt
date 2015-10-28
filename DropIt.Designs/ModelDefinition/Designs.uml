@@ -1025,11 +1025,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <undefinedType
-        Id="817d0f00-9411-4a41-829e-bdf92360c171"
-        name="T" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
         Id="430bcb6a-ddf8-4585-ad04-dd8580f8cfe0"
         name="bool" />
     </packageHasNamedElement>
@@ -6584,7 +6579,67 @@
           <initialNode
             Id="25ac0c50-b81e-4d3b-82a2-cc939ead496a"
             name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1f395fea-8cec-489d-8e13-75990d80eae3"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="dedadfd7-db32-43b2-89e0-446d73f04b38"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <forkNode
+            Id="dedadfd7-db32-43b2-89e0-446d73f04b38"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="68f3e438-053f-4e0d-931c-1d15b2340067"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="f012881e-4596-4275-be5b-15249fde1d43"
+                  LastKnownName="Show Loading"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <sendSignalAction
+            Id="f012881e-4596-4275-be5b-15249fde1d43"
+            name="Show Loading"
             isLeaf="false" />
+          <objectNode
+            Id="dbac02a2-f44b-4e96-8258-c48ea082ca0b"
+            name="ViewModel"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="d5d68be1-702a-49f6-9230-8b901812a07a"
+                LastKnownName="HomePageViewModel"
+                LastKnownLocation="Package1_2204.uml" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger
+                Id="adf99cd8-ba51-4257-8d88-271d1383daa6"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <callOperationAction
+            Id="25ef9eed-172e-4692-968b-ca274e126fe6"
+            name="Operation1"
+            isLeaf="false">
+            <operation>
+              <operationMoniker
+                Id="16896e7d-dd7c-444f-9540-b5488c1007f3"
+                LastKnownName="TESTJ"
+                LastKnownLocation="Designs.uml" />
+            </operation>
+          </callOperationAction>
         </nodes>
       </activity>
     </packageHasNamedElement>
@@ -6797,6 +6852,36 @@
             isLeaf="false" />
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="abbc6e3a-10d9-40c0-b245-8ce71beb5acd"
+        LastKnownName="DropIt.Data.Interfaces.ViewModels"
+        LastKnownLocation="Package_2330.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b58d5dba-5dba-4682-9920-4b291c0c0b4b"
+        LastKnownName="System.Component"
+        LastKnownLocation="Package_2331.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5d81a35d-1e6c-4796-850a-b81846ef5758"
+        LastKnownName="DropIt.Data.ViewModels.Bases"
+        LastKnownLocation="Package_2334.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b1dff565-80f2-4f13-bdad-ca3273953e06"
+        LastKnownName="DropIt.Data.ViewModels.Projects"
+        LastKnownLocation="Package_2347.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5b5b8ce7-3132-4c7b-9ac5-0d649edf7e0b"
+        LastKnownName="DropIt.Data.Services"
+        LastKnownLocation="Package_0029.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

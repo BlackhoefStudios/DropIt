@@ -5,5 +5,18 @@
   <ActivityIndicator IsVisible="{Binding IsLoggingIn}" IsRunning="{Binding IsLoggingIn}"
                      VerticalOptions="Center" HorizontalOptions="Center" />
 
-  <Entry Keyboard="Telephone" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" />
+  <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsBusy}"
+            ItemsSource="{Binding DataSource, Mode=TwoWay}"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text="{Binding Name}" Detail="{Binding TaskCount, StringFormat='Tasks Remaining: {0}'} ">
+          <TextCell.ContextActions>
+            <MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
+               Text="Delete" IsDestructive="True" />
+          </TextCell.ContextActions>
+        </TextCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
 </ContentPage>

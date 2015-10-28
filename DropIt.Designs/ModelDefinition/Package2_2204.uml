@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="9bf214a3-e266-4c6c-b13c-6c6fe0fd61b9"
   name="DropIt.Data.Interfaces.Services" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -128,16 +128,6 @@
         name="IAccountService"
         isAbstract="false"
         isLeaf="false">
-        <generalsInternal>
-          <generalization
-            Id="10735a6f-27c9-403a-9da9-b48dd5d77142"
-            isSubstitutable="false">
-            <interfaceMoniker
-              Id="26642a89-0ce1-44c1-b069-b65761e019ec"
-              LastKnownName="ISecureStorage"
-              LastKnownLocation="Package2_2204.uml" />
-          </generalization>
-        </generalsInternal>
         <ownedOperations>
           <operation
             Id="429ce647-e595-478c-8255-594d4e35cd67"
@@ -179,8 +169,23 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="df024c76-c4d7-4c15-bad0-bef216e8aecc"
+                  name="Designs::Data.Interfaces::IUser user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="e0d8e19f-a3f6-4644-b8f5-59b5a3c234b5"
+            name="ClearCredentials"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperations>
       </Interface>
     </packageHasNamedElement>

@@ -7,10 +7,10 @@ using DropIt.Data.Interfaces.Users;
 
 namespace DropIt.Data.Interfaces.Services
 {
-    public interface IAccountService : ISecureStorage
+    public interface IAccountService
     {
         void StoreCredentials(IUser toStore);
-        IUser LoadCredentials();
+        IUser LoadCredentials(IUser destination);
         void ClearCredentials();
     }
 }

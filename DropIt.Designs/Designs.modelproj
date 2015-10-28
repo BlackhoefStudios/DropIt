@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Activity Diagrams\DropIt.activitydiagram</DependentUpon>
     </Content>
+    <Content Include="Activity Diagrams\HomePage.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activity Diagrams\HomePage.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activity Diagrams\HomePage.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="Activity Diagrams\Login.activitydiagram">
       <SubType>Content</SubType>
     </Content>
@@ -71,12 +78,26 @@
       <SubType>Content</SubType>
       <DependentUpon>Class Diagrams\DropIt.classdiagram</DependentUpon>
     </Content>
-    <Content Include="HomePage.activitydiagram">
+    <Content Include="Class Diagrams\ViewModels\BaseViewModels.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="HomePage.activitydiagram.layout">
+    <Content Include="Class Diagrams\ViewModels\BaseViewModels.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>HomePage.activitydiagram</DependentUpon>
+      <DependentUpon>Class Diagrams\ViewModels\BaseViewModels.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\ViewModels\HomePage.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\ViewModels\HomePage.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\ViewModels\HomePage.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\ViewModels\ViewModelInterfaces.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\ViewModels\ViewModelInterfaces.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\ViewModels\ViewModelInterfaces.classdiagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package1_2204.uml">
       <SubType>Content</SubType>
@@ -85,6 +106,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package2_2204.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0029.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_2029.uml">
@@ -126,6 +150,18 @@
     <Content Include="ModelDefinition\Package_2225.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_2330.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2331.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2334.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2347.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Sequence Diagrams\DropIt.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -141,6 +177,7 @@
       <DependentUpon>Use Cases\DropIt.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="Class Diagrams\Dependencies" />
+    <Folder Include="Class Diagrams\ViewModels" />
     <Folder Include="ModelDefinition\" />
     <Content Include="DropIt.componentdiagram">
       <SubType>Content</SubType>

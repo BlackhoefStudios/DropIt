@@ -6,6 +6,7 @@ using Auth0.SDK;
 using Foundation;
 using UIKit;
 using DropIt.Data;
+using DropIt.Data.Services;
 using DropIt.iOS.Dependencies;
 using DropIt.Services;
 using Newtonsoft.Json.Linq;
@@ -55,11 +56,11 @@ namespace DropIt.iOS.Dependencies
                 Email = result.Profile["email"].Value<string>()
 	        };
 
-            var accountService = DependencyService.Get<IAccountService>();
+            var accountService =new AccountHelper(new SecureStorage());
             accountService.StoreCredentials(toReturn);
             SetUser(toReturn);
 
-            MessagingCenter.Send(LoginService.CurrentUser as IUser, "LoggedIn");
+            MessagingCenter.Send(LoginService.CurrentUser, "LoggedIn");
         }
     }
 }

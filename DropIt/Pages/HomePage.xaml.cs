@@ -14,14 +14,15 @@ namespace DropIt.Pages
     {
         public HomePage()
         {
-            BindingContext = new HomePageViewModel((IApplication)Application.Current);
+            var binding = new ProjectsListViewModel((IApplication)Application.Current);
+            BindingContext = binding;
             InitializeComponent();
             
             Appearing += (sender, args) =>
             {
                 if (LoginService.CurrentUser == null)
                 {
-                    MessagingCenter.Send(BindingContext as HomePageViewModel, "NeedsLogIn");
+                    MessagingCenter.Send(binding, "NeedsLogIn");
                 }
             };
         }

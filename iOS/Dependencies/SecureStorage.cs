@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using DropIt.Data.Interfaces.Services;
+using DropIt.iOS.Dependencies;
 
+[assembly: Xamarin.Forms.Dependency(typeof(SecureStorage))]
 namespace DropIt.iOS.Dependencies
 {
     //ORIGINAL: https://github.com/XLabs/Xamarin-Forms-Labs/blob/master/src/Platform/XLabs.Platform.iOS/Services/SecureStorage.cs
@@ -15,7 +17,7 @@ namespace DropIt.iOS.Dependencies
     /// <summary>
     /// Implements <see cref="ISecureStorage"/> for iOS using <see cref="SecKeyChain"/>.
     /// </summary>
-    public abstract class SecureStorage : ISecureStorage
+    public sealed class SecureStorage : ISecureStorage
     {
         #region ISecureStorage Members
 

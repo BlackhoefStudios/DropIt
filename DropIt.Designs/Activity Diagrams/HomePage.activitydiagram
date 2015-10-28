@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e715296b-288a-4c69-aaca-09e925501560" name="HomePage" linkedPackageId="7ddc0e06-6878-4786-98c3-d936d1354853" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="e715296b-288a-4c69-aaca-09e925501560" name="HomePage" linkedPackageId="7ddc0e06-6878-4786-98c3-d936d1354853" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="b4ba6aac-e689-45ab-a35a-1afdef3b6fe7" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="d335f89d-08aa-45ba-b777-87e33b45d5d2" />
@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="30d17d47-d171-44ea-9851-69a54d33fa0f">
-      <profileInstance Id="38ddd5de-ee55-49f5-b60b-234fc1af0284" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="5199d6c8-2d19-4a18-958f-31a584db8015">
-      <profileInstance Id="4505f588-473a-486b-bc64-b8c118b66716" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="7a5489f2-6209-4e80-91d1-60703c6fbfd6">
-      <profileInstance Id="0dbdd255-24cf-431f-83b4-69e15b482902" name="CSharpProfile">
-        <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
-      </profileInstance>
-      <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e968a93a-ac15-4bf1-9820-3c2cff59d598">
-      <profileInstance Id="81e25952-7fe2-4ea7-9682-5949312cc7cb" name="TextTemplateBindings">
-        <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
-      </profileInstance>
-      <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="944078d3-d987-4874-ab7e-1ad61bb44720" name="HomePage" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -105,12 +79,80 @@
         <nodes>
           <initialNode Id="d3a71548-f2b5-4962-b195-4561c6671704" name="Initial1" isLeaf="false">
             <elementDefinition Id="25ac0c50-b81e-4d3b-82a2-cc939ead496a" />
+            <flowNodeTargets>
+              <controlFlow Id="21804bdf-d719-4144-8ece-360193d3d343" isLeaf="false">
+                <forkNodeMoniker Id="8b2f7078-6859-40c2-93f4-3870df29bf2d" LastKnownName="Fork1" />
+                <elementDefinition Id="1f395fea-8cec-489d-8e13-75990d80eae3" />
+              </controlFlow>
+            </flowNodeTargets>
           </initialNode>
+          <forkNode Id="8b2f7078-6859-40c2-93f4-3870df29bf2d" name="Fork1" isLeaf="false">
+            <elementDefinition Id="dedadfd7-db32-43b2-89e0-446d73f04b38" />
+            <flowNodeTargets>
+              <controlFlow Id="a3892eb6-c6ec-4d16-9d2c-c5fcef6fe4bc" isLeaf="false">
+                <sendSignalActionMoniker Id="2c465cc8-12b9-4aae-8a9b-b1dab172e55c" LastKnownName="Show Loading" />
+                <elementDefinition Id="68f3e438-053f-4e0d-931c-1d15b2340067" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <sendSignalAction Id="2c465cc8-12b9-4aae-8a9b-b1dab172e55c" name="Show Loading" isLeaf="false">
+            <elementDefinition Id="f012881e-4596-4275-be5b-15249fde1d43" />
+          </sendSignalAction>
+          <objectNode Id="f40e95c7-509c-4e20-94e7-1b35c5b57492" name="ViewModel" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="dbac02a2-f44b-4e96-8258-c48ea082ca0b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a90a7ba2-da25-4023-a608-70b4546b8619" LastKnownName="HomePageViewModel" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger Id="92c06f68-a50d-4260-9fa0-9915b5be6a76" name="2147483647" value="2147483647">
+                <elementDefinition Id="adf99cd8-ba51-4257-8d88-271d1383daa6" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="9da1a753-5398-4c3d-be26-b4d8260f7ef8" name="Operation1" isLeaf="false">
+            <elementDefinition Id="25ef9eed-172e-4692-968b-ca274e126fe6" />
+          </callOperationAction>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
+    <packageHasNamedElement>
+      <referencedType Id="321c6b8e-2324-4e88-af38-38ed670d2977" name="BaseViewModel" isAbstract="false" isLeaf="false" cachedFullName="Designs::ViewModels::BaseViewModel">
+        <elementDefinition Id="301d8006-c381-44d5-961e-a33ef6aac865" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a90a7ba2-da25-4023-a608-70b4546b8619" name="HomePageViewModel" isAbstract="false" isLeaf="false" cachedFullName="Designs::ViewModels::HomePageViewModel">
+        <elementDefinition Id="d5d68be1-702a-49f6-9230-8b901812a07a" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="7ddc0e06-6878-4786-98c3-d936d1354853" name="Designs">
     <elementDefinition Id="3d630edb-3337-47c3-962c-dff5243b7e0c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="30d17d47-d171-44ea-9851-69a54d33fa0f">
+        <profileInstance Id="38ddd5de-ee55-49f5-b60b-234fc1af0284" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="5199d6c8-2d19-4a18-958f-31a584db8015">
+        <profileInstance Id="4505f588-473a-486b-bc64-b8c118b66716" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7a5489f2-6209-4e80-91d1-60703c6fbfd6">
+        <profileInstance Id="0dbdd255-24cf-431f-83b4-69e15b482902" name="CSharpProfile">
+          <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
+        </profileInstance>
+        <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e968a93a-ac15-4bf1-9820-3c2cff59d598">
+        <profileInstance Id="81e25952-7fe2-4ea7-9682-5949312cc7cb" name="TextTemplateBindings">
+          <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
+        </profileInstance>
+        <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>

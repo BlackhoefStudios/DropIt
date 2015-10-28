@@ -1,6 +1,8 @@
 ﻿using System;
+using DropIt.Data;
 using DropIt.Data.Interfaces.Users;
 
+[assembly: Xamarin.Forms.Dependency(typeof(User))]
 namespace DropIt.Data
 {
 	public class User : IUser
