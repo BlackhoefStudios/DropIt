@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="3d630edb-3337-47c3-962c-dff5243b7e0c"
   name="Designs" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -32,6 +32,20 @@
       Id="c8299651-c257-4e73-af62-8ce80813de32">
       <body>The ISecureStorage interface should be pulled from GitHub at: https://github.com/XLabs/Xamarin-Forms-Labs/blob/master/src/Platform/XLabs.Platform/Services/ISecureStorage.cs
 </body>
+    </comment>
+    <comment
+      Id="864d7498-6ba8-41c3-919e-6d0b6fa9e012">
+      <body>Set IsBusy = true
+</body>
+    </comment>
+    <comment
+      Id="c20c48f5-8c32-4394-a771-339e8397ea6f">
+      <body>IsBusy = false
+</body>
+    </comment>
+    <comment
+      Id="52e79cf1-144b-4206-96c9-a67d04d74cd7">
+      <body>MessagingCenter.Send("Delete")</body>
     </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
@@ -6597,30 +6611,34 @@
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="68f3e438-053f-4e0d-931c-1d15b2340067"
+                Id="d9f69f14-53d9-44b4-bede-24c8d31e56f0"
                 isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="f012881e-4596-4275-be5b-15249fde1d43"
+                <opaqueActionMoniker
+                  Id="4686c117-e533-4fa9-b95d-56da91ca3f28"
                   LastKnownName="Show Loading"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="ea96c39d-e916-4f66-b491-475cab869d10"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="314076df-765a-4397-9fdd-ea1ea944417d"
+                  LastKnownName="Fetch List of Projects"
                   LastKnownLocation="Designs.uml" />
               </controlFlow>
             </flowNodeTargets>
           </forkNode>
-          <sendSignalAction
-            Id="f012881e-4596-4275-be5b-15249fde1d43"
-            name="Show Loading"
-            isLeaf="false" />
           <objectNode
             Id="dbac02a2-f44b-4e96-8258-c48ea082ca0b"
-            name="ViewModel"
+            name="ProjectListViewModel"
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
             <type_NamedElement>
               <classMoniker
-                Id="d5d68be1-702a-49f6-9230-8b901812a07a"
-                LastKnownName="HomePageViewModel"
-                LastKnownLocation="Package1_2204.uml" />
+                Id="0a16fa98-19cb-4c8d-8f3b-e90d5cdad950"
+                LastKnownName="ProjectsListViewModel"
+                LastKnownLocation="Package_2347.uml" />
             </type_NamedElement>
             <upperBound>
               <literalInteger
@@ -6629,17 +6647,116 @@
                 value="2147483647" />
             </upperBound>
           </objectNode>
-          <callOperationAction
-            Id="25ef9eed-172e-4692-968b-ca274e126fe6"
-            name="Operation1"
+          <opaqueAction
+            Id="4686c117-e533-4fa9-b95d-56da91ca3f28"
+            name="Show Loading"
             isLeaf="false">
-            <operation>
-              <operationMoniker
-                Id="16896e7d-dd7c-444f-9540-b5488c1007f3"
-                LastKnownName="TESTJ"
-                LastKnownLocation="Designs.uml" />
-            </operation>
+            <flowNodeTargets>
+              <controlFlow
+                Id="5cca4505-a12e-4af3-b327-d16a661978a1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="093bf589-16d2-4dda-9f43-65a4568a2c54"
+                  LastKnownName="Stop Loading"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="093bf589-16d2-4dda-9f43-65a4568a2c54"
+            name="Stop Loading"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="04e6c7b2-a6f4-4eb6-9580-22bf8d5e78de"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="60fc1f74-aafa-4ac0-9f65-aceb08ec5546"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <callOperationAction
+            Id="314076df-765a-4397-9fdd-ea1ea944417d"
+            name="Fetch List of Projects"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7e4f30c4-c512-4440-9dd4-8659310d7b73"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="60fc1f74-aafa-4ac0-9f65-aceb08ec5546"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
           </callOperationAction>
+          <joinNode
+            Id="60fc1f74-aafa-4ac0-9f65-aceb08ec5546"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1f0702b9-bb3e-4751-aa78-fc88c54e1afd"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="9b96ee38-44b3-4fc5-8694-c3aeacf1da4d"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <decisionNode
+            Id="9b96ee38-44b3-4fc5-8694-c3aeacf1da4d"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="16530f4d-2b40-4a7f-bee9-5e6d8404e096"
+                guard="Long pressed/swipes item"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="1eeaa87b-a9b3-4a4f-b2d3-e525d258d5af"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="8af1c02d-17e0-4186-b496-5d53a10a6365"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <decisionNode
+            Id="1eeaa87b-a9b3-4a4f-b2d3-e525d258d5af"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2b68160f-1e61-4863-be42-dbdd7a7e44c8"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="e0024cc6-088a-4634-a5ee-ef8ae2c80af0"
+                  LastKnownName="Send Delete Message"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <sendSignalAction
+            Id="e0024cc6-088a-4634-a5ee-ef8ae2c80af0"
+            name="Send Delete Message"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7b2bc16c-eca0-491d-94f0-b4c925b7a050"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="8af1c02d-17e0-4186-b496-5d53a10a6365"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
         </nodes>
       </activity>
     </packageHasNamedElement>
@@ -6882,6 +6999,18 @@
         Id="5b5b8ce7-3132-4c7b-9ac5-0d649edf7e0b"
         LastKnownName="DropIt.Data.Services"
         LastKnownLocation="Package_0029.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="552915b3-096d-48b0-a5e7-1c734b5cf625"
+        LastKnownName="DropIt.Data.ViewModels.Categories"
+        LastKnownLocation="Package_2046.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b13eb3c1-8238-4070-8d09-f5fa6866a112"
+        LastKnownName="DropIt.Data.Interfaces.Pages"
+        LastKnownLocation="Package_2050.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

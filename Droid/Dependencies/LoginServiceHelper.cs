@@ -22,7 +22,9 @@ using Xamarin.Auth;
 using Xamarin.Forms;
 using Application = Android.App.Application;
 
+//need this line so we can use the DependencyService.Get<ILoginService>()
 [assembly: Xamarin.Forms.Dependency(typeof(LoginServiceHelper))]
+
 namespace DropIt.Droid.Dependencies
 {
     public class LoginServiceHelper : Auth0Client, ILoginService
@@ -38,7 +40,10 @@ namespace DropIt.Droid.Dependencies
         protected override async Task<WebRedirectAuthenticator> GetAuthenticator(string connection, string scope, string title = null)
         {
             var baseAuthenticator = await base.GetAuthenticator(connection, scope, title);
+            //get the base web view to show for logging in.
             baseAuthenticator.AllowCancel = false;
+            //set the title
+            webAuth.Title = "Sign into DropIt";
             return baseAuthenticator;
         }
 
@@ -55,15 +60,15 @@ namespace DropIt.Droid.Dependencies
                 Email = user.Profile["email"].Value<string>()
             };
 
+            //create account service and store the credentials on the device.
             var accountService = new AccountHelper(new KeyVaultStorage());
             accountService.StoreCredentials(toReturn);
             SetUser(toReturn);
-
-            MessagingCenter.Send(LoginService.CurrentUser, "LoggedIn");
         }
 
         public void SetUser(IUser loggedInUser)
         {
+            //setup the current user to be the one that signed in.
             LoginService.CurrentUser = loggedInUser;
         }
     }

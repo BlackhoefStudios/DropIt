@@ -13,6 +13,7 @@ using Newtonsoft.Json.Linq;
 using Xamarin.Auth;
 using Xamarin.Forms;
 
+//need this line so we can use the DependencyService.Get<ILoginService>()
 [assembly: Xamarin.Forms.Dependency(typeof(LoginServiceHelper))]
 
 namespace DropIt.iOS.Dependencies
@@ -29,21 +30,26 @@ namespace DropIt.iOS.Dependencies
 
 	    protected override async Task<WebRedirectAuthenticator> GetAuthenticator(string connection, string scope, string title = null)
 	    {
+            //get the base web view to show for logging in.
 	        var webAuth = await base.GetAuthenticator(connection, scope, title);
+            //force them to login and not cancel.
 	        webAuth.AllowCancel = false;
+            //set the title
 	        webAuth.Title = "Sign into DropIt";
 	        return webAuth;
 	    }
 
 	    public void SetUser(IUser user)
 	    {
+            //setup the current user to be the one that signed in.
 	        LoginService.CurrentUser = user;
 	    }
 
 	    public async Task Login (){
+            //get the main controller
 			var controller = UIApplication.SharedApplication.KeyWindow.RootViewController;
 
-            //show login
+            //show login page.
             var result = await LoginAsync(
                 controller,
                 withRefreshToken: true);
@@ -56,11 +62,12 @@ namespace DropIt.iOS.Dependencies
                 Email = result.Profile["email"].Value<string>()
 	        };
 
+            //create account service and store the credentials on the device.
             var accountService =new AccountHelper(new SecureStorage());
             accountService.StoreCredentials(toReturn);
-            SetUser(toReturn);
 
-            MessagingCenter.Send(LoginService.CurrentUser, "LoggedIn");
+            //set the current user.
+            SetUser(toReturn);
         }
     }
 }

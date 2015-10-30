@@ -1,5 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="e715296b-288a-4c69-aaca-09e925501560" name="HomePage" linkedPackageId="7ddc0e06-6878-4786-98c3-d936d1354853" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e715296b-288a-4c69-aaca-09e925501560" name="HomePage" linkedPackageId="7ddc0e06-6878-4786-98c3-d936d1354853" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="60b78072-b3fb-48d4-9641-563214bf11ab">
+      <elementDefinition Id="864d7498-6ba8-41c3-919e-6d0b6fa9e012" />
+      <body>Set IsBusy = true
+</body>
+    </comment>
+    <comment Id="46a39a19-ab0b-40a4-8189-5057e7e7c204">
+      <elementDefinition Id="c20c48f5-8c32-4394-a771-339e8397ea6f" />
+      <body>IsBusy = false
+</body>
+    </comment>
+    <comment Id="d1f3fbdd-f51a-4684-9d6b-aba21a62ee07">
+      <elementDefinition Id="52e79cf1-144b-4206-96c9-a67d04d74cd7" />
+      <body>MessagingCenter.Send("Delete")</body>
+    </comment>
+  </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance Id="b4ba6aac-e689-45ab-a35a-1afdef3b6fe7" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="d335f89d-08aa-45ba-b777-87e33b45d5d2" />
@@ -89,19 +105,20 @@
           <forkNode Id="8b2f7078-6859-40c2-93f4-3870df29bf2d" name="Fork1" isLeaf="false">
             <elementDefinition Id="dedadfd7-db32-43b2-89e0-446d73f04b38" />
             <flowNodeTargets>
-              <controlFlow Id="a3892eb6-c6ec-4d16-9d2c-c5fcef6fe4bc" isLeaf="false">
-                <sendSignalActionMoniker Id="2c465cc8-12b9-4aae-8a9b-b1dab172e55c" LastKnownName="Show Loading" />
-                <elementDefinition Id="68f3e438-053f-4e0d-931c-1d15b2340067" />
+              <controlFlow Id="5e3006e8-9961-4d8c-84fe-4b8a0c7548d2" isLeaf="false">
+                <opaqueActionMoniker Id="05de27a0-e0fe-4f74-9297-60f0a32e58f8" LastKnownName="Show Loading" />
+                <elementDefinition Id="d9f69f14-53d9-44b4-bede-24c8d31e56f0" />
+              </controlFlow>
+              <controlFlow Id="0693e0b9-d797-4581-b88a-3ae712af6255" isLeaf="false">
+                <callOperationActionMoniker Id="dd4a9e1f-62c9-43c0-b693-df936bcfc700" LastKnownName="Fetch List of Projects" />
+                <elementDefinition Id="ea96c39d-e916-4f66-b491-475cab869d10" />
               </controlFlow>
             </flowNodeTargets>
           </forkNode>
-          <sendSignalAction Id="2c465cc8-12b9-4aae-8a9b-b1dab172e55c" name="Show Loading" isLeaf="false">
-            <elementDefinition Id="f012881e-4596-4275-be5b-15249fde1d43" />
-          </sendSignalAction>
-          <objectNode Id="f40e95c7-509c-4e20-94e7-1b35c5b57492" name="ViewModel" isLeaf="false" ordering="Unordered" isControlType="false">
+          <objectNode Id="f40e95c7-509c-4e20-94e7-1b35c5b57492" name="ProjectListViewModel" isLeaf="false" ordering="Unordered" isControlType="false">
             <elementDefinition Id="dbac02a2-f44b-4e96-8258-c48ea082ca0b" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="a90a7ba2-da25-4023-a608-70b4546b8619" LastKnownName="HomePageViewModel" />
+              <referencedTypeMoniker Id="40727adf-6858-48d2-add4-0ab130b16efa" LastKnownName="ProjectsListViewModel" />
             </type_NamedElement>
             <upperBound>
               <literalInteger Id="92c06f68-a50d-4260-9fa0-9915b5be6a76" name="2147483647" value="2147483647">
@@ -109,9 +126,72 @@
               </literalInteger>
             </upperBound>
           </objectNode>
-          <callOperationAction Id="9da1a753-5398-4c3d-be26-b4d8260f7ef8" name="Operation1" isLeaf="false">
-            <elementDefinition Id="25ef9eed-172e-4692-968b-ca274e126fe6" />
+          <opaqueAction Id="05de27a0-e0fe-4f74-9297-60f0a32e58f8" name="Show Loading" isLeaf="false">
+            <elementDefinition Id="4686c117-e533-4fa9-b95d-56da91ca3f28" />
+            <flowNodeTargets>
+              <controlFlow Id="03f6448d-4eb4-4c69-8318-95621c073ff2" isLeaf="false">
+                <opaqueActionMoniker Id="ef848b1b-5794-40c6-a1dc-96066a2b7a81" LastKnownName="Stop Loading" />
+                <elementDefinition Id="5cca4505-a12e-4af3-b327-d16a661978a1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ef848b1b-5794-40c6-a1dc-96066a2b7a81" name="Stop Loading" isLeaf="false">
+            <elementDefinition Id="093bf589-16d2-4dda-9f43-65a4568a2c54" />
+            <flowNodeTargets>
+              <controlFlow Id="a708063c-3d46-463b-8b1c-4c8d5e08501b" isLeaf="false">
+                <joinNodeMoniker Id="d0710de0-0537-41ae-861a-4d0eff02581b" LastKnownName="Join1" />
+                <elementDefinition Id="04e6c7b2-a6f4-4eb6-9580-22bf8d5e78de" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <callOperationAction Id="dd4a9e1f-62c9-43c0-b693-df936bcfc700" name="Fetch List of Projects" isLeaf="false">
+            <elementDefinition Id="314076df-765a-4397-9fdd-ea1ea944417d" />
+            <flowNodeTargets>
+              <controlFlow Id="b026a8d2-faf7-4f74-a6cb-15a0b02335e8" isLeaf="false">
+                <joinNodeMoniker Id="d0710de0-0537-41ae-861a-4d0eff02581b" LastKnownName="Join1" />
+                <elementDefinition Id="7e4f30c4-c512-4440-9dd4-8659310d7b73" />
+              </controlFlow>
+            </flowNodeTargets>
           </callOperationAction>
+          <joinNode Id="d0710de0-0537-41ae-861a-4d0eff02581b" name="Join1" isLeaf="false">
+            <elementDefinition Id="60fc1f74-aafa-4ac0-9f65-aceb08ec5546" />
+            <flowNodeTargets>
+              <controlFlow Id="3c2127e1-0829-4d28-9dd1-5ad917c15e5c" isLeaf="false">
+                <decisionNodeMoniker Id="9ffb4191-4da9-408e-84de-493f1fa68a9f" LastKnownName="Decision1" />
+                <elementDefinition Id="1f0702b9-bb3e-4751-aa78-fc88c54e1afd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <decisionNode Id="9ffb4191-4da9-408e-84de-493f1fa68a9f" name="Decision1" isLeaf="false">
+            <elementDefinition Id="9b96ee38-44b3-4fc5-8694-c3aeacf1da4d" />
+            <flowNodeTargets>
+              <controlFlow Id="0812437c-6919-4935-93c0-1caf0be36d2f" guard="Long pressed/swipes item" isLeaf="false">
+                <decisionNodeMoniker Id="3cb63c3f-99c7-4ced-a3c1-f56b8a041bc1" LastKnownName="Decision2" />
+                <elementDefinition Id="16530f4d-2b40-4a7f-bee9-5e6d8404e096" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="9149a8e9-9517-4391-a293-a31496f7c590" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="8af1c02d-17e0-4186-b496-5d53a10a6365" />
+          </activityFinalNode>
+          <decisionNode Id="3cb63c3f-99c7-4ced-a3c1-f56b8a041bc1" name="Decision2" isLeaf="false">
+            <elementDefinition Id="1eeaa87b-a9b3-4a4f-b2d3-e525d258d5af" />
+            <flowNodeTargets>
+              <controlFlow Id="3025dc6d-7c0c-4700-a1cb-1b70ab9f674d" isLeaf="false">
+                <sendSignalActionMoniker Id="c397861b-ea39-4af5-bffb-d0ef417a90fd" LastKnownName="Send Delete Message" />
+                <elementDefinition Id="2b68160f-1e61-4863-be42-dbdd7a7e44c8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <sendSignalAction Id="c397861b-ea39-4af5-bffb-d0ef417a90fd" name="Send Delete Message" isLeaf="false">
+            <elementDefinition Id="e0024cc6-088a-4634-a5ee-ef8ae2c80af0" />
+            <flowNodeTargets>
+              <controlFlow Id="4a3d262d-2f1c-4d73-9705-38de82174577" isLeaf="false">
+                <activityFinalNodeMoniker Id="9149a8e9-9517-4391-a293-a31496f7c590" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7b2bc16c-eca0-491d-94f0-b4c925b7a050" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
@@ -123,6 +203,11 @@
     <packageHasNamedElement>
       <referencedType Id="a90a7ba2-da25-4023-a608-70b4546b8619" name="HomePageViewModel" isAbstract="false" isLeaf="false" cachedFullName="Designs::ViewModels::HomePageViewModel">
         <elementDefinition Id="d5d68be1-702a-49f6-9230-8b901812a07a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="40727adf-6858-48d2-add4-0ab130b16efa" name="ProjectsListViewModel" isAbstract="false" isLeaf="false" cachedFullName="Designs::DropIt.Data.ViewModels.Projects::ProjectsListViewModel">
+        <elementDefinition Id="0a16fa98-19cb-4c8d-8f3b-e90d5cdad950" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

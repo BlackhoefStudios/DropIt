@@ -4,6 +4,7 @@ using System.Text;
 using DropIt.Data.Interfaces.Services;
 using DropIt.iOS.Dependencies;
 
+//need this line so we can use the DependencyService.Get<ISecureStorage>()
 [assembly: Xamarin.Forms.Dependency(typeof(SecureStorage))]
 namespace DropIt.iOS.Dependencies
 {

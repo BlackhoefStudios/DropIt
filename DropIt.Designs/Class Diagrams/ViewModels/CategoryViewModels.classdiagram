@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="563ac07b-5405-4cd6-acd3-b640ead4bfc3" name="CategoryViewModels" linkedPackageId="c78ba1b9-f3de-478a-bfd0-96bb55036e07" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="e43f558d-e408-41ed-84e6-fcfb97cc43be" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d335f89d-08aa-45ba-b777-87e33b45d5d2" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5f02a8b9-2794-4bd3-ad62-2f9c9e1bf987">
+          <propertyInstance Id="f11b9094-0e87-4e12-8984-376601fce0b4" name="BaseName">
+            <elementDefinition Id="8f919c97-7741-414b-bbc5-b37205d062cf" />
+          </propertyInstance>
+          <elementDefinition Id="f632270c-6858-4caa-a63b-8b5fa12dc8e7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0967dfff-9722-48ca-8337-abf703737ac0">
+          <propertyInstance Id="520f809a-1ee9-4d50-92d1-0fbdec917c7e" name="ClrAttributes">
+            <elementDefinition Id="73df1cbd-002b-4532-b909-95d23b5a2fe5" />
+          </propertyInstance>
+          <elementDefinition Id="8e72a556-a9eb-4b97-9b86-d342384bd976" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="28ee44bb-b093-4f2d-87aa-2c2574705ac3">
+          <propertyInstance Id="4e1d728f-f248-4120-aa8f-4eb6d20ce2ce" name="Usings">
+            <elementDefinition Id="b624e893-4c64-4bc2-bc51-0c9a30a5945d" />
+          </propertyInstance>
+          <elementDefinition Id="23a55045-2091-4227-9a21-5e552b585e72" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="4a5e551f-a04e-4db9-a72f-916957ccdd4c" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="385fbe02-8fbe-4b33-87fa-ff470caafa37" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="445bd022-f4b1-400e-9465-c5eb4f68a0a4">
+          <propertyInstance Id="9e766486-6550-4aff-84ba-a357a38dbf52" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="16837944-f673-41bd-b1e4-4d7bea2f0c16" />
+          </propertyInstance>
+          <elementDefinition Id="ddbd2294-7dcc-4b4c-896f-97537d4a141e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9b85545e-3753-4887-a001-c8e40169e15f">
+          <propertyInstance Id="7cbfba40-6512-489e-af4f-b34bfa4bc3d1" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="6fa3d6da-2185-4438-8299-fcfeb3e0de1e" />
+          </propertyInstance>
+          <elementDefinition Id="3c96f943-145f-4a57-ae97-e817558b8beb" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a5eb492f-1387-4071-b190-c77656f96faa">
+          <propertyInstance Id="353b20ac-fc6d-40a5-861c-bdb65ac0bfb6" name="ProjectPath" value="ClassTemplate=..\DesignsLib\DesignsLib.csproj|EnumTemplate=..\DesignsLib\DesignsLib.csproj|InterfaceTemplate=..\DesignsLib\DesignsLib.csproj|StructTemplate=..\DesignsLib\DesignsLib.csproj">
+            <elementDefinition Id="fd57be94-ab71-4027-a561-c492351dc1e8" />
+          </propertyInstance>
+          <elementDefinition Id="e0b78421-9f9b-4c93-a5dc-ca4a735ec5ad" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="76190557-e229-4b04-92a4-c9503f1a6ea7">
+          <propertyInstance Id="fccf5e8e-6e15-448f-ac6f-06bae809e1b3" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="67c27021-3bc3-4732-af84-dbb0ee0bc32b" />
+          </propertyInstance>
+          <elementDefinition Id="1187d179-b43c-4267-83c6-fa64147211b1" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3a35340a-9ebb-4adc-8872-57e85b1526ec">
+          <propertyInstance Id="8b323061-24a2-4702-a25e-531493921d96" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="daa131d3-e996-41cf-934b-a2b1c737be75" />
+          </propertyInstance>
+          <elementDefinition Id="0771e53e-9d61-4a6e-9882-a38f63fa8a9a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="981da362-cbe8-4297-8f57-a3dfc30c6449">
+          <propertyInstance Id="6ac8f09a-be06-4bde-89b3-9879a0120f88" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9283217e-4536-4922-b83e-50fd360d3398" />
+          </propertyInstance>
+          <elementDefinition Id="181d58c9-5213-4538-91f6-8cd419aa6161" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="00de4802-51e0-45f8-8cd7-9db8ed4bf258">
+          <propertyInstance Id="e99d5e85-6b62-4b8c-9f26-5dda2ce604bc" name="Parameters">
+            <elementDefinition Id="7f0c3a78-c3c4-444c-82f3-07e0b3b6daad" />
+          </propertyInstance>
+          <elementDefinition Id="53bc716f-771f-4c26-82cc-7f6748a1278b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="07b486e8-8788-4ea3-b156-60972d24f5c8">
+      <profileInstance Id="0caaff29-d4ce-468d-a8ff-51c7c6331590" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ec1e1946-29d1-4a29-9eb6-23e8f8e7c146">
+      <profileInstance Id="d3fbcbfe-dfb6-45ae-8719-e88f9d3bd011" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="be514f91-f37c-4204-83e4-2493fa561c87">
+      <profileInstance Id="73708445-fb03-4887-885c-51355a5c3fa2" name="CSharpProfile">
+        <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
+      </profileInstance>
+      <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d46db457-ca0c-41eb-9cc7-ce1df89e457f">
+      <profileInstance Id="c3bc9e16-d220-49c3-a2bc-251205323d1f" name="TextTemplateBindings">
+        <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
+      </profileInstance>
+      <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="10989251-476e-4ea8-9412-bfd23b0f3373" name="BaseListViewModel" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3bed07a8-5b54-4bb8-8d59-e3b738ac511a" />
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="3eae16d9-a6bc-46d8-8731-df9a1bdf3649" parameters="" isLeaf="false">
+            <elementDefinition Id="1fef1e77-7618-4733-8602-978c700436c7" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="12fb3457-3b97-415b-8b2a-e12f9e91f325">
+                <elementDefinition Id="f03a1568-73c7-4f92-b152-d8d8daa94c04" />
+                <ownedParameterableElement>
+                  <class Id="5e9c1199-bf18-4059-9c32-191084d37007" name="T" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="db410425-1877-4b50-acde-270bf0ef3ba5" />
+                  </class>
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property Id="a17c795c-0073-46e2-bd25-42af014d6610" name="Refresh" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0e0131bc-a234-4993-a73d-5b16da2c02b6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3a2ecbe0-9d9b-4fd6-8206-52f268f5298a" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+          <property Id="63082110-a717-42d2-a1e4-1831a85e7e7c" name="DataSource" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="66e10954-3468-4929-a583-63b0d4c0bb25" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f1b5ccbc-2e3c-4a05-badf-56eae453aefa" LastKnownName="ObservableCollection&lt;T&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3a2ecbe0-9d9b-4fd6-8206-52f268f5298a" name="ICommand" isAbstract="false" isLeaf="false" cachedFullName="ICommand">
+        <elementDefinition Id="c41c87dc-7299-4915-af6c-ec44da791361" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f1b5ccbc-2e3c-4a05-badf-56eae453aefa" name="ObservableCollection&lt;T&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;T&gt;">
+        <elementDefinition Id="6f309f5e-604b-469d-b0e9-b994a6df726b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="9577d623-a97b-44f9-b91d-40103e7a767c" name="DropIt.Data.ViewModels.Categories">
+        <elementDefinition Id="552915b3-096d-48b0-a5e7-1c734b5cf625" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="1e621f84-1790-4eac-8285-7a4d17fe4552" name="CategoriesListViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3d417f28-5d0e-45a2-a3eb-70496a0d484d" />
+              <generalsInternal>
+                <generalization Id="059d924b-5371-4770-ad28-2c8e9decb2ad" isSubstitutable="false">
+                  <classMoniker Id="10989251-476e-4ea8-9412-bfd23b0f3373" LastKnownName="BaseListViewModel" />
+                  <elementDefinition Id="a6ba806c-237b-4c7d-adc5-b4516f7af811" />
+                </generalization>
+              </generalsInternal>
+              <targetEnds>
+                <association Id="e0cefa8b-fd6c-4e9f-9d1f-6f4b68aa6f90" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0d5d7f32-a183-444e-86ae-87025e757e8d" LastKnownName="CategoryViewModel" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="07bc4bfa-f516-4882-baa7-5e2dd3f4685f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="5579faf7-9c3a-42fc-947f-d7eb46d7cb4e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="23ed2e35-06f8-46ca-8594-d00ef70fcda2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="296f4893-657e-4d58-810b-f46ad35cd237" name="Lower" value="*">
+                            <elementDefinition Id="a5bb7eb1-3458-4caf-9248-92f640713610" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="b73e77b9-2021-4bcc-9d35-2d9f89dcdc27" name="Upper" value="*">
+                            <elementDefinition Id="66a960b3-b757-4959-9bdf-d98a6b5cec6d" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="199c6f2d-9a4e-4e52-b500-781d72a25c09" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="3d11f7bc-7e9c-4211-9c1f-f90408452834" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="0285d907-8f1e-434b-9a49-a1df6095ee9e" name="application" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="59347e78-8ea8-4d01-a0f8-d608603e1e5f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b6a9f18b-2c9b-43b0-b5bb-c83cc76ebcb9" LastKnownName="IApplication" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="2c2b48a6-ba56-4858-b242-4b548df2702a" name="CategoriesListViewModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cd3d2710-4de6-48cb-b6eb-d3d664f3b19f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8fbc6f50-3553-4a2c-8ff1-4a46eb527519" name="IApplication app" direction="In" isUnique="false">
+                        <elementDefinition Id="c5e44a1c-44d4-46ed-b73b-2c516de4487f" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="f8cef9fb-582e-4fee-979b-7a73c388bedc" name="TaskListItemViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="332332e7-9ffb-47f9-9afd-eccfe672c428" />
+              <generalsInternal>
+                <generalization Id="5e2bc3e0-a905-4f27-9375-a73577f6b2a1" isSubstitutable="false">
+                  <classMoniker Id="dae69439-c19f-473a-8e82-f1285699cc17" LastKnownName="BaseListItemViewModel" />
+                  <elementDefinition Id="d2adeb44-a3e4-4cb5-8663-0ea267938c65" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="b9e130ab-9807-497f-b4d2-e6a1939fee16" name="CategoryId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0c2366d8-79f0-4215-819e-8ca941256a62" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4631f017-c014-4d30-94de-c42a2ec9a43c" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e74e3f39-05b6-4699-b8cd-808de3778370" name="Dropped" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="340ee0e2-0051-4580-a803-ed230d1a76a9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3a2ecbe0-9d9b-4fd6-8206-52f268f5298a" LastKnownName="ICommand" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0d5d7f32-a183-444e-86ae-87025e757e8d" name="CategoryViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0e208049-ef12-4281-94a5-f185f8fdc48a" />
+              <targetEnds>
+                <association Id="f423a5f3-8b7b-4410-8c6a-0a5ebb27a7cf" isDerived="false" sourceEndRoleName="CategoryViewModel" targetEndRoleName="TaskListItemViewModel" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="f8cef9fb-582e-4fee-979b-7a73c388bedc" LastKnownName="TaskListItemViewModel" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bad06758-618d-420c-bd62-a1e9ee8e806c" name="CategoryViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="f6296876-3673-4d66-b69f-199aba5cddf8" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="55c72ba4-d635-47c4-8801-87dd19efa0fc" name="TaskListItemViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="deaaac6f-07c8-4632-8d54-d410c5afdea0" name="Lower" value="*">
+                            <elementDefinition Id="ab841262-76aa-45ee-a32a-1333e6ec0aa6" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="726c7d6f-8650-4976-9ff0-5017c5a00cd0" name="Upper" value="*">
+                            <elementDefinition Id="174a19e2-2dfb-4170-bda3-9ceb07db617f" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="962e6cfa-2240-4101-81d1-a9256af74a57" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="2c06876f-ef7c-4ed2-b789-7cfabbfe80cd" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="92b2c4db-2a5f-49ba-a29e-05af4499b5a7" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="649aa0db-26de-40ac-973c-76fe517c24bb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="047f959f-07f1-4c24-b590-6374a5d9e0fd" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="63e7ae2b-8125-449a-9557-b45af2a6f299" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d34e956a-43fb-4aed-9501-3ff2a4052013" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="047f959f-07f1-4c24-b590-6374a5d9e0fd" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="dfae75a2-8a99-4f4f-b6a5-2ded3c2f9d58" name="Tasks" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e80fca64-9ea6-43e7-9da4-cf1db63bf562" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="86f102e1-ffec-43f9-b3f3-817b20ab01ae" LastKnownName="ObservableCollection&lt;TaskListItemViewModel&gt;" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="b6a9f18b-2c9b-43b0-b5bb-c83cc76ebcb9" name="IApplication" isAbstract="false" isLeaf="false" cachedFullName="IApplication">
+        <elementDefinition Id="4bf42ddd-0c92-4288-8171-176a607666b7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dae69439-c19f-473a-8e82-f1285699cc17" name="BaseListItemViewModel" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="89814960-6081-4eb6-9b9d-626b1b93da2b" />
+        <ownedAttributesInternal>
+          <property Id="754a2bd2-0ff8-4a23-b49b-83e721186338" name="Delete" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4aba8531-6479-4b94-a82f-1a5f5fe5d50e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3a2ecbe0-9d9b-4fd6-8206-52f268f5298a" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+          <property Id="b8aa9305-28b0-45fa-b27d-d7b68e850aef" name="Selected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e3aa8b11-1036-45f5-ad9f-6a810391669d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3a2ecbe0-9d9b-4fd6-8206-52f268f5298a" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+          <property Id="75032525-b043-4441-8252-e4023c8d0eb5" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="784f308e-9bdc-4805-9207-8dac7f8fdd4e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="047f959f-07f1-4c24-b590-6374a5d9e0fd" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="00418b89-4c0f-40c9-bdac-4e1db8ceda27" name="Subtitle" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fd8d74b2-be16-4368-826b-bb2da6d6e326" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="047f959f-07f1-4c24-b590-6374a5d9e0fd" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="125fbf68-8941-44ce-8282-7e1c7bd838e8" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="41aca5c1-c686-4793-bae0-ec9dc4c9aa0b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="047f959f-07f1-4c24-b590-6374a5d9e0fd" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="155319cd-2e62-4009-81b7-20f95a0ae707" name="BaseListItemViewModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cf1d8a71-8a4d-4dfe-8604-d03e227ab3ae" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="047f959f-07f1-4c24-b590-6374a5d9e0fd" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4631f017-c014-4d30-94de-c42a2ec9a43c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="86f102e1-ffec-43f9-b3f3-817b20ab01ae" name="ObservableCollection&lt;TaskListItemViewModel&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;TaskListItemViewModel&gt;">
+        <elementDefinition Id="93b9112d-d536-4d09-ae87-7a4735affff1" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c78ba1b9-f3de-478a-bfd0-96bb55036e07" name="Designs">
+    <elementDefinition Id="3d630edb-3337-47c3-962c-dff5243b7e0c" />
+  </package>
+</logicalClassDesignerModel>

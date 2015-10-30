@@ -10,12 +10,20 @@ namespace DropIt.Data.ViewModels.Bases
 	{
 		IApplication app;
 
+        /// <summary>
+        /// Creates an instance for a typical view model.
+        /// </summary>
+        /// <param name="app">The base application for interactions with the navigation of an app.</param>
 		protected BaseViewModel (IApplication app)
 		{
 			this.app = app;
 		}
 
 		bool isBusy;
+
+        /// <summary>
+        /// When set, it changes the Network icon to show active.
+        /// </summary>
 		public bool IsBusy {
 			get { 
 				return isBusy;
@@ -29,6 +37,9 @@ namespace DropIt.Data.ViewModels.Bases
 			}
 		}
 
+        /// <summary>
+        /// Gets the navigation item for the given application. Usefull for when wanting to push or pop pages.
+        /// </summary>
 		public INavigation Navigation {
 			get { 
 				var mainPage = app.MainPage;
@@ -47,8 +58,15 @@ namespace DropIt.Data.ViewModels.Bases
 
 		#region Property Changed Implementation
 
+        /// <summary>
+        /// The event for when a property changes.
+        /// </summary>
 		public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Notify any bound items that a property value has been changed.
+        /// </summary>
+        /// <param name="propertyName">The property that had changed.</param>
 		protected virtual void OnPropertyChanged(string propertyName)
 		{
 			if (PropertyChanged != null)
@@ -61,6 +79,12 @@ namespace DropIt.Data.ViewModels.Bases
 		#endregion
 	}
 
+    /// <summary>
+    /// Provides a more generic view model for a page. This is usefull when you have a 
+    /// data item backing the view model. For example, if on an edit screen, the DataSource
+    /// could possibly be the item you are changing values on.
+    /// </summary>
+    /// <typeparam name="T">The item type to use for a DataSource.</typeparam>
 	public abstract class BaseViewModel<T> : BaseViewModel where T : class
 	{
 		protected BaseViewModel (IApplication app) 
@@ -69,6 +93,9 @@ namespace DropIt.Data.ViewModels.Bases
 
 		}
 		private T dataSource;
+        /// <summary>
+        /// The Object that is usually used for edits/creates on a page.
+        /// </summary>
 		public T DataSource {
 			get { return dataSource; }
 			set {
