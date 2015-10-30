@@ -33,8 +33,8 @@ namespace DropIt.Pages
                         originalPadding.Right, originalPadding.Bottom);
                 }
             }
-            //hide the title bar. may want to take that out?
-            SetHasNavigationBar(content, false);
+
+            Title = content.Title;
 
             //wire up two events to fire when a page is added or removed.
             Pushed += CustomNavigationPage_Pushed;

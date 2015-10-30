@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e715296b-288a-4c69-aaca-09e925501560" name="HomePage" linkedPackageId="7ddc0e06-6878-4786-98c3-d936d1354853" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="e715296b-288a-4c69-aaca-09e925501560" name="HomePage" linkedPackageId="7ddc0e06-6878-4786-98c3-d936d1354853" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="60b78072-b3fb-48d4-9641-563214bf11ab">
       <elementDefinition Id="864d7498-6ba8-41c3-919e-6d0b6fa9e012" />
@@ -13,7 +13,11 @@
     </comment>
     <comment Id="d1f3fbdd-f51a-4684-9d6b-aba21a62ee07">
       <elementDefinition Id="52e79cf1-144b-4206-96c9-a67d04d74cd7" />
-      <body>MessagingCenter.Send("Delete")</body>
+      <body>MessagingCenter.Send("ProjectDelete")</body>
+    </comment>
+    <comment Id="d658ad53-7d44-49b0-81e1-ce707fc4f2ca">
+      <elementDefinition Id="6599cf4d-9b38-440c-9fc8-0e94801adc62" />
+      <body>MessagingCenter.Send("ProjectSelected")</body>
     </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
@@ -165,33 +169,59 @@
           <decisionNode Id="9ffb4191-4da9-408e-84de-493f1fa68a9f" name="Decision1" isLeaf="false">
             <elementDefinition Id="9b96ee38-44b3-4fc5-8694-c3aeacf1da4d" />
             <flowNodeTargets>
-              <controlFlow Id="0812437c-6919-4935-93c0-1caf0be36d2f" guard="Long pressed/swipes item" isLeaf="false">
-                <decisionNodeMoniker Id="3cb63c3f-99c7-4ced-a3c1-f56b8a041bc1" LastKnownName="Decision2" />
-                <elementDefinition Id="16530f4d-2b40-4a7f-bee9-5e6d8404e096" />
+              <controlFlow Id="08c148d4-64b3-4f18-ae31-41230cb54c34" guard="Long pressed/swipes item" isLeaf="false">
+                <decisionNodeMoniker Id="21348112-062e-4021-87d6-8fe26c2d21f3" LastKnownName="Decision2" />
+                <elementDefinition Id="7ff93975-83e4-4a4e-8255-ea738ac25d4a" />
+              </controlFlow>
+              <controlFlow Id="e7f78976-fe2d-480b-ac77-6403f883df41" isLeaf="false">
+                <sendSignalActionMoniker Id="8fde0f65-1d31-4e21-b6bb-6bd5338175fb" LastKnownName="Send Selected Message" />
+                <elementDefinition Id="0f400d54-1a9a-4865-a779-236ed4f482c5" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <activityFinalNode Id="9149a8e9-9517-4391-a293-a31496f7c590" name="ActivityFinal1" isLeaf="false">
             <elementDefinition Id="8af1c02d-17e0-4186-b496-5d53a10a6365" />
           </activityFinalNode>
-          <decisionNode Id="3cb63c3f-99c7-4ced-a3c1-f56b8a041bc1" name="Decision2" isLeaf="false">
-            <elementDefinition Id="1eeaa87b-a9b3-4a4f-b2d3-e525d258d5af" />
+          <decisionNode Id="21348112-062e-4021-87d6-8fe26c2d21f3" name="Decision2" isLeaf="false">
+            <elementDefinition Id="430a6d5f-da49-4318-ab16-b19d11b3a9e7" />
             <flowNodeTargets>
-              <controlFlow Id="3025dc6d-7c0c-4700-a1cb-1b70ab9f674d" isLeaf="false">
-                <sendSignalActionMoniker Id="c397861b-ea39-4af5-bffb-d0ef417a90fd" LastKnownName="Send Delete Message" />
-                <elementDefinition Id="2b68160f-1e61-4863-be42-dbdd7a7e44c8" />
+              <controlFlow Id="10f802ec-18e5-4421-91d1-36a90ba381b9" guard="Presses Delete" isLeaf="false">
+                <sendSignalActionMoniker Id="dc06ad56-6f73-49fe-afc7-71e5cde271a2" LastKnownName="Send Delete Message" />
+                <elementDefinition Id="171e0afe-25af-4174-b4c6-312b491ce6b3" />
+              </controlFlow>
+              <controlFlow Id="91021796-ba13-44c2-b1dc-16265f3b87b7" guard="Cancels" isLeaf="false">
+                <joinNodeMoniker Id="d0710de0-0537-41ae-861a-4d0eff02581b" LastKnownName="Join1" />
+                <elementDefinition Id="16770694-5349-4f75-8f80-2b30da6e2038" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <sendSignalAction Id="c397861b-ea39-4af5-bffb-d0ef417a90fd" name="Send Delete Message" isLeaf="false">
-            <elementDefinition Id="e0024cc6-088a-4634-a5ee-ef8ae2c80af0" />
+          <sendSignalAction Id="dc06ad56-6f73-49fe-afc7-71e5cde271a2" name="Send Delete Message" isLeaf="false">
+            <elementDefinition Id="eeb0d96c-7493-4201-8085-f30c961e93e2" />
             <flowNodeTargets>
-              <controlFlow Id="4a3d262d-2f1c-4d73-9705-38de82174577" isLeaf="false">
+              <controlFlow Id="4a69a706-dd09-4a61-aaac-a5b8cfa2e138" isLeaf="false">
                 <activityFinalNodeMoniker Id="9149a8e9-9517-4391-a293-a31496f7c590" LastKnownName="ActivityFinal1" />
-                <elementDefinition Id="7b2bc16c-eca0-491d-94f0-b4c925b7a050" />
+                <elementDefinition Id="db6e64e5-efb5-4950-9c3d-4b94a2af037f" />
               </controlFlow>
             </flowNodeTargets>
           </sendSignalAction>
+          <sendSignalAction Id="8fde0f65-1d31-4e21-b6bb-6bd5338175fb" name="Send Selected Message" isLeaf="false">
+            <elementDefinition Id="88163dbf-1c14-42f7-b304-33bae41b5583" />
+            <flowNodeTargets>
+              <controlFlow Id="e4edd506-c042-451a-8e2a-b6c889168607" isLeaf="false">
+                <callBehaviorActionMoniker Id="26f32f16-383b-4304-a397-bf2b21bd8710" LastKnownName="Show Categories" />
+                <elementDefinition Id="e720cbc1-5505-4e1e-82ea-2427d07e84df" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <callBehaviorAction Id="26f32f16-383b-4304-a397-bf2b21bd8710" name="Show Categories" isLeaf="false">
+            <elementDefinition Id="7dc3971b-d4ea-4ba4-999e-d64da17016dc" />
+            <flowNodeTargets>
+              <controlFlow Id="a7dab19c-1234-4a7b-b9a4-04fbbc15fa5a" isLeaf="false">
+                <activityFinalNodeMoniker Id="9149a8e9-9517-4391-a293-a31496f7c590" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="58c0e0f3-c915-4143-a99a-325c557a4c37" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callBehaviorAction>
         </nodes>
       </activity>
     </activityRootModelHasActivity>

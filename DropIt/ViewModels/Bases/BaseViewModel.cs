@@ -4,7 +4,7 @@ using DropIt.Data.Interfaces.Pages;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 
-namespace DropIt.Data.ViewModels.Bases
+namespace DropIt.ViewModels.Bases
 {
 	public abstract class BaseViewModel : INotifyPropertyChanged 
 	{
@@ -37,6 +37,27 @@ namespace DropIt.Data.ViewModels.Bases
 			}
 		}
 
+        string title;
+
+        /// <summary>
+        /// When set, it changes the Title of the page.
+        /// </summary>
+		public string Title
+        {
+            get
+            {
+                return title;
+            }
+            set
+            {
+                if (app != null && app.MainPage != null)
+                    app.MainPage.Title = value;
+
+                title = value;
+                OnPropertyChanged("Title");
+            }
+        }
+
         /// <summary>
         /// Gets the navigation item for the given application. Usefull for when wanting to push or pop pages.
         /// </summary>
@@ -45,7 +66,7 @@ namespace DropIt.Data.ViewModels.Bases
 				var mainPage = app.MainPage;
 				if (mainPage != null) {
 					if (mainPage is NavigationPage) {
-						return (INavigation)mainPage;
+						return mainPage.Navigation;
 					}
 					if (mainPage is TabbedPage) {
 						return ((TabbedPage)mainPage).Children [0].Navigation;

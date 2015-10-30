@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DropIt.cs" />
+    <Compile Include="Pages\CategoriesListPage.xaml.cs">
+      <DependentUpon>CategoriesListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CustomNavigationPage.cs" />
     <Compile Include="Pages\ProjectListPage.xaml.cs">
       <DependentUpon>ProjectListPage.xaml</DependentUpon>
@@ -39,6 +42,14 @@
     <Compile Include="Data\User.cs" />
     <Compile Include="Data\Admin.cs" />
     <Compile Include="Services\LoginService.cs" />
+    <Compile Include="ViewModels\Bases\BaseListItemViewModel.cs" />
+    <Compile Include="ViewModels\Bases\BaseListViewModel.cs" />
+    <Compile Include="ViewModels\Bases\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Categories\CategoryListItemViewModel.cs" />
+    <Compile Include="ViewModels\Categories\CategoriesListViewModel.cs" />
+    <Compile Include="ViewModels\Projects\ProjectsListViewModel.cs" />
+    <Compile Include="ViewModels\Projects\ProjectViewModel.cs" />
+    <Compile Include="ViewModels\Tasks\TaskItemViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -67,5 +78,11 @@
       <Project>{e7eadb65-e364-418d-8845-eb723bd149c1}</Project>
       <Name>DropIt.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\CategoriesListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -43,7 +43,7 @@ namespace DropIt.Droid.Dependencies
             //get the base web view to show for logging in.
             baseAuthenticator.AllowCancel = false;
             //set the title
-            webAuth.Title = "Sign into DropIt";
+            baseAuthenticator.Title = "Sign into DropIt";
             return baseAuthenticator;
         }
 

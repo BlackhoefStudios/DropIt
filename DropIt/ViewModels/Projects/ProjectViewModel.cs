@@ -1,4 +1,4 @@
-﻿using DropIt.Data.ViewModels.Bases;
+﻿using DropIt.ViewModels.Bases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace DropIt.Data.ViewModels.Projects
+namespace DropIt.ViewModels.Projects
 {
     public sealed class ProjectViewModel : BaseListItemViewModel
     {

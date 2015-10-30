@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DropIt.Services;
 using Xamarin.Forms;
-using DropIt.Data.ViewModels.Projects;
+using DropIt.ViewModels.Projects;
 using DropIt.Data.Interfaces.Pages;
 
 namespace DropIt.Pages

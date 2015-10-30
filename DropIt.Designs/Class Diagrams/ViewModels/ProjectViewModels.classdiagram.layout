@@ -22,7 +22,7 @@
       </nestedChildShapes>
     </classShape>
     <packageShape Id="c9262ffb-034f-4bcf-95d9-14b125dbb379" absoluteBounds="0.5, 2.625, 9, 2.5" customColor="255, 249, 230" hideQualifiedName="false">
-      <packageMoniker Id="252054d6-816e-4f0d-b0d4-ed756c0c583a" LastKnownName="DropIt.Data.ViewModels.Projects" />
+      <packageMoniker Id="252054d6-816e-4f0d-b0d4-ed756c0c583a" LastKnownName="DropIt.ViewModels.Projects" />
       <nestedChildShapes>
         <classShape Id="cd26b626-b306-41f1-bc5a-fad2054cd69a" absoluteBounds="1.125, 3.125, 3.75, 1.2226562251647315" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
           <classMoniker Id="accda596-9730-4753-8c4d-017991636d85" LastKnownName="ProjectsListViewModel" />

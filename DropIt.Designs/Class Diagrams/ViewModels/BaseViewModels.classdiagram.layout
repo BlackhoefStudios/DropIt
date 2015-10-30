@@ -10,7 +10,7 @@
       </nestedChildShapes>
     </interfaceShape>
     <packageShape Id="cb1dfae1-98b6-4763-b40c-9d53eef1d464" absoluteBounds="0.625, 2.25, 9.375, 3.5" customColor="255, 249, 230" hideQualifiedName="false">
-      <packageMoniker Id="deb1d4ed-e98e-4aec-9e17-7cf239eef872" LastKnownName="DropIt.Data.ViewModels.Bases" />
+      <packageMoniker Id="deb1d4ed-e98e-4aec-9e17-7cf239eef872" LastKnownName="DropIt.ViewModels.Bases" />
       <nestedChildShapes>
         <classShape Id="16cb1659-51f9-4a05-8eae-701476da769d" absoluteBounds="0.875, 2.75, 2.5, 1.7031249602635699" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
           <classMoniker Id="e482d8af-cf29-4dfb-9dcd-fb8167253985" LastKnownName="BaseViewModel" />
@@ -60,7 +60,7 @@
         <interfaceShapeMoniker Id="91813f5c-b720-4cec-8296-a4bfa93a8214" />
       </nodes>
     </realizationConnector>
-    <generalizationConnector edgePoints="[(3.875 : 3.28124999006589); (3.375 : 3.28124999006589)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+    <generalizationConnector edgePoints="[(3.875 : 3.28124999006589); (3.375 : 3.28124999006589)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
       <generalizationMoniker Id="4ea131d2-c3a2-4233-9950-b5e7de45bc82" />
       <relativeChildShapes />
       <nodes>

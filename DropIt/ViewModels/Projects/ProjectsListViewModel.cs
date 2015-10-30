@@ -9,10 +9,11 @@ using DropIt.Data.Interfaces.Services;
 using DropIt.Data.Interfaces.Users;
 using Xamarin.Forms;
 using DropIt.Data.Services;
-using DropIt.Data.ViewModels.Bases;
+using DropIt.ViewModels.Bases;
 using System.Windows.Input;
+using DropIt.Pages;
 
-namespace DropIt.Data.ViewModels.Projects
+namespace DropIt.ViewModels.Projects
 {
     /// <summary>
     /// A class for the ProjectsList page. 
@@ -122,6 +123,7 @@ namespace DropIt.Data.ViewModels.Projects
                 //user selected an item, so push a new page (the categories view page).
                 //also, deselect the project so it doesn't remain highlighted.
                 Selected = null;
+                Navigation.PushAsync(new CategoriesListPage(project));
             });
         }
 

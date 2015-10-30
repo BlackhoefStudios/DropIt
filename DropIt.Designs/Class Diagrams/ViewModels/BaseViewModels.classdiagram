@@ -74,7 +74,7 @@
   </appliedStereotypesInternal>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
-      <package Id="deb1d4ed-e98e-4aec-9e17-7cf239eef872" name="DropIt.Data.ViewModels.Bases">
+      <package Id="deb1d4ed-e98e-4aec-9e17-7cf239eef872" name="DropIt.ViewModels.Bases">
         <elementDefinition Id="5d81a35d-1e6c-4796-850a-b81846ef5758" />
         <packagedElements>
           <packageHasNamedElement>

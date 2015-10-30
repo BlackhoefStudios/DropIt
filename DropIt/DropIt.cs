@@ -13,7 +13,7 @@ namespace DropIt
 	    public App()
 	    {
             // The root page of your application
-            MainPage = new CustomNavigationPage(new HomePage());
+            MainPage = new CustomNavigationPage(new ProjectListPage());
 	    }
 
 	    protected override void OnStart ()

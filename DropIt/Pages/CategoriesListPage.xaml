@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DropIt.Pages.CategoriesListPage" Title="{Binding Title}">
+  <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsBusy}"
+            ItemsSource="{Binding DataSource, Mode=TwoWay}" SelectedItem="{Binding Selected, Mode=TwoWay}"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+             GroupDisplayBinding="{Binding Id}" IsGroupingEnabled="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text="{Binding Name}" Detail="{Binding Subtitle, StringFormat='{0}'}"
+                  Command="{Binding Selected}">
+          <TextCell.ContextActions>
+            <MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
+               Text="Delete" IsDestructive="True" />
+          </TextCell.ContextActions>
+        </TextCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

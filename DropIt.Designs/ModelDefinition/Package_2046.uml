@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="552915b3-096d-48b0-a5e7-1c734b5cf625"
-  name="DropIt.Data.ViewModels.Categories" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  name="DropIt.ViewModels.Categories" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <packagedElements>
     <packageHasNamedElement>
       <class
@@ -106,8 +106,15 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c5e44a1c-44d4-46ed-b73b-2c516de4487f"
+                  Id="1395175e-1c9a-4020-a2e0-ffbd637c3e42"
                   name="IApplication app"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="370b48ae-8afa-4103-bd09-917cd2df12c2"
+                  name="ProjectViewModel project"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -185,6 +192,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="095fc358-36f3-443b-aa16-7d004da6fea3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="698e45e5-aceb-4e3c-b2f2-534c8bc563ac"
+              LastKnownName="System::Collections::ObjectModel::ObservableCollection"
+              LastKnownLocation="Designs.uml" />
+          </generalization>
+        </generalsInternal>
         <targetEnds>
           <association
             Id="2c06876f-ef7c-4ed2-b789-7cfabbfe80cd"

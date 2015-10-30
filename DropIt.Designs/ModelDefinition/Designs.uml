@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="3d630edb-3337-47c3-962c-dff5243b7e0c"
   name="Designs" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -45,7 +45,11 @@
     </comment>
     <comment
       Id="52e79cf1-144b-4206-96c9-a67d04d74cd7">
-      <body>MessagingCenter.Send("Delete")</body>
+      <body>MessagingCenter.Send("ProjectDelete")</body>
+    </comment>
+    <comment
+      Id="6599cf4d-9b38-440c-9fc8-0e94801adc62">
+      <body>MessagingCenter.Send("ProjectSelected")</body>
     </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
@@ -6713,12 +6717,20 @@
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="16530f4d-2b40-4a7f-bee9-5e6d8404e096"
+                Id="7ff93975-83e4-4a4e-8255-ea738ac25d4a"
                 guard="Long pressed/swipes item"
                 isLeaf="false">
                 <decisionNodeMoniker
-                  Id="1eeaa87b-a9b3-4a4f-b2d3-e525d258d5af"
+                  Id="430a6d5f-da49-4318-ab16-b19d11b3a9e7"
                   LastKnownName="Decision2"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0f400d54-1a9a-4865-a779-236ed4f482c5"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="88163dbf-1c14-42f7-b304-33bae41b5583"
+                  LastKnownName="Send Selected Message"
                   LastKnownLocation="Designs.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -6728,27 +6740,37 @@
             name="ActivityFinal1"
             isLeaf="false" />
           <decisionNode
-            Id="1eeaa87b-a9b3-4a4f-b2d3-e525d258d5af"
+            Id="430a6d5f-da49-4318-ab16-b19d11b3a9e7"
             name="Decision2"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="2b68160f-1e61-4863-be42-dbdd7a7e44c8"
+                Id="171e0afe-25af-4174-b4c6-312b491ce6b3"
+                guard="Presses Delete"
                 isLeaf="false">
                 <sendSignalActionMoniker
-                  Id="e0024cc6-088a-4634-a5ee-ef8ae2c80af0"
+                  Id="eeb0d96c-7493-4201-8085-f30c961e93e2"
                   LastKnownName="Send Delete Message"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="16770694-5349-4f75-8f80-2b30da6e2038"
+                guard="Cancels"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="60fc1f74-aafa-4ac0-9f65-aceb08ec5546"
+                  LastKnownName="Join1"
                   LastKnownLocation="Designs.uml" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <sendSignalAction
-            Id="e0024cc6-088a-4634-a5ee-ef8ae2c80af0"
+            Id="eeb0d96c-7493-4201-8085-f30c961e93e2"
             name="Send Delete Message"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="7b2bc16c-eca0-491d-94f0-b4c925b7a050"
+                Id="db6e64e5-efb5-4950-9c3d-4b94a2af037f"
                 isLeaf="false">
                 <activityFinalNodeMoniker
                   Id="8af1c02d-17e0-4186-b496-5d53a10a6365"
@@ -6757,6 +6779,36 @@
               </controlFlow>
             </flowNodeTargets>
           </sendSignalAction>
+          <sendSignalAction
+            Id="88163dbf-1c14-42f7-b304-33bae41b5583"
+            name="Send Selected Message"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e720cbc1-5505-4e1e-82ea-2427d07e84df"
+                isLeaf="false">
+                <callBehaviorActionMoniker
+                  Id="7dc3971b-d4ea-4ba4-999e-d64da17016dc"
+                  LastKnownName="Show Categories"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <callBehaviorAction
+            Id="7dc3971b-d4ea-4ba4-999e-d64da17016dc"
+            name="Show Categories"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="58c0e0f3-c915-4143-a99a-325c557a4c37"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="8af1c02d-17e0-4186-b496-5d53a10a6365"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Designs.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callBehaviorAction>
         </nodes>
       </activity>
     </packageHasNamedElement>
@@ -6985,13 +7037,13 @@
     <packageHasNamedElement>
       <packageMoniker
         Id="5d81a35d-1e6c-4796-850a-b81846ef5758"
-        LastKnownName="DropIt.Data.ViewModels.Bases"
+        LastKnownName="DropIt.ViewModels.Bases"
         LastKnownLocation="Package_2334.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
         Id="b1dff565-80f2-4f13-bdad-ca3273953e06"
-        LastKnownName="DropIt.Data.ViewModels.Projects"
+        LastKnownName="DropIt.ViewModels.Projects"
         LastKnownLocation="Package_2347.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -7003,7 +7055,7 @@
     <packageHasNamedElement>
       <packageMoniker
         Id="552915b3-096d-48b0-a5e7-1c734b5cf625"
-        LastKnownName="DropIt.Data.ViewModels.Categories"
+        LastKnownName="DropIt.ViewModels.Categories"
         LastKnownLocation="Package_2046.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -7011,6 +7063,35 @@
         Id="b13eb3c1-8238-4070-8d09-f5fa6866a112"
         LastKnownName="DropIt.Data.Interfaces.Pages"
         LastKnownLocation="Package_2050.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="698e45e5-aceb-4e3c-b2f2-534c8bc563ac"
+        name="System::Collections::ObjectModel::ObservableCollection"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="4e145363-fa5d-4e5c-afff-b09487204182"
+            parameters=""
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="60ba0401-1cf4-46b9-8c2c-5a649a0bc069">
+                <ownedParameterableElement>
+                  <class
+                    Id="b0ee46f0-cbb3-43ff-9161-88252132e37f"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

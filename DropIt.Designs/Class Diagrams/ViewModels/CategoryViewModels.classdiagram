@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="07b486e8-8788-4ea3-b156-60972d24f5c8">
-      <profileInstance Id="0caaff29-d4ce-468d-a8ff-51c7c6331590" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ec1e1946-29d1-4a29-9eb6-23e8f8e7c146">
-      <profileInstance Id="d3fbcbfe-dfb6-45ae-8719-e88f9d3bd011" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="be514f91-f37c-4204-83e4-2493fa561c87">
-      <profileInstance Id="73708445-fb03-4887-885c-51355a5c3fa2" name="CSharpProfile">
-        <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
-      </profileInstance>
-      <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="d46db457-ca0c-41eb-9cc7-ce1df89e457f">
-      <profileInstance Id="c3bc9e16-d220-49c3-a2bc-251205323d1f" name="TextTemplateBindings">
-        <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
-      </profileInstance>
-      <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="10989251-476e-4ea8-9412-bfd23b0f3373" name="BaseListViewModel" isAbstract="true" isLeaf="false" isActiveClass="false">
@@ -130,6 +104,12 @@
               <referencedTypeMoniker Id="f1b5ccbc-2e3c-4a05-badf-56eae453aefa" LastKnownName="ObservableCollection&lt;T&gt;" />
             </type_NamedElement>
           </property>
+          <property Id="d9bae6ea-7018-4329-b659-96e7c94bd2e0" name="Selected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d86953b7-eaec-4ffd-acff-2336a6bbb262" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e5f0ec19-c64c-475c-9d4e-c708605c88c1" LastKnownName="T" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -144,7 +124,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasPackages>
-      <package Id="9577d623-a97b-44f9-b91d-40103e7a767c" name="DropIt.Data.ViewModels.Categories">
+      <package Id="9577d623-a97b-44f9-b91d-40103e7a767c" name="DropIt.ViewModels.Categories">
         <elementDefinition Id="552915b3-096d-48b0-a5e7-1c734b5cf625" />
         <packagedElements>
           <packageHasNamedElement>
@@ -197,8 +177,13 @@
                   <elementDefinition Id="cd3d2710-4de6-48cb-b6eb-d3d664f3b19f" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="8fbc6f50-3553-4a2c-8ff1-4a46eb527519" name="IApplication app" direction="In" isUnique="false">
-                        <elementDefinition Id="c5e44a1c-44d4-46ed-b73b-2c516de4487f" />
+                      <parameter Id="449eef51-53bc-4fa0-8737-33477b954719" name="IApplication app" direction="In" isUnique="false">
+                        <elementDefinition Id="1395175e-1c9a-4020-a2e0-ffbd637c3e42" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="076683e2-cb42-4baa-9783-ae706230a3b5" name="ProjectViewModel project" direction="In" isUnique="false">
+                        <elementDefinition Id="370b48ae-8afa-4103-bd09-917cd2df12c2" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -234,6 +219,12 @@
           <packageHasNamedElement>
             <class Id="0d5d7f32-a183-444e-86ae-87025e757e8d" name="CategoryViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="0e208049-ef12-4281-94a5-f185f8fdc48a" />
+              <generalsInternal>
+                <generalization Id="1210d32f-a62e-4dfd-bd99-7212e06dba04" isSubstitutable="false">
+                  <classMoniker Id="0971e2aa-1f43-496b-aee2-3c57eea6a15b" LastKnownName="System::Collections::ObjectModel::ObservableCollection" />
+                  <elementDefinition Id="095fc358-36f3-443b-aa16-7d004da6fea3" />
+                </generalization>
+              </generalsInternal>
               <targetEnds>
                 <association Id="f423a5f3-8b7b-4410-8c6a-0a5ebb27a7cf" isDerived="false" sourceEndRoleName="CategoryViewModel" targetEndRoleName="TaskListItemViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="f8cef9fb-582e-4fee-979b-7a73c388bedc" LastKnownName="TaskListItemViewModel" />
@@ -349,8 +340,59 @@
         <elementDefinition Id="93b9112d-d536-4d09-ae87-7a4735affff1" />
       </referencedType>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e5f0ec19-c64c-475c-9d4e-c708605c88c1" name="T" isAbstract="false" isLeaf="false" cachedFullName="T">
+        <elementDefinition Id="9f0ba443-9c2c-43a8-85f6-ced625565643" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0971e2aa-1f43-496b-aee2-3c57eea6a15b" name="System::Collections::ObjectModel::ObservableCollection" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="698e45e5-aceb-4e3c-b2f2-534c8bc563ac" />
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="acf40c3b-9516-40f8-911f-c5836b34bcdb" parameters="" isLeaf="false">
+            <elementDefinition Id="4e145363-fa5d-4e5c-afff-b09487204182" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="7a7166b6-668a-48df-8fbb-9b0d41c11996">
+                <elementDefinition Id="60ba0401-1cf4-46b9-8c2c-5a649a0bc069" />
+                <ownedParameterableElement>
+                  <class Id="9d8dc645-eda1-41a8-b9a7-72e2e3814f2c" name="T" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="b0ee46f0-cbb3-43ff-9161-88252132e37f" />
+                  </class>
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="c78ba1b9-f3de-478a-bfd0-96bb55036e07" name="Designs">
     <elementDefinition Id="3d630edb-3337-47c3-962c-dff5243b7e0c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="07b486e8-8788-4ea3-b156-60972d24f5c8">
+        <profileInstance Id="0caaff29-d4ce-468d-a8ff-51c7c6331590" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ec1e1946-29d1-4a29-9eb6-23e8f8e7c146">
+        <profileInstance Id="d3fbcbfe-dfb6-45ae-8719-e88f9d3bd011" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="be514f91-f37c-4204-83e4-2493fa561c87">
+        <profileInstance Id="73708445-fb03-4887-885c-51355a5c3fa2" name="CSharpProfile">
+          <elementDefinition Id="87fac1a1-51f5-4ea2-a6b0-04f900917022" />
+        </profileInstance>
+        <elementDefinition Id="b5643722-69cb-4839-a2f4-baed5d6b18a1" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d46db457-ca0c-41eb-9cc7-ce1df89e457f">
+        <profileInstance Id="c3bc9e16-d220-49c3-a2bc-251205323d1f" name="TextTemplateBindings">
+          <elementDefinition Id="2cdee3cd-0914-4af5-9dcd-3164b5a86baf" />
+        </profileInstance>
+        <elementDefinition Id="abfbf9ce-1854-47b1-a584-cf39584b4ca1" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
