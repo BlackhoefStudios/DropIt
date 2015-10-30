@@ -3,3 +3,4 @@
 *.a filter=lfs diff=lfs merge=lfs -text
 *.dll filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
+Documents filter=lfs diff=lfs merge=lfs -text
