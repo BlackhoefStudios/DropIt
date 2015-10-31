@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DropIt.Services;
 using Xamarin.Forms;
 using DropIt.ViewModels.Projects;
-using DropIt.Data.Interfaces.Pages;
+using BlackhoefStudios.Common.Interfaces.Pages;
 
 namespace DropIt.Pages
 {

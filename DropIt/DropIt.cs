@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
-using DropIt.Data.Interfaces.Pages;
-using DropIt.Data.Interfaces.Services;
 using Xamarin.Forms;
 using DropIt.Pages;
 using DropIt.Services;
+using BlackhoefStudios.Common.Interfaces.Pages;
 
 namespace DropIt
 {

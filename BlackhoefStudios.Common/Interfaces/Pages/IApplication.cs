@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace DropIt.Data.Interfaces.Pages
+namespace BlackhoefStudios.Common.Interfaces.Pages
 {
     /// <summary>
     /// Represents a Xamarin.Forms application that is running.

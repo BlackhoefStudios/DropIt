@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DropIt.Data.Interfaces.Pages
+namespace BlackhoefStudios.Common.Interfaces.Pages
 {
     /// <summary>
     /// Represents an object that sends and recieves messages using the Xamarin.Forms.MessagingCenter.

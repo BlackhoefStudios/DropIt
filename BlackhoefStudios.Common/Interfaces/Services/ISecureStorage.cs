@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DropIt.Data.Interfaces.Services
+namespace BlackhoefStudios.Common.Interfaces.Services
 {
     //ORIGINAL: https://github.com/XLabs/Xamarin-Forms-Labs/blob/master/src/Platform/XLabs.Platform/Services/ISecureStorage.cs
 

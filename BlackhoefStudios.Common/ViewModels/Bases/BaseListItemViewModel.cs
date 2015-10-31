@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DropIt.ViewModels.Bases
+namespace BlackhoefStudios.ViewModels.Bases
 {
     /// <summary>
     /// Represents the basic structure for a ListView cell.

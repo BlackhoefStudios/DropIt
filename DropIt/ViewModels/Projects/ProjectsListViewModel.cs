@@ -4,14 +4,15 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DropIt.Data.Interfaces.Pages;
 using DropIt.Data.Interfaces.Services;
 using DropIt.Data.Interfaces.Users;
 using Xamarin.Forms;
 using DropIt.Data.Services;
-using DropIt.ViewModels.Bases;
 using System.Windows.Input;
 using DropIt.Pages;
+using BlackhoefStudios.Common.Interfaces.Pages;
+using BlackhoefStudios.ViewModels.Bases;
+using BlackhoefStudios.Common.Interfaces.Services;
 
 namespace DropIt.ViewModels.Projects
 {

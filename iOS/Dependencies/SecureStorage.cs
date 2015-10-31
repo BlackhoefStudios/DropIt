@@ -14,6 +14,7 @@ namespace DropIt.iOS.Dependencies
     using System.Runtime.CompilerServices;
     using Foundation;
     using Security;
+    using BlackhoefStudios.Common.Interfaces.Services;
 
     /// <summary>
     /// Implements <see cref="ISecureStorage"/> for iOS using <see cref="SecKeyChain"/>.

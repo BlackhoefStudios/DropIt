@@ -19,6 +19,7 @@ using Java.Security;
 using Javax.Crypto;
 using Exception = System.Exception;
 using Object = Java.Lang.Object;
+using BlackhoefStudios.Common.Interfaces.Services;
 
 [assembly: Xamarin.Forms.Dependency(typeof(KeyVaultStorage))]
 

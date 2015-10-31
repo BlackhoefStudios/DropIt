@@ -7,6 +7,7 @@ using DropIt.Data.Interfaces.Services;
 using DropIt.Data.Interfaces.Users;
 using DropIt.Data.Services;
 using Xamarin.Forms;
+using BlackhoefStudios.Common.Interfaces.Services;
 
 namespace DropIt.Data.Services
 {

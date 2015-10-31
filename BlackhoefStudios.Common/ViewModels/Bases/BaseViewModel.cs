@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
-using DropIt.Data.Interfaces.Pages;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
+using BlackhoefStudios.Common.Interfaces.Pages;
 
-namespace DropIt.ViewModels.Bases
+namespace BlackhoefStudios.ViewModels.Bases
 {
 	public abstract class BaseViewModel : INotifyPropertyChanged 
 	{

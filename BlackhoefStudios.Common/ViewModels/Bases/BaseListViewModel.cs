@@ -1,4 +1,4 @@
-﻿using DropIt.Data.Interfaces.Pages;
+﻿using BlackhoefStudios.Common.Interfaces.Pages;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DropIt.ViewModels.Bases
+namespace BlackhoefStudios.ViewModels.Bases
 {
     /// <summary>
     /// A base class that provides common interfaces for ListViews.

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="3d630edb-3337-47c3-962c-dff5243b7e0c"
   name="Designs" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -7037,7 +7037,7 @@
     <packageHasNamedElement>
       <packageMoniker
         Id="5d81a35d-1e6c-4796-850a-b81846ef5758"
-        LastKnownName="DropIt.ViewModels.Bases"
+        LastKnownName="BlackhoefStudios.Common.ViewModels.Bases"
         LastKnownLocation="Package_2334.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -7061,7 +7061,7 @@
     <packageHasNamedElement>
       <packageMoniker
         Id="b13eb3c1-8238-4070-8d09-f5fa6866a112"
-        LastKnownName="DropIt.Data.Interfaces.Pages"
+        LastKnownName="BlackhoefStudios.Common.Interfaces.Pages"
         LastKnownLocation="Package_2050.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -7092,6 +7092,24 @@
           </redefinableTemplateSignature>
         </ownedRedefinableTemplateSignatureInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9a16a838-fb7f-4cbe-b8e2-7cfddfbce56b"
+        LastKnownName="BlackhoefStudios.Common.Services"
+        LastKnownLocation="Package_2141.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="959ac6d7-10d5-4b8d-814d-1745c845e886"
+        LastKnownName="Newtonsoft.JSON"
+        LastKnownLocation="Package1_2200.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="da42dc1e-dd12-4001-b1c3-bd92f6b2d8f0"
+        LastKnownName="BlackhoefStudios.Common.Interfaces.Services"
+        LastKnownLocation="Package_2314.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

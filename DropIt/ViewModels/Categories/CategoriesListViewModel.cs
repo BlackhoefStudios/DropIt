@@ -1,5 +1,6 @@
-﻿using DropIt.Data.Interfaces.Pages;
-using DropIt.ViewModels.Bases;
+﻿
+using BlackhoefStudios.Common.Interfaces.Pages;
+using BlackhoefStudios.ViewModels.Bases;
 using DropIt.ViewModels.Projects;
 using DropIt.ViewModels.Tasks;
 using System;
