@@ -13,7 +13,7 @@ namespace DropIt.Pages
 		{
 			var vm = new UserListViewModel ((IApplication)Application.Current);
 			BindingContext = vm;
-			ToolbarItems.Add(new ToolbarItem("NewUser", "add-user.png", async () => {
+			ToolbarItems.Add(new ToolbarItem("New User", "add-user.png", async () => {
 				await Navigation.PushAsync(new AddUserPage());
 			}));
 

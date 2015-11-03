@@ -19,7 +19,7 @@ namespace DropIt.Pages
             var binding = new CategoriesListViewModel((IApplication)Application.Current, project);
             BindingContext = binding;
 
-			ToolbarItems.Add(new ToolbarItem("NewTask", "add-task.png", async () => {
+			ToolbarItems.Add(new ToolbarItem("New Task", "add-task.png", async () => {
 				await Navigation.PushAsync(new TaskDetailsPage());
 			}));
 
