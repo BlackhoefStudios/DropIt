@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BlackhoefStudios.ViewModels.Bases
+namespace BlackhoefStudios.Common.ViewModels.Bases
 {
     /// <summary>
     /// A base class that provides common interfaces for ListViews.
@@ -53,6 +53,17 @@ namespace BlackhoefStudios.ViewModels.Bases
         {
             get; protected set;
         }
+
+		bool fetchingData;
+		public bool IsFetchingData {
+			get {
+				return fetchingData;
+			}
+			set {
+				fetchingData = value;
+				OnPropertyChanged ("IsFetchingData");
+			}
+		}
         
         /// <summary>
         /// Creates an object for interactions with a ListView.

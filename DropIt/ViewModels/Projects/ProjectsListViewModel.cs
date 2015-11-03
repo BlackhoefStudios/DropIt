@@ -13,6 +13,7 @@ using DropIt.Pages;
 using BlackhoefStudios.Common.Interfaces.Pages;
 using BlackhoefStudios.ViewModels.Bases;
 using BlackhoefStudios.Common.Interfaces.Services;
+using BlackhoefStudios.Common.ViewModels.Bases;
 
 namespace DropIt.ViewModels.Projects
 {
@@ -42,13 +43,21 @@ namespace DropIt.ViewModels.Projects
         {
             Refresh = new Command(() =>
             {
-                IsBusy = true;
+				IsFetchingData = true;
 
                 DataSource.Clear();
+
+				DataSource.Add(new ProjectViewModel()
+				{
+					Name = "Diagrams",
+					Id = Guid.NewGuid().ToString(),
+					Subtitle = 0.ToString()
+				});
+					
                 //update list view
                 DataSource.Add(new ProjectViewModel()
                 {
-                    Name = "DropIt Authentication",
+                    Name = "Implement Authentication",
                     Id = Guid.NewGuid().ToString(),
                     Subtitle = 5.ToString()
                 });
@@ -58,21 +67,17 @@ namespace DropIt.ViewModels.Projects
                     Id = Guid.NewGuid().ToString(),
                     Subtitle = 0.ToString()
                 });
-                DataSource.Add(new ProjectViewModel()
-                {
-                    Name = "Diagrams",
-                    Id = Guid.NewGuid().ToString(),
-                    Subtitle = 150.ToString()
-                });
+                
                 DataSource.Add(new ProjectViewModel()
                 {
                     Name = "Tests",
                     Id = Guid.NewGuid().ToString(),
                     Subtitle = 20.ToString()
                 });
-                IsBusy = false;
 
-            }, () => !IsBusy);
+				IsFetchingData = false;
+
+            }, () => !IsFetchingData);
         }
 
         /// <summary>
@@ -125,6 +130,12 @@ namespace DropIt.ViewModels.Projects
                 //also, deselect the project so it doesn't remain highlighted.
                 Selected = null;
                 Navigation.PushAsync(new CategoriesListPage(project));
+            });
+
+            MessagingCenter.Subscribe<Cell>(this, "StartDrag", (cell) =>
+            {
+                var item = cell.BindingContext as ProjectViewModel;
+                item.Dragging = true;
             });
         }
 

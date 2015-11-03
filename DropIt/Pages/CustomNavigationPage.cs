@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Diagnostics;
 using BlackhoefStudios.Common.Interfaces.Pages;
+using System.Linq;
 
 namespace DropIt.Pages
 {
@@ -35,6 +36,7 @@ namespace DropIt.Pages
             }
 
             Title = content.Title;
+			Icon = content.Icon;
 
             //wire up two events to fire when a page is added or removed.
             Pushed += CustomNavigationPage_Pushed;
@@ -72,7 +74,7 @@ namespace DropIt.Pages
         }
 
         private void CustomNavigationPage_Pushed(object sender, NavigationEventArgs e)
-        {
+		{
             //page added to view, so check if we need to subscribe.
             HandleEvent(e.Page, true);
         }

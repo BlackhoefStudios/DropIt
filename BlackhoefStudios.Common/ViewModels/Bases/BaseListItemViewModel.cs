@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackhoefStudios.Common.ViewModels.Bases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace BlackhoefStudios.ViewModels.Bases
     /// <summary>
     /// Represents the basic structure for a ListView cell.
     /// </summary>
-    public abstract class BaseListItemViewModel
+    public abstract class BaseListItemViewModel : ObservableViewModel
     {
         /// <summary>
         /// A unique Id for the given item.
@@ -36,5 +37,16 @@ namespace BlackhoefStudios.ViewModels.Bases
         /// A command that is normally used when the item has been deleted from a list.
         /// </summary>
         public ICommand Delete { get; protected set; }
+
+        private bool dragging;
+        public bool Dragging
+        {
+            get { return dragging; }
+            set
+            {
+                dragging = value;
+                OnPropertyChanged("Dragging");
+            }
+        }
     }
 }

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="DropIt.Pages.UsersListPage"
+	Title="Users" Icon="users.png" IsBusy="{Binding IsFetchingData}">
+	<ContentPage.Content>
+		  <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsFetchingData}"
+            ItemsSource="{Binding DataSource, Mode=TwoWay}" SelectedItem="{Binding Selected, Mode=TwoWay}"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  IsPullToRefreshEnabled="true">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text="{Binding Name}" Command="{Binding Selected}">
+          <TextCell.ContextActions>
+            <MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
+               Text="Delete" IsDestructive="True" />
+          </TextCell.ContextActions>
+        </TextCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+	</ContentPage.Content>
+</ContentPage>

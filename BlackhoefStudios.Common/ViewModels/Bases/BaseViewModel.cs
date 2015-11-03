@@ -4,9 +4,9 @@ using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using BlackhoefStudios.Common.Interfaces.Pages;
 
-namespace BlackhoefStudios.ViewModels.Bases
+namespace BlackhoefStudios.Common.ViewModels.Bases
 {
-	public abstract class BaseViewModel : INotifyPropertyChanged 
+	public abstract class BaseViewModel : ObservableViewModel 
 	{
 		IApplication app;
 
@@ -29,8 +29,20 @@ namespace BlackhoefStudios.ViewModels.Bases
 				return isBusy;
 			}
 			set { 
-				if (app != null && app.MainPage != null)
-					app.MainPage.IsBusy = value;
+				if (app != null && app.MainPage != null) {
+					var tabber = app.MainPage as TabbedPage;
+
+					if (tabber != null) {
+						var navigationPage = tabber.Children [0] as NavigationPage;
+						if (navigationPage != null) {
+							navigationPage.CurrentPage.IsBusy = value;
+						} else {
+							tabber.Children [0].IsBusy = value;
+						}
+					} else {
+						app.MainPage.IsBusy = value;
+					}
+				}
 
 				isBusy = value;
 				OnPropertyChanged ("IsBusy");
@@ -58,6 +70,27 @@ namespace BlackhoefStudios.ViewModels.Bases
             }
         }
 
+		string icon;
+
+		/// <summary>
+		/// When set, it changes the Icon of the page.
+		/// </summary>
+		public string Icon
+		{
+			get
+			{
+				return icon;
+			}
+			set
+			{
+				if (app != null && app.MainPage != null)
+					app.MainPage.Icon = value;
+
+				icon = value;
+				OnPropertyChanged("Icon");
+			}
+		}
+
         /// <summary>
         /// Gets the navigation item for the given application. Usefull for when wanting to push or pop pages.
         /// </summary>
@@ -69,35 +102,13 @@ namespace BlackhoefStudios.ViewModels.Bases
 						return mainPage.Navigation;
 					}
 					if (mainPage is TabbedPage) {
-						return ((TabbedPage)mainPage).Children [0].Navigation;
+						return ((TabbedPage)mainPage).CurrentPage.Navigation;
 					}
 					return app.MainPage.Navigation;
 				}
 				return null;
 			}
 		}
-
-		#region Property Changed Implementation
-
-        /// <summary>
-        /// The event for when a property changes.
-        /// </summary>
-		public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Notify any bound items that a property value has been changed.
-        /// </summary>
-        /// <param name="propertyName">The property that had changed.</param>
-		protected virtual void OnPropertyChanged(string propertyName)
-		{
-			if (PropertyChanged != null)
-			{
-				PropertyChanged(this,
-					new PropertyChangedEventArgs(propertyName));
-			}
-		}
-
-		#endregion
 	}
 
     /// <summary>

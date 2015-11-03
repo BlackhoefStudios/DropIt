@@ -27,6 +27,8 @@ namespace DropIt.Pages
                 {
                     //send a message saying we need to login.
                     MessagingCenter.Send(binding, "NeedsLogIn");
+
+					ToolbarItems.Add(new ToolbarItem("NewProject", "plus.png", () => { }));
                 }
             };
         }

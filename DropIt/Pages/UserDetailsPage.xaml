@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"	
+	x:Class="DropIt.Pages.UserDetailsPage"
+	Title="User Details">
+	<ContentPage.Content>
+		<StackLayout Padding="10" Spacing="20">
+			<Label Text="{Binding Email, StringFormat='Email: {0}'}"/>
+			<Label Text="{Binding DateCreated, StringFormat='Date Created: {0}'}" />
+			
+			<Label Text="Projects user has access to" />
+			<ListView ItemsSource="{Binding DataSource, Mode=TwoWay}" SelectedItem="{Binding Selected, Mode=TwoWay}"
+			        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+				<ListView.ItemTemplate>
+				  <DataTemplate>
+				  	<ViewCell>
+				  		<StackLayout Orientation="Horizontal" Padding="10">
+				  			<Label Text="{Binding Name}" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand"/>
+				  			<Label Text="Is Admin " XAlign="End" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+				  			<Switch IsToggled="{Binding IsAdminOfProject}" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand"/>
+				  		</StackLayout>
+				  		<ViewCell.ContextActions>
+					    	<MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
+					    		Text="Remove Access" IsDestructive="True" />
+					    </ViewCell.ContextActions>
+				  	</ViewCell>
+				  </DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+
+	</ContentPage.Content>
+</ContentPage>

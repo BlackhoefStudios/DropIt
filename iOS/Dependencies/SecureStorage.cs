@@ -21,6 +21,11 @@ namespace DropIt.iOS.Dependencies
     /// </summary>
     public sealed class SecureStorage : ISecureStorage
     {
+		public SecureStorage ()
+		{
+			
+		}
+
         #region ISecureStorage Members
 
         /// <summary>

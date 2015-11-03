@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DropIt.Pages.ProjectListPage" Title="Projects">
+             xmlns:cells="clr-namespace:DropIt.Cells;assembly=DropIt"
+             x:Class="DropIt.Pages.ProjectListPage" Title="Projects" Icon="projects.png" IsBusy="{Binding IsFetchingData}">
+
   <ActivityIndicator IsVisible="{Binding IsLoggingIn}" IsRunning="{Binding IsLoggingIn}"
                      VerticalOptions="Center" HorizontalOptions="Center" />
 
-  <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsBusy}"
+  <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsFetchingData, Mode=TwoWay}"
             ItemsSource="{Binding DataSource, Mode=TwoWay}" SelectedItem="{Binding Selected, Mode=TwoWay}"
-            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="true">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding Name}" Detail="{Binding Subtitle, StringFormat='Tasks Remaining: {0}'}"

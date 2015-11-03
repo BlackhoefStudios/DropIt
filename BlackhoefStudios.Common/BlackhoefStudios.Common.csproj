@@ -46,6 +46,7 @@
     <Compile Include="ViewModels\Bases\BaseListItemViewModel.cs" />
     <Compile Include="ViewModels\Bases\BaseListViewModel.cs" />
     <Compile Include="ViewModels\Bases\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Bases\ObservableViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

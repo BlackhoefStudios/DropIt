@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DropIt.Controls;assembly=DropIt"
+             x:Class="DropIt.Pages.TaskDetailsPage"
+             Title="Task Details">
+<ScrollView>
+ <Grid Padding="10">
+ 	<Grid.RowDefinitions>
+ 			<RowDefinition Height="auto" />
+ 			<RowDefinition Height="auto" />
+ 			<RowDefinition Height="auto" />
+ 			<RowDefinition Height="400" />
+ 			<RowDefinition Height="auto" />
+ 	</Grid.RowDefinitions>
+ 	    <Label Grid.Row="0" Text="{Binding DateCreated, StringFormat='Date Created: {0:d}'}" HorizontalOptions="FillAndExpand" />
+
+	    <StackLayout Grid.Row="1" Orientation="Horizontal">
+	      <Label Text="Assigned To: " HorizontalOptions="Fill"/>
+	      <controls:BindablePicker ItemsSource="{Binding Users}"
+	      		SelectedItem="{Binding SelectedUser, Mode=TwoWay, StringFormat='{0}.Email'}"
+	      		HorizontalOptions="FillAndExpand" />
+	    </StackLayout>
+
+	    <StackLayout Grid.Row="2">
+	    	<Label Text="Description" />
+	    	<controls:BorderedEditor Text="{Binding Description}" HorizontalOptions="FillAndExpand"/>
+	    </StackLayout>
+
+	    <StackLayout Grid.Row="3">
+	    	<Label Text="Discussion" />
+		    <ListView HasUnevenRows="true" ItemsSource="{Binding Comments, Mode=TwoWay}">
+		     	<ListView.ItemTemplate>
+			      	<DataTemplate>
+						<ViewCell>
+			      			<Editor Text="{Binding Name}" IsEnabled="false" />
+						</ViewCell>
+			    	</DataTemplate>
+		      	</ListView.ItemTemplate>
+		    </ListView>
+	    </StackLayout>
+
+
+	    <StackLayout Grid.Row="4">
+	    	<Label Text="Comment"/>
+			<controls:BorderedEditor Text="{Binding CurrentComment.Subtitle, Mode=TwoWay}" Keyboard="Chat" />
+			<Button Text="Comment" Command="{Binding CurrentComment.Selected}" />
+	    </StackLayout>
+
+<!--	<StackLayout Padding="10">
+    	<Label Text="Date Created: 10/20/2015" HorizontalOptions="FillAndExpand" />
+
+	    <StackLayout Orientation="Horizontal">
+	      <Label Text="Assigned To: " HorizontalOptions="Fill"/>
+	      <controls:BindablePicker ItemsSource="{Binding Users}"
+	      		SelectedItem="{Binding SelectedUser, Mode=TwoWay, StringFormat='{0}.Email'}"
+	      		HorizontalOptions="FillAndExpand" />
+	    </StackLayout>
+
+	    <Label Text="Description" />
+	    <controls:BorderedEditor Text="{Binding Description}" HorizontalOptions="FillAndExpand"/>
+
+	    <Label Text="Discussion" />
+	    <ListView HasUnevenRows="true" ItemsSource="{Binding Comments, Mode=TwoWay}">
+	     	<ListView.ItemTemplate>
+		      	<DataTemplate>
+					<ViewCell>
+		      			<Editor Text="{Binding Name}" IsEnabled="false" />
+					</ViewCell>
+		    	</DataTemplate>
+	      	</ListView.ItemTemplate>
+	    </ListView>
+
+	    <Label Text="Comment"/>
+		<controls:BorderedEditor Text="{Binding CurrentComment.Subtitle, Mode=TwoWay}" Keyboard="Chat" />
+		<Button Text="Comment" Command="{Binding CurrentComment.Selected}" />
+	</StackLayout>-->
+	</Grid>
+	</ScrollView>
+</ContentPage>

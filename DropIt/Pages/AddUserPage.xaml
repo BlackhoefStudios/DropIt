@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="DropIt.Pages.AddUserPage" Title="Invite User">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+			<Label Text="Enter the email of the user you want to invite."  XAlign="Center" />
+			<Entry Text="{Binding Email}" Keyboard="Email" WidthRequest="200" />
+			<Button Text="Send Invitation" Command="{Binding SendEmail}" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
