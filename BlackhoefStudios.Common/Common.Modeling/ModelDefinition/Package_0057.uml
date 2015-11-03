@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3ae01285-355e-4422-b9d5-a76975b85b80"
+  name="BlackhoefStudios.Common.Services" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="34393337-a346-4168-b0d3-0c612e691a76"
+        name="BaseApiService"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="5cf97939-0644-495b-b682-0bf72eae220c"
+            name="Client"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="70d1d734-44f3-4243-8d0c-961bf775ab2a"
+                LastKnownName="HttpClient"
+                LastKnownLocation="Common.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="03178ad6-28f1-4092-8f4f-93d2858f9728"
+            name="Host"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Common.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5754cc6b-a580-4b79-a013-872b5de2d46f"
+            name="Authenticator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="aba4fdd6-72ec-4470-b118-e6f0d729bf98"
+                LastKnownName="IApiAuthenticator"
+                LastKnownLocation="Common.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6ce37414-8634-429d-a52c-45133213a23a"
+            name="Controller"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Common.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="dabfcac0-e2d8-479c-8e9f-8fe90e107103"
+            name="GetAsync&lt;T&gt;"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c60f656b-b481-4ded-895f-a981549a3a53"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="034d582d-31fa-46df-a6cc-2b6fdf5b3bdc"
+                      LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;"
+                      LastKnownLocation="Common.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e5a628f7-1026-4138-8ce1-55be8163e692"
+                  name="String action"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="195b5bae-a49e-4bb8-93d6-2b0e67b82eb1"
+            name="PutAsync"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c8f22cac-1eff-44ef-8ef2-40557a389b8a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="034d582d-31fa-46df-a6cc-2b6fdf5b3bdc"
+                      LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;"
+                      LastKnownLocation="Common.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d9056385-744e-4b01-adb0-da1926051453"
+                  name="String action"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9ff649f4-3c2c-4eb4-9bea-96e96df55916"
+                  name="object data"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e7d0016a-5d43-470f-ac24-3499bb53b351"
+            name="DeleteAsync"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6df2b843-91e5-41f9-b5b4-d4a89bdb71f1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="b04a7414-40c4-439b-b53e-897353802a95"
+                      LastKnownName="Task&lt;ApiResult&gt;"
+                      LastKnownLocation="Common.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c2b5771f-cf0d-4289-96b9-17c7f91ced93"
+                  name="String action"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="88fc6824-b0a1-4584-9276-31f3151f4ab9"
+                  name="String idToRemove"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5de1a92c-33ac-423f-ab0b-401843f766ab"
+            name="PostAsync"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fce1a5bb-539e-48d3-b984-050fff058527"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="034d582d-31fa-46df-a6cc-2b6fdf5b3bdc"
+                      LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;"
+                      LastKnownLocation="Common.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3092918e-a780-4af1-9d9d-acd1b1eebd73"
+                  name="String action"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3e28843d-5ed7-4c6c-9a22-e3e75e98edf9"
+                  name="object data"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6e799c55-70e0-47c1-8370-30a1e0fb1771"
+            name="Get&lt;T&gt;"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dce1d2e9-2f5e-4587-95dd-2522eb9030fe"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="034d582d-31fa-46df-a6cc-2b6fdf5b3bdc"
+                      LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;"
+                      LastKnownLocation="Common.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b3b95123-08a4-4c37-a740-dd1e61ea8a2d"
+                  name="String action"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eaf06617-7cd3-4069-9a38-3db0549172d5"
+                  name="String id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f1f90aae-a9f3-4814-b732-3353d069bce9"
+            name="BaseService"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="243c683c-dbb4-4217-9b81-ee4a93128fb2"
+                  name="IApIAuthenticator auth"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="24440799-8483-42ad-91e0-404829986e10"
+                  name="String host"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="730ff028-c6b1-4f3e-83fe-5f8df909622a"
+                  name="String controller"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="725cce75-06de-4e9e-8e82-7cea351410a5"
+            name="CreateClientAsync"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c80f2263-09ce-4cee-a680-6bd1c818734f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="16760f4a-d567-4997-97c6-17ac7f9b4eec"
+                      LastKnownName="Task&lt;HttpClient&gt;"
+                      LastKnownLocation="Common.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9db8ed21-8254-42b8-92cb-0428b8379af9"
+            name="HandleResponseAsync&lt;T&gt;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c438794-1806-4359-a327-6f14668a2015"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="034d582d-31fa-46df-a6cc-2b6fdf5b3bdc"
+                      LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;"
+                      LastKnownLocation="Common.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="77dd41cb-db1a-43af-8189-446cfd6f154e"
+                  name="HttpResponseMessage response"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d11a723c-b792-4c53-85d2-d3f394a49346"
+        name="ApiResult&lt;T&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="90ce6fe1-607a-437d-8b79-54a1ffa1fc64"
+            isSubstitutable="false">
+            <classMoniker
+              Id="26f3049e-186e-405c-8691-02a089137777"
+              LastKnownName="ApiResult"
+              LastKnownLocation="Package_0057.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="47c4fecd-56d6-4fee-a965-a0ce17d5c890"
+            parameters=""
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="93b62f57-a9a9-4a24-a9a0-21ba6c81fa21">
+                <ownedParameterableElement>
+                  <class
+                    Id="beb32f7f-641a-4cef-bd3c-f945737d8c91"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="f3a2410b-8d77-4eb1-9c4a-aed08fec0969"
+            name="ResponseCode"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="69b735e0-9c45-4792-bbca-30de9e2a37b0"
+                LastKnownName="int"
+                LastKnownLocation="Common.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c62a2a10-02b9-422c-a625-1cd4ff8ebbfc"
+            name="Message"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Common.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bed23f4b-7261-46f7-898c-02bd49b42932"
+            name="Data"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="b24fd812-fd40-4c68-a86b-fc6d1ffb22d3"
+                LastKnownName="T"
+                LastKnownLocation="Package_0054.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="26f3049e-186e-405c-8691-02a089137777"
+        name="ApiResult"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

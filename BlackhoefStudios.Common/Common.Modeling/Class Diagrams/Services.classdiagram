@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ee8c865a-85b8-4ca1-992e-d8fe972b6b38" name="Services" linkedPackageId="751ddece-2a11-435c-8878-33037531dcd9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ecbffc27-0675-4932-812c-3e8b24e45f2a">
+      <profileInstance Id="20adfadf-56d2-4929-beb5-e2828218fa29" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2dc9d1cc-f9eb-4bbb-a0d4-b22b21b275b8">
+      <profileInstance Id="a60232b1-7216-46f5-8f56-ecfdea2c4251" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="27517671-cba2-4013-9ef3-6af7706d9850" name="HttpClient" isAbstract="false" isLeaf="false" cachedFullName="HttpClient">
+        <elementDefinition Id="70d1d734-44f3-4243-8d0c-961bf775ab2a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4165081c-538b-4ecb-9c5a-e71ab49c2962" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="20b31652-bd84-4387-b399-c704383d59d5" name="IApiAuthenticator" isAbstract="false" isLeaf="false" cachedFullName="IApiAuthenticator">
+        <elementDefinition Id="aba4fdd6-72ec-4470-b118-e6f0d729bf98" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="18bb4a27-61cd-417c-b3ee-1d4b6ab2836f" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d6cd64ed-2b1e-481e-92a5-a25a71e6a733" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="69b735e0-9c45-4792-bbca-30de9e2a37b0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="83d4f8f7-f80b-4308-8714-5c982574ddea" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="84ec2320-86a1-4492-8591-e66d2143e201" name="T" isAbstract="false" isLeaf="false" cachedFullName="T">
+        <elementDefinition Id="b24fd812-fd40-4c68-a86b-fc6d1ffb22d3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f28a6088-4cd1-4c87-8286-9873762a1b62" name="Task&lt;ApiResult&lt;T&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="Task&lt;ApiResult&lt;T&gt;&gt;">
+        <elementDefinition Id="034d582d-31fa-46df-a6cc-2b6fdf5b3bdc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="640147be-972f-4212-8e6a-144bbee428b5" name="Task&lt;ApiResult&gt;" isAbstract="false" isLeaf="false" cachedFullName="Task&lt;ApiResult&gt;">
+        <elementDefinition Id="b04a7414-40c4-439b-b53e-897353802a95" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cc569846-db5b-4167-b3b7-7301ab3bb13a" name="Task&lt;HttpClient&gt;" isAbstract="false" isLeaf="false" cachedFullName="Task&lt;HttpClient&gt;">
+        <elementDefinition Id="16760f4a-d567-4997-97c6-17ac7f9b4eec" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="53bdac6d-d25a-414b-8dbb-f51e26a8040d" name="BlackhoefStudios.Common.Services">
+        <elementDefinition Id="3ae01285-355e-4422-b9d5-a76975b85b80" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="5025b23a-b053-42b5-a941-be661abc127f" name="BaseApiService" isAbstract="true" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="34393337-a346-4168-b0d3-0c612e691a76" />
+              <ownedAttributesInternal>
+                <property Id="8af86529-d216-473e-b4bb-acb821911a91" name="Client" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5cf97939-0644-495b-b682-0bf72eae220c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27517671-cba2-4013-9ef3-6af7706d9850" LastKnownName="HttpClient" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8209aa81-2439-445f-a95a-c72c6f2d7381" name="Host" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="03178ad6-28f1-4092-8f4f-93d2858f9728" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4165081c-538b-4ecb-9c5a-e71ab49c2962" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="7e18cc15-8eea-4774-8140-db3369ac9e23" name="Authenticator" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5754cc6b-a580-4b79-a013-872b5de2d46f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="20b31652-bd84-4387-b399-c704383d59d5" LastKnownName="IApiAuthenticator" />
+                  </type_NamedElement>
+                </property>
+                <property Id="98ffb182-c91c-4f77-a4f8-c75ae657b5b2" name="Controller" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6ce37414-8634-429d-a52c-45133213a23a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="18bb4a27-61cd-417c-b3ee-1d4b6ab2836f" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="670d830f-979e-4434-826a-1feb9219b84f" name="GetAsync&lt;T&gt;" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="dabfcac0-e2d8-479c-8e9f-8fe90e107103" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7aa22ce3-309b-4034-92aa-bae0f68fe743" direction="Return" isUnique="false">
+                        <elementDefinition Id="c60f656b-b481-4ded-895f-a981549a3a53" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f28a6088-4cd1-4c87-8286-9873762a1b62" LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="db6a7e8a-20e6-4ee1-80d3-215705e8f02e" name="String action" direction="In" isUnique="false">
+                        <elementDefinition Id="e5a628f7-1026-4138-8ce1-55be8163e692" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="54a7f7a2-96e0-49e6-9b55-2f51bcb95faf" name="PutAsync" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="195b5bae-a49e-4bb8-93d6-2b0e67b82eb1" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9af45ef7-2feb-4922-b74e-c730622610bc" direction="Return" isUnique="false">
+                        <elementDefinition Id="c8f22cac-1eff-44ef-8ef2-40557a389b8a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f28a6088-4cd1-4c87-8286-9873762a1b62" LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="64ad90ac-5e8b-4451-bdad-ed2654e063b1" name="String action" direction="In" isUnique="false">
+                        <elementDefinition Id="d9056385-744e-4b01-adb0-da1926051453" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="975b1e61-4491-4a14-9640-bdd481b22fbb" name="object data" direction="In" isUnique="false">
+                        <elementDefinition Id="9ff649f4-3c2c-4eb4-9bea-96e96df55916" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="95c9498a-96c5-44f5-ac68-ec6d79a77549" name="DeleteAsync" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e7d0016a-5d43-470f-ac24-3499bb53b351" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="503a460f-1151-441e-b1e9-64d22ba74590" direction="Return" isUnique="false">
+                        <elementDefinition Id="6df2b843-91e5-41f9-b5b4-d4a89bdb71f1" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="640147be-972f-4212-8e6a-144bbee428b5" LastKnownName="Task&lt;ApiResult&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="23b910d2-3d22-4e40-b9bf-720d35a5f496" name="String action" direction="In" isUnique="false">
+                        <elementDefinition Id="c2b5771f-cf0d-4289-96b9-17c7f91ced93" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7030a06a-8df6-48a2-ac1f-6fa894c83a52" name="String idToRemove" direction="In" isUnique="false">
+                        <elementDefinition Id="88fc6824-b0a1-4584-9276-31f3151f4ab9" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c6a686bc-3e25-49ac-8cb5-097e69449901" name="PostAsync" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5de1a92c-33ac-423f-ab0b-401843f766ab" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="bcd6f763-37bf-4b45-a563-db93dc3b7d62" direction="Return" isUnique="false">
+                        <elementDefinition Id="fce1a5bb-539e-48d3-b984-050fff058527" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f28a6088-4cd1-4c87-8286-9873762a1b62" LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="83893c7f-e9d0-4623-afae-645302a9b6cd" name="String action" direction="In" isUnique="false">
+                        <elementDefinition Id="3092918e-a780-4af1-9d9d-acd1b1eebd73" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="6ff276db-e98e-4ed4-847b-14906f2ca25d" name="object data" direction="In" isUnique="false">
+                        <elementDefinition Id="3e28843d-5ed7-4c6c-9a22-e3e75e98edf9" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="26eec709-673b-4a3c-a019-d9cd1eb6388f" name="Get&lt;T&gt;" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6e799c55-70e0-47c1-8370-30a1e0fb1771" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8fd59877-daaa-4e3e-932a-d6fb9d1f9b80" direction="Return" isUnique="false">
+                        <elementDefinition Id="dce1d2e9-2f5e-4587-95dd-2522eb9030fe" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f28a6088-4cd1-4c87-8286-9873762a1b62" LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b6023d76-3965-49c2-b0c5-217eda15c4b8" name="String action" direction="In" isUnique="false">
+                        <elementDefinition Id="b3b95123-08a4-4c37-a740-dd1e61ea8a2d" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b8c70377-a711-4b2d-8d65-108030baed5f" name="String id" direction="In" isUnique="false">
+                        <elementDefinition Id="eaf06617-7cd3-4069-9a38-3db0549172d5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="8622c4fb-bd82-4ece-b44d-e8b6171c5c18" name="BaseService" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f1f90aae-a9f3-4814-b732-3353d069bce9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="91827b89-a1de-40bc-b825-0eb5fc9b7577" name="IApIAuthenticator auth" direction="In" isUnique="false">
+                        <elementDefinition Id="243c683c-dbb4-4217-9b81-ee4a93128fb2" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9dbec7df-f702-4e7c-bbca-d72d997eaa03" name="String host" direction="In" isUnique="false">
+                        <elementDefinition Id="24440799-8483-42ad-91e0-404829986e10" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="964b5fa7-bdd0-4ab9-bde2-75d4a4a6b30c" name="String controller" direction="In" isUnique="false">
+                        <elementDefinition Id="730ff028-c6b1-4f3e-83fe-5f8df909622a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="cd031036-c928-4f59-8558-eed2abe831c0" name="CreateClientAsync" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="725cce75-06de-4e9e-8e82-7cea351410a5" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2ca280ce-e35b-4780-b868-e783d3176def" direction="Return" isUnique="false">
+                        <elementDefinition Id="c80f2263-09ce-4cee-a680-6bd1c818734f" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="cc569846-db5b-4167-b3b7-7301ab3bb13a" LastKnownName="Task&lt;HttpClient&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="459ac33e-d161-4fd0-a99c-b1e93573288d" name="HandleResponseAsync&lt;T&gt;" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9db8ed21-8254-42b8-92cb-0428b8379af9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f1971295-9bfc-4da1-9015-e4c64a9e0af9" direction="Return" isUnique="false">
+                        <elementDefinition Id="5c438794-1806-4359-a327-6f14668a2015" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f28a6088-4cd1-4c87-8286-9873762a1b62" LastKnownName="Task&lt;ApiResult&lt;T&gt;&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="47853869-544a-4b6d-8d0c-c3a47b13859f" name="HttpResponseMessage response" direction="In" isUnique="false">
+                        <elementDefinition Id="77dd41cb-db1a-43af-8189-446cfd6f154e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7c14b9b0-0cef-47c9-9a78-950473ddc6ea" name="ApiResult&lt;T&gt;" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d11a723c-b792-4c53-85d2-d3f394a49346" />
+              <generalsInternal>
+                <generalization Id="4fde5910-5f21-4a0f-86b5-3a8b0238f4c4" isSubstitutable="false">
+                  <classMoniker Id="8af8e9d8-531d-4a55-8c37-d07061a21998" LastKnownName="ApiResult" />
+                  <elementDefinition Id="90ce6fe1-607a-437d-8b79-54a1ffa1fc64" />
+                </generalization>
+              </generalsInternal>
+              <ownedRedefinableTemplateSignatureInternal>
+                <redefinableTemplateSignature Id="9eca5978-9ae1-4664-8b29-582d7bbcc58d" parameters="" isLeaf="false">
+                  <elementDefinition Id="47c4fecd-56d6-4fee-a965-a0ce17d5c890" />
+                  <ownedParameters>
+                    <classifierTemplateParameter Id="c3882803-c5a0-411a-a98f-ae56ca83c9fc">
+                      <elementDefinition Id="93b62f57-a9a9-4a24-a9a0-21ba6c81fa21" />
+                      <ownedParameterableElement>
+                        <class Id="ea4e27e9-69bf-4438-984a-27951d9fd311" name="T" isAbstract="false" isLeaf="false" isActiveClass="false">
+                          <elementDefinition Id="beb32f7f-641a-4cef-bd3c-f945737d8c91" />
+                        </class>
+                      </ownedParameterableElement>
+                    </classifierTemplateParameter>
+                  </ownedParameters>
+                </redefinableTemplateSignature>
+              </ownedRedefinableTemplateSignatureInternal>
+              <ownedAttributesInternal>
+                <property Id="37e6bf21-64ca-48e0-824c-9912c490c8f3" name="ResponseCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f3a2410b-8d77-4eb1-9c4a-aed08fec0969" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d6cd64ed-2b1e-481e-92a5-a25a71e6a733" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+                <property Id="18c8f407-4d99-4555-b0dd-59ead7571062" name="Message" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c62a2a10-02b9-422c-a625-1cd4ff8ebbfc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="83d4f8f7-f80b-4308-8714-5c982574ddea" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="9bf2a69c-9637-4c4d-a759-f1f4a00db187" name="Data" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bed23f4b-7261-46f7-898c-02bd49b42932" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="84ec2320-86a1-4492-8591-e66d2143e201" LastKnownName="T" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="8af8e9d8-531d-4a55-8c37-d07061a21998" name="ApiResult" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="26f3049e-186e-405c-8691-02a089137777" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="751ddece-2a11-435c-8878-33037531dcd9" name="Common.Modeling">
+    <elementDefinition Id="74a6cca8-782c-4386-9bf7-41d991453b0d" />
+  </package>
+</logicalClassDesignerModel>

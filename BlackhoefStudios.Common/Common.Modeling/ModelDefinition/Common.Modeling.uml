@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="74a6cca8-782c-4386-9bf7-41d991453b0d"
+  name="Common.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4ebee33b-52a5-435f-ba72-e2602fe8c8e3"
+        name="event" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ae22267a-15da-4485-a26c-eb9ed6957306"
+        name="INavigation" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f566b265-63d4-4f9b-ac95-fcb816fc1578"
+        name="ICommand" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4e831a28-8af5-4b01-aa17-7a0507ba6f90"
+        name="ObservableCollection&lt;T&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c9a146be-49de-4123-a33a-f844bab126ba"
+        name="INotifyPropertyChanged"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="ece27b89-923a-44a5-bd38-a1995daad6b9"
+            name="PropertyChanged"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4ebee33b-52a5-435f-ba72-e2602fe8c8e3"
+                LastKnownName="event"
+                LastKnownLocation="Common.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7763d425-a668-47e2-a8ed-73828653181c"
+        LastKnownName="BlackhoefStudios.Common.ViewModels.Bases"
+        LastKnownLocation="Package_0054.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b601030e-9471-4e02-938b-455bb055d3f3"
+        name="Xamarin.Forms.Page" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="805e6cd6-fd53-4653-b490-83cca74f7189"
+        LastKnownName="BlackhoefStudios.Common.Interfaces.Pages"
+        LastKnownLocation="Package_0055.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d340db25-6cd2-4d49-8d1a-ade940a5e011"
+        name="Task&lt;String&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5f16f25b-0f8a-46a8-9883-bb8864dc38bc"
+        LastKnownName="BlackhoefStudios.Common.Interfaces.Services"
+        LastKnownLocation="Package1_0055.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="70d1d734-44f3-4243-8d0c-961bf775ab2a"
+        name="HttpClient" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="aba4fdd6-72ec-4470-b118-e6f0d729bf98"
+        name="IApiAuthenticator" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="69b735e0-9c45-4792-bbca-30de9e2a37b0"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="034d582d-31fa-46df-a6cc-2b6fdf5b3bdc"
+        name="Task&lt;ApiResult&lt;T&gt;&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b04a7414-40c4-439b-b53e-897353802a95"
+        name="Task&lt;ApiResult&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="16760f4a-d567-4997-97c6-17ac7f9b4eec"
+        name="Task&lt;HttpClient&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3ae01285-355e-4422-b9d5-a76975b85b80"
+        LastKnownName="BlackhoefStudios.Common.Services"
+        LastKnownLocation="Package_0057.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="16f971a8-feb0-4d1b-a30f-1b85b2c43a3b"
+        LastKnownName="System.Component"
+        LastKnownLocation="Package_0059.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
