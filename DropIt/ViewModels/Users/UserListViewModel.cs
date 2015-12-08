@@ -17,12 +17,12 @@ namespace DropIt.ViewModels.Users
 				DataSource.Clear();
 
 				DataSource.Add(new UserListItemViewModel(){
-					Id = Guid.NewGuid().ToString(),
+					Id = Guid.NewGuid(),
 					Name = "chris.willette@wsu.edu",
 				});
 
 				DataSource.Add(new UserListItemViewModel(){
-					Id = Guid.NewGuid().ToString(),
+					Id = Guid.NewGuid(),
 					Name = LoginService.CurrentUser.Email,
 				});
 

@@ -45,7 +45,7 @@ namespace DropIt.iOS.Dependencies
 	        LoginService.CurrentUser = user;
 	    }
 
-	    public async Task Login (){
+	    public async System.Threading.Tasks.Task Login (){
             //get the main controller
 			var controller = UIApplication.SharedApplication.KeyWindow.RootViewController;
 

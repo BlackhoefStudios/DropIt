@@ -14,6 +14,8 @@ using BlackhoefStudios.Common.Interfaces.Pages;
 using BlackhoefStudios.ViewModels.Bases;
 using BlackhoefStudios.Common.Interfaces.Services;
 using BlackhoefStudios.Common.ViewModels.Bases;
+using DropIt.Services;
+using System.Collections.ObjectModel;
 
 namespace DropIt.ViewModels.Projects
 {
@@ -41,39 +43,13 @@ namespace DropIt.ViewModels.Projects
 
         public ProjectsListViewModel(IApplication app) : base(app)
         {
-            Refresh = new Command(() =>
+            Refresh = new Command(async () =>
             {
 				IsFetchingData = true;
 
-                DataSource.Clear();
-
-				DataSource.Add(new ProjectViewModel()
-				{
-					Name = "Diagrams",
-					Id = Guid.NewGuid().ToString(),
-					Subtitle = 0.ToString()
-				});
-					
-                //update list view
-                DataSource.Add(new ProjectViewModel()
-                {
-                    Name = "Implement Authentication",
-                    Id = Guid.NewGuid().ToString(),
-                    Subtitle = 5.ToString()
-                });
-                DataSource.Add(new ProjectViewModel()
-                {
-                    Name = "SRS",
-                    Id = Guid.NewGuid().ToString(),
-                    Subtitle = 0.ToString()
-                });
-                
-                DataSource.Add(new ProjectViewModel()
-                {
-                    Name = "Tests",
-                    Id = Guid.NewGuid().ToString(),
-                    Subtitle = 20.ToString()
-                });
+				var service = new StorageService();
+				var projects = await service.GetProjects();
+				DataSource = new ObservableCollection<ProjectViewModel>(projects);
 
 				IsFetchingData = false;
 
@@ -118,11 +94,20 @@ namespace DropIt.ViewModels.Projects
                 Refresh.Execute(null);
             });
 
-            MessagingCenter.Subscribe<ProjectViewModel>(this, ProjectViewModel.DeleteMessage, (project) =>
+            MessagingCenter.Subscribe<ProjectViewModel>(this, ProjectViewModel.DeleteMessage, async (project) =>
             {
                 //user chose to delete a project, so simply remove from the list.
                 DataSource.Remove(project);
+				var storage = new StorageService();
+				await storage.DeleteProject(project.Id);
+
             });
+
+			MessagingCenter.Subscribe<ProjectViewModel>(this, ProjectViewModel.AddedMessage, (project) =>
+				{
+					//user chose to add a project, so simply add to the list.
+					DataSource.Add(project);
+				});
 
             MessagingCenter.Subscribe<ProjectViewModel>(this, ProjectViewModel.SelectedMessage, (project) =>
             {

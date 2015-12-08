@@ -54,7 +54,7 @@ namespace DropIt.ViewModels.Categories
             };
             cat.Add(new TaskItemViewModel
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = Guid.NewGuid(),
                 Name = "Translate app",
                 Subtitle = "Assigned To: Tyler Vanderhoef"
             });
@@ -66,7 +66,7 @@ namespace DropIt.ViewModels.Categories
             };
             cat2.Add(new TaskItemViewModel
             {
-                Id = "Categories View",
+					Id = Guid.NewGuid(),
                 Name = "Categories UI",
                 Subtitle = "Assigned To: Chris Willette"
             });

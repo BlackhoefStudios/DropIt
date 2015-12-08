@@ -47,7 +47,7 @@ namespace DropIt.Droid.Dependencies
             return baseAuthenticator;
         }
 
-        public async Task Login()
+        public async System.Threading.Tasks.Task Login()
         {
             //show login
             var user = await LoginAsync(Forms.Context, withRefreshToken: true, title: "Sign In");

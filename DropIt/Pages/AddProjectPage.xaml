@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	Title="New Project"
+	x:Class="DropIt.Pages.AddProjectPage">
+	<ContentPage.Content>
+		<TableView Intent="Form">
+			<TableRoot>
+				<TableSection>
+					<EntryCell Label="Project Name" Text="{Binding Name}" />
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</ContentPage.Content>
+</ContentPage>

@@ -11,6 +11,7 @@ namespace DropIt.ViewModels.Projects
 {
     public sealed class ProjectViewModel : BaseListItemViewModel
     {
+		public const string AddedMessage = "ProjectAdded";
         public const string DeleteMessage = "DeleteProject";
         public const string SelectedMessage = "SelectedProject";
 

@@ -16,7 +16,7 @@ namespace BlackhoefStudios.ViewModels.Bases
         /// <summary>
         /// A unique Id for the given item.
         /// </summary>
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
         /// The name of the item. Typically used as the Title of a cell.
