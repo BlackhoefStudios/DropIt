@@ -12,79 +12,69 @@ using Xamarin.Forms;
 
 namespace DropIt.Services
 {
-	public class StorageService
-	{
-		const string ProjectFileName = "projects.json";
-		const string CategoriesFileName = "categroies.json";
-		const string TaskFileName = "tasks.json";
+	public abstract class StorageService {
+		
+		protected string FileName { get; private set; }
+		protected ISaveAndLoad DeviceStorage { get; set; }
 
-		public async Task<IEnumerable<ProjectViewModel>> GetProjects() {
-			return await System.Threading.Tasks.Task.Run<IEnumerable<ProjectViewModel>>(() => {
-				var platform = DependencyService.Get<ISaveAndLoad>();
-				var projectsJson = platform.LoadText(ProjectFileName);
-
-				if(!String.IsNullOrEmpty(projectsJson)){
-					var projects = JsonConvert.DeserializeObject<List<Project>> (projectsJson);
-
-					var listOfProjects = projects.Select(p => new ProjectViewModel{
-						Id = p.Id,
-						Name = p.Name
-					});
-
-					return listOfProjects;
-				}
-
-				return new List<ProjectViewModel>();
-			});
-		}
-//
-		public async System.Threading.Tasks.Task<ProjectViewModel> SaveProject(Project toSave) {
-			return await System.Threading.Tasks.Task.Run (() => {
-				var platform = DependencyService.Get<ISaveAndLoad>();
-				var projectsJson = platform.LoadText(ProjectFileName);
-
-				var currentProjects = new List<Project>();
-
-				if(!String.IsNullOrEmpty(projectsJson)){
-					//add it to the existing list
-					currentProjects = JsonConvert.DeserializeObject<List<Project>> (projectsJson);
-				}
-
-				currentProjects.Add(toSave);
-				var json = JsonConvert.SerializeObject(currentProjects);
-				platform.SaveText(ProjectFileName, json);
-				return new ProjectViewModel(){
-					Id = toSave.Id,
-					Name = toSave.Name
-				};
-			});
-
+		protected StorageService (string fileName)
+		{
+			FileName = fileName;
+			DeviceStorage = DependencyService.Get<ISaveAndLoad>();
 		}
 
-		public async System.Threading.Tasks.Task<bool> DeleteProject(Guid toDelete) {
-			return await System.Threading.Tasks.Task.Run (() => {
-				var platform = DependencyService.Get<ISaveAndLoad>();
-				var projectsJson = platform.LoadText(ProjectFileName);
+		public async Task<IEnumerable<TReturn>> Get<TReturn>()
+			where TReturn : class, new()
+		{
+			return await System.Threading.Tasks.Task.Run<IEnumerable<TReturn>>(() => {
+				var originalJson = DeviceStorage.LoadText(FileName);
 
-				var currentProjects = new List<Project>();
+				if(!String.IsNullOrEmpty(originalJson)){
+					return JsonConvert.DeserializeObject<List<TReturn>> (originalJson);
+				}
 
-				if(!String.IsNullOrEmpty(projectsJson)){
+				return new List<TReturn>();
+			});
+		}
+
+		public async System.Threading.Tasks.Task Save<TReturn>(TReturn toSave) {
+			await System.Threading.Tasks.Task.Run (() => {
+				var originalJson = DeviceStorage.LoadText(FileName);
+
+				var currentItems = new List<TReturn>();
+
+				if(!String.IsNullOrEmpty(originalJson)){
 					//add it to the existing list
-					currentProjects = JsonConvert.DeserializeObject<List<Project>> (projectsJson);
-					var toRemove = currentProjects.First(p => p.Id == toDelete);
-					currentProjects.Remove(toRemove);
-					var json = JsonConvert.SerializeObject(currentProjects);
-					platform.SaveText(ProjectFileName, json);
+					currentItems = JsonConvert.DeserializeObject<List<TReturn>> (originalJson);
+				}
+
+				currentItems.Add(toSave);
+				var json = JsonConvert.SerializeObject(currentItems);
+				DeviceStorage.SaveText(FileName, json);
+			});
+		}
+
+		public async System.Threading.Tasks.Task<bool> Delete<TType>(Guid toDelete) 
+			where TType : BaseData, new()
+		{
+			return await System.Threading.Tasks.Task.Run (() => {
+				var originalJson = DeviceStorage.LoadText(FileName);
+
+				var currentObjects = new List<TType>();
+
+				if(!String.IsNullOrEmpty(originalJson)){
+					//add it to the existing list
+					currentObjects = JsonConvert.DeserializeObject<List<TType>> (originalJson);
+					var toRemove = currentObjects.First(p => p.Id == toDelete);
+					currentObjects.Remove(toRemove);
+					var json = JsonConvert.SerializeObject(currentObjects);
+					DeviceStorage.SaveText(FileName, json);
 					return true;
 				}
 				return false;
 			});
 		}
 
-
-		public StorageService ()
-		{
-		}
 	}
 }
 
