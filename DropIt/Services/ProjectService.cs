@@ -6,40 +6,82 @@ using DropIt.ViewModels.Projects;
 using System.Threading.Tasks;
 using DropIt.Data;
 using System.Linq;
+using Newtonsoft.Json;
+using DropIt.Data.Interfaces.Services;
+using System.Collections;
 
 namespace DropIt.Services
 {
-	public class ProjectService : StorageService
+	public class ProjectService : StorageService<Project>
 	{
-		const string ProjectFileName = "projects.json";
+		public const string ProjectFileName = "projects.json";
 
 		public ProjectService () : base(ProjectFileName)
 		{
-
 		}
 
 		public async Task<IEnumerable<ProjectViewModel>> GetProjects() {
-			var projects = await Get<Project>();
+			
+			return await Task.Run<IEnumerable<ProjectViewModel>>(async () => {
+				await GetAll();
+				Filtered = All;
+				var toReturn = new List<ProjectViewModel>();
 
-			return await System.Threading.Tasks.Task.Run<IEnumerable<ProjectViewModel>>(() => {
-				return projects.Select(p => new ProjectViewModel{
-					Id = p.Id,
-					Name = p.Name
-				});
+				foreach (var item in Filtered) {
+					var toAdd = new ProjectViewModel{
+						Id = item.Id,
+						Name = item.Name
+					};
+					int sum = 0;
+
+					foreach (var category in item.NavigationIds) {
+						sum += await ServiceResolver.Tasks.CountTasks(category);
+					}
+
+					toAdd.Subtitle = sum.ToString();
+					toReturn.Add(toAdd);
+				}
+
+				return toReturn;
 			});
 		}
 
-		public async System.Threading.Tasks.Task<ProjectViewModel> SaveProject(Project toSave) {
-			await Save (toSave);
+		public async Task<ProjectViewModel> SaveProject(Project toSave) {
+			await Task.Run (async () => {
+				Filtered.Add(toSave);
+				await Save();
+			});
+
 			return new ProjectViewModel(){
 				Id = toSave.Id,
 				Name = toSave.Name
 			};
 		}
 
-		public async System.Threading.Tasks.Task<bool> DeleteProject(Guid toDelete) {
-			return await Delete<Project> (toDelete);
+		public async Task<bool> DeleteProject(Guid toDelete) {
+			return await Task.Run (async () => {
+				if(All == null)
+					return false;
+				
+				var toRemove = All.FirstOrDefault(p => p.Id == toDelete);
+
+				if(toRemove != null){
+					Filtered.Remove(toRemove);
+
+					//remove categories
+					var categoryService = ServiceResolver.Categories;
+
+					await categoryService.DeleteCategories(toRemove.NavigationIds);
+
+					await Save();
+					return true;
+				}
+
+				return false;
+			});
 		}
+
+
 	}
 }
 

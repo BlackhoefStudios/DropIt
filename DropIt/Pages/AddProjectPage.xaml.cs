@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using DropIt.Data;
 using DropIt.Services;
 using DropIt.ViewModels.Projects;
+using DropIt.ViewModels.Categories;
 
 namespace DropIt.Pages
 {
@@ -12,14 +13,13 @@ namespace DropIt.Pages
 	{
 		public AddProjectPage ()
 		{
-			BindingContext = new Project ();
-			var save = new ToolbarItem ("Save", string.Empty, 
-		           async () => {
-					var service = new ProjectService();
-					var newProject = await service.SaveProject(BindingContext as Project);
-					MessagingCenter.Send<ProjectViewModel>(newProject, ProjectViewModel.AddedMessage);
-					await Navigation.PopAsync();
-				});
+			BindingContext = new AddProjectViewModel ();
+
+			var save = new ToolbarItem();
+			save.Text = "Save";
+			save.Icon = string.Empty;
+			save.Command = (BindingContext as AddProjectViewModel).Save;
+			save.CommandParameter = BindingContext;
 
 			ToolbarItems.Add (save);
 

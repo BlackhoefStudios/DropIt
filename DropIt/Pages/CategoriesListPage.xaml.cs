@@ -8,20 +8,33 @@ using Xamarin.Forms;
 using DropIt.ViewModels.Categories;
 using DropIt.ViewModels.Projects;
 using BlackhoefStudios.Common.Interfaces.Pages;
+using DropIt.Data;
 
 namespace DropIt.Pages
 {
     public partial class CategoriesListPage : ContentPage
     {
+		protected override void OnAppearing ()
+		{
+			base.OnAppearing ();
+			(BindingContext as CategoriesListViewModel).Refresh.Execute (null);
+		}
+
         public CategoriesListPage(ProjectViewModel project)
         {
             //Set the view model of the page. Since this is the Projects List page, use that view model.
             var binding = new CategoriesListViewModel((IApplication)Application.Current, project);
             BindingContext = binding;
 
-			ToolbarItems.Add(new ToolbarItem("New Task", "add-task.png", async () => {
-				await Navigation.PushAsync(new TaskDetailsPage());
-			}));
+			var addButton = new ToolbarItem ();
+			addButton.Text = "New Task";
+			addButton.Icon = "add-task.png";
+			addButton.Command = new Command (async () => {
+				await Navigation.PushAsync (new TaskDetailsPage (project.Id, new TaskInfo ()));
+			}, () => !binding.IsFetchingData);
+
+
+			ToolbarItems.Add(addButton);
 
             InitializeComponent();
         }

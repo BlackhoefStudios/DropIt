@@ -10,6 +10,7 @@
  			<RowDefinition Height="auto" />
  			<RowDefinition Height="auto" />
  			<RowDefinition Height="auto" />
+ 			<RowDefinition Height="auto" />
  			<RowDefinition Height="400" />
  			<RowDefinition Height="auto" />
  	</Grid.RowDefinitions>
@@ -18,16 +19,24 @@
 	    <StackLayout Grid.Row="1" Orientation="Horizontal">
 	      <Label Text="Assigned To: " HorizontalOptions="Fill"/>
 	      <controls:BindablePicker ItemsSource="{Binding Users}"
-	      		SelectedItem="{Binding SelectedUser, Mode=TwoWay, StringFormat='{0}.Email'}"
+	      		SelectedItem="{Binding AssignedTo, Mode=TwoWay}"
 	      		HorizontalOptions="FillAndExpand" />
 	    </StackLayout>
 
-	    <StackLayout Grid.Row="2">
-	    	<Label Text="Description" />
-	    	<controls:BorderedEditor Text="{Binding Description}" HorizontalOptions="FillAndExpand"/>
+	    <StackLayout Grid.Row="2" Orientation="Horizontal">
+	      <Label Text="Category: " HorizontalOptions="Fill"/>
+	      		
+	      	 <controls:BindablePicker ItemsSource="{Binding Categories}"
+	      		SelectedItem="{Binding Category, Mode=TwoWay}"
+	      		HorizontalOptions="FillAndExpand" />
 	    </StackLayout>
 
 	    <StackLayout Grid.Row="3">
+	    	<Label Text="Description" />
+	    	<controls:BorderedEditor Text="{Binding Description, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
+	    </StackLayout>
+
+	    <StackLayout Grid.Row="4">
 	    	<Label Text="Discussion" />
 		    <ListView HasUnevenRows="true" ItemsSource="{Binding Comments, Mode=TwoWay}">
 		     	<ListView.ItemTemplate>
@@ -41,7 +50,7 @@
 	    </StackLayout>
 
 
-	    <StackLayout Grid.Row="4">
+	    <StackLayout Grid.Row="5">
 	    	<Label Text="Comment"/>
 			<controls:BorderedEditor Text="{Binding CurrentComment.Subtitle, Mode=TwoWay}" Keyboard="Chat" />
 			<Button Text="Comment" Command="{Binding CurrentComment.Selected}" />

@@ -17,7 +17,7 @@ namespace DropIt.ViewModels.Projects
 
         public ProjectViewModel()
         {
-            
+			Subtitle = 0.ToString ();
             Delete = new Command(() =>
             {
                 MessagingCenter.Send(this, DeleteMessage);

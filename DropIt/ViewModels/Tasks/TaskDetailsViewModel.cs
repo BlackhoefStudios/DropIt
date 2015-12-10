@@ -8,28 +8,33 @@ using System.Windows.Input;
 using System.Collections.Generic;
 using DropIt.Data.Interfaces.Users;
 using DropIt.Data;
+using DropIt.ViewModels.Categories;
+using System.Diagnostics;
+using System.Linq;
 
 namespace DropIt.ViewModels.Tasks
 {
 	public class TaskDetailsViewModel : ObservableViewModel, ISubscriber
 	{
+		TaskInfo data;
+
 		public const string SaveMessage = "SaveTask";
 
-		DateTime created;
 		public DateTime DateCreated {
-			get { return created; }
+			get { return data.DateCreated; }
 			set {
-				created = value;
+				data.DateCreated = value;
 				OnPropertyChanged ("DateCreated");
 			}
 		}
 
-		string description;
 		public string Description {
-			get { return description; }
+			get { return data.Description; }
 			set {
-				description = value;
+				data.Description = value;
 				OnPropertyChanged ("Description");
+				SaveCommand.ChangeCanExecute ();
+
 			}
 		}
 
@@ -44,15 +49,40 @@ namespace DropIt.ViewModels.Tasks
 
 		public List<string> Users { get; set; }
 
-		string assignedTo;
 		public string AssignedTo 
 		{
 			get {
-				return assignedTo;
+				return data.AssignedTo;
 			}
 			set {
-				assignedTo = value;
+				data.AssignedTo = value;
 				OnPropertyChanged ("AssignedTo");
+				SaveCommand.ChangeCanExecute ();
+
+			}
+		}
+
+		IEnumerable<CategoryListItemViewModel> categories;
+		public IEnumerable<CategoryListItemViewModel> Categories {
+			get { return categories; }
+			set {
+				categories = value; 
+				OnPropertyChanged ("Categories");
+			}
+		}
+
+		CategoryListItemViewModel category;
+		public CategoryListItemViewModel Category 
+		{
+			get {
+				return category;
+			}
+			set {
+				category = value;
+				data.ParentForeignKey = category.ModelId;
+				OnPropertyChanged ("Category");
+				SaveCommand.ChangeCanExecute ();
+
 			}
 		}
 
@@ -67,22 +97,42 @@ namespace DropIt.ViewModels.Tasks
 			}
 		}
 
-		public ICommand SaveCommand { get; private set; }
+		public bool IsValid {
+			get {
+				return !String.IsNullOrEmpty (Description)
+				&& !String.IsNullOrEmpty (AssignedTo)
+				&& Category.ModelId != Guid.Empty;
+			}
+		}
 
-		public TaskDetailsViewModel ()
+		public Command SaveCommand { get; private set; }
+
+		public TaskDetailsViewModel (Guid projectId, TaskInfo info)
 		{
-			DateCreated = DateTime.Now;
+			data = info ?? new TaskInfo();
+			DateCreated = DateTime.UtcNow;
 			Users = new List<string> () {
 				"chris.willette@wsu.edu",
 				LoginService.CurrentUser.Email
 			};
 
-			SetupNewComment ();
-			Comments = new ObservableCollection<CommentViewModel> ();
-			SaveCommand = new Command (() => {
-				MessagingCenter.Send(this, SaveMessage);
+			Command c = new Command (async() => {
+				Categories = await ServiceResolver.Categories.GetCategories(projectId);
+				if (data.ParentForeignKey == Guid.Empty)
+					Category = Categories.ElementAt(0);
 			});
 
+			SetupNewComment ();
+			Comments = new ObservableCollection<CommentViewModel> ();
+			SaveCommand = new Command (async (sender) => {
+				var service = ServiceResolver.Tasks;
+				await service.SaveTask(data);
+
+				await ServiceResolver.Categories.AddTask(data);
+
+				MessagingCenter.Send(this, SaveMessage);
+			}, (sender) => IsValid);
+			c.Execute (null);
 		}
 
 		void SetupNewComment(){
@@ -103,6 +153,10 @@ namespace DropIt.ViewModels.Tasks
 						currentComment.Subtitle);
 					
 					Comments.Add(CurrentComment);
+					data.Comments.Add(new Comment(){
+						CommenterName = CurrentComment.Name,
+						Descriptions = CurrentComment.Subtitle
+					});
 					SetupNewComment();
 				});
 		}

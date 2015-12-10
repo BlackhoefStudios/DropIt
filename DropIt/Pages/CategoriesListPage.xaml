@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:labs="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-             x:Class="DropIt.Pages.CategoriesListPage" Title="{Binding Title}">
+             x:Class="DropIt.Pages.CategoriesListPage" Title="{Binding Title}"
+             IsBusy="{Binding IsFetchingData, Mode=TwoWay}">
 
-  <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsBusy}"
+  <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
             ItemsSource="{Binding DataSource, Mode=TwoWay}" SelectedItem="{Binding Selected, Mode=TwoWay}"
-            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-             GroupDisplayBinding="{Binding Id}" IsGroupingEnabled="True">
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="true"
+            GroupDisplayBinding="{Binding Name}" IsGroupingEnabled="True" Footer="">
     
     <ListView.ItemTemplate>
       <DataTemplate>

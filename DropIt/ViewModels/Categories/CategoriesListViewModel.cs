@@ -12,29 +12,34 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using BlackhoefStudios.Common.ViewModels.Bases;
 using DropIt.Services;
+using System.Collections.ObjectModel;
 
 namespace DropIt.ViewModels.Categories
 {
     public sealed class CategoriesListViewModel : BaseListViewModel<CategoryListItemViewModel>, ISubscriber
     {
+		ProjectViewModel data;
+
         public void Subscribe()
         {
             MessagingCenter.Subscribe<TaskItemViewModel>(this, "TaskTapped",
                 async (task) =>
                 {
-                    await base.Navigation.PushAsync(new TaskDetailsPage());
+					var taskToEdit = await ServiceResolver.Tasks.GetTask(task.ModelId);
+					await base.Navigation.PushAsync(new TaskDetailsPage(data.Id, taskToEdit));
 					Selected = null;
                 });
 
 			MessagingCenter.Subscribe<TaskDetailsViewModel> (this, TaskDetailsViewModel.SaveMessage,
 				async (saved) => {
-
 					var newListItem = new TaskItemViewModel{
 						Name = saved.Description,
-						Subtitle = LoginService.CurrentUser.Email
+						Subtitle = saved.AssignedTo
 					};
 
-					DataSource[0].Add(newListItem);
+					var category = DataSource.FirstOrDefault(c => c.ModelId == saved.Category.ModelId);
+
+					category.Add(newListItem);
 					await base.Navigation.PopAsync();
 				});
         }
@@ -43,52 +48,23 @@ namespace DropIt.ViewModels.Categories
         {
             MessagingCenter.Unsubscribe<TaskItemViewModel>(this, "TaskTapped");
         }
+
         public CategoriesListViewModel(IApplication app, ProjectViewModel project) : base(app)
         {
+			data = project;
             Title = project.Name;
 
-            var cat = new CategoryListItemViewModel()
-            {
-                Id = "Backlog",
-                Name = "Backlog 1"
-            };
-            cat.Add(new TaskItemViewModel
-            {
-                Id = Guid.NewGuid(),
-                Name = "Translate app",
-                Subtitle = "Assigned To: Tyler Vanderhoef"
-            });
+			Refresh = new Command (async () => {
+				IsBusy = IsFetchingData = true;
 
-            var cat2 = new CategoryListItemViewModel()
-            {
-                Id = "In Process",
-                Name = "In Process 1"
-            };
-            cat2.Add(new TaskItemViewModel
-            {
-					Id = Guid.NewGuid(),
-                Name = "Categories UI",
-                Subtitle = "Assigned To: Chris Willette"
-            });
+				var categoryService = ServiceResolver.Categories;
+				var categories = await categoryService.GetCategories (project.Id);
 
-            DataSource.Add(cat);
-            DataSource.Add(cat2);
+				DataSource = new ObservableCollection<CategoryListItemViewModel>(categories);
 
-            DataSource.Add(new CategoryListItemViewModel()
-            {
-                Id = "Category 2",
-                Name = "Category 2"
-            });
-            DataSource.Add(new CategoryListItemViewModel()
-            {
-                Id = "Category 3",
-                Name = "Category 3"
-            });
-            DataSource.Add(new CategoryListItemViewModel()
-            {
-                Id = "Category 4",
-                Name = "Category 4"
-            });
+				IsBusy = IsFetchingData = false;
+			});
+
         }
     }
 }

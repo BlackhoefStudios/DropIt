@@ -9,72 +9,49 @@ using System.Linq;
 using System.Reflection;
 using DropIt.Data.Interfaces.Services;
 using Xamarin.Forms;
+using System.Collections;
 
 namespace DropIt.Services
 {
-	public abstract class StorageService {
+	public abstract class StorageService<TSource> where TSource : class, new() {
 		
 		protected string FileName { get; private set; }
 		protected ISaveAndLoad DeviceStorage { get; set; }
+		protected List<TSource> Filtered { get; set; }
+		protected List<TSource> All { get; set; }
+
 
 		protected StorageService (string fileName)
 		{
 			FileName = fileName;
 			DeviceStorage = DependencyService.Get<ISaveAndLoad>();
+			Filtered = new List<TSource> ();
+			All = null;
 		}
 
-		public async Task<IEnumerable<TReturn>> Get<TReturn>()
-			where TReturn : class, new()
-		{
-			return await System.Threading.Tasks.Task.Run<IEnumerable<TReturn>>(() => {
+		protected async Task<List<TSource>> GetAsSource() {
+			return await Task.Run (() => {
 				var originalJson = DeviceStorage.LoadText(FileName);
 
 				if(!String.IsNullOrEmpty(originalJson)){
-					return JsonConvert.DeserializeObject<List<TReturn>> (originalJson);
+					return JsonConvert.DeserializeObject<List<TSource>> (originalJson);
 				}
 
-				return new List<TReturn>();
+				return new List<TSource>();
 			});
 		}
 
-		public async System.Threading.Tasks.Task Save<TReturn>(TReturn toSave) {
-			await System.Threading.Tasks.Task.Run (() => {
-				var originalJson = DeviceStorage.LoadText(FileName);
-
-				var currentItems = new List<TReturn>();
-
-				if(!String.IsNullOrEmpty(originalJson)){
-					//add it to the existing list
-					currentItems = JsonConvert.DeserializeObject<List<TReturn>> (originalJson);
-				}
-
-				currentItems.Add(toSave);
-				var json = JsonConvert.SerializeObject(currentItems);
-				DeviceStorage.SaveText(FileName, json);
-			});
+		protected async Task GetAll() {
+			if(All == null)
+				All = await GetAsSource();
 		}
 
-		public async System.Threading.Tasks.Task<bool> Delete<TType>(Guid toDelete) 
-			where TType : BaseData, new()
-		{
-			return await System.Threading.Tasks.Task.Run (() => {
-				var originalJson = DeviceStorage.LoadText(FileName);
-
-				var currentObjects = new List<TType>();
-
-				if(!String.IsNullOrEmpty(originalJson)){
-					//add it to the existing list
-					currentObjects = JsonConvert.DeserializeObject<List<TType>> (originalJson);
-					var toRemove = currentObjects.First(p => p.Id == toDelete);
-					currentObjects.Remove(toRemove);
-					var json = JsonConvert.SerializeObject(currentObjects);
-					DeviceStorage.SaveText(FileName, json);
-					return true;
-				}
-				return false;
+		protected async Task Save() {
+			await Task.Run (() => {
+				var json = JsonConvert.SerializeObject (Filtered);
+				DeviceStorage.SaveText (FileName, json);
 			});
 		}
-
 	}
 }
 

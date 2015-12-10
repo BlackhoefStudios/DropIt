@@ -9,7 +9,8 @@
 
   <ListView RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsFetchingData, Mode=TwoWay}"
             ItemsSource="{Binding DataSource, Mode=TwoWay}" SelectedItem="{Binding Selected, Mode=TwoWay}"
-            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="true">
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="true"
+            Footer="">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding Name}" Detail="{Binding Subtitle, StringFormat='Tasks Remaining: {0}'}"

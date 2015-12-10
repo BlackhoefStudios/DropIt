@@ -17,6 +17,6 @@ namespace DropIt.ViewModels.Tasks
                 MessagingCenter.Send(this, "TaskTapped");
             });
         }
-        public string CategoryId { get; set; }
+        public Guid ModelId { get; set; }
     }
 }

@@ -6,14 +6,23 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using DropIt.ViewModels.Tasks;
+using DropIt.Data;
 
 namespace DropIt.Pages
 {
     public partial class TaskDetailsPage : ContentPage
     {
-        public TaskDetailsPage()
+
+        public TaskDetailsPage(Guid projectId, TaskInfo toEdit = null)
         {
-			BindingContext = new TaskDetailsViewModel ();
+			var binding = new TaskDetailsViewModel (projectId, toEdit);
+			BindingContext = binding;
+
+			var save = new ToolbarItem ();
+			save.Command = (BindingContext as TaskDetailsViewModel).SaveCommand;
+			save.Text = "Save";
+
+			ToolbarItems.Add(save);
             InitializeComponent();
         }
     }

@@ -47,7 +47,7 @@ namespace DropIt.ViewModels.Projects
             {
 				IsFetchingData = true;
 
-				var service = new ProjectService();
+				var service = ServiceResolver.Projects;
 				var projects = await service.GetProjects();
 				DataSource = new ObservableCollection<ProjectViewModel>(projects);
 
@@ -97,10 +97,10 @@ namespace DropIt.ViewModels.Projects
             MessagingCenter.Subscribe<ProjectViewModel>(this, ProjectViewModel.DeleteMessage, async (project) =>
             {
                 //user chose to delete a project, so simply remove from the list.
-                DataSource.Remove(project);
-				var storage = new ProjectService();
-				await storage.DeleteProject(project.Id);
-
+				var storage = ServiceResolver.Projects;
+				var result = await storage.DeleteProject(project.Id);
+				if(result == true)
+         			DataSource.Remove(project);
             });
 
 			MessagingCenter.Subscribe<ProjectViewModel>(this, ProjectViewModel.AddedMessage, (project) =>
