@@ -24,10 +24,9 @@ namespace DropIt.Services
 			
 			return await Task.Run<IEnumerable<ProjectViewModel>>(async () => {
 				await GetAll();
-				Filtered = All;
 				var toReturn = new List<ProjectViewModel>();
 
-				foreach (var item in Filtered) {
+				foreach (var item in All) {
 					var toAdd = new ProjectViewModel{
 						Id = item.Id,
 						Name = item.Name
@@ -48,7 +47,7 @@ namespace DropIt.Services
 
 		public async Task<ProjectViewModel> SaveProject(Project toSave) {
 			await Task.Run (async () => {
-				Filtered.Add(toSave);
+				All.Add(toSave);
 				await Save();
 			});
 
@@ -66,7 +65,7 @@ namespace DropIt.Services
 				var toRemove = All.FirstOrDefault(p => p.Id == toDelete);
 
 				if(toRemove != null){
-					Filtered.Remove(toRemove);
+					All.Remove(toRemove);
 
 					//remove categories
 					var categoryService = ServiceResolver.Categories;

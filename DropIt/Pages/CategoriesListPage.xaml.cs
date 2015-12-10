@@ -29,9 +29,7 @@ namespace DropIt.Pages
 			var addButton = new ToolbarItem ();
 			addButton.Text = "New Task";
 			addButton.Icon = "add-task.png";
-			addButton.Command = new Command (async () => {
-				await Navigation.PushAsync (new TaskDetailsPage (project.Id, new TaskInfo ()));
-			}, () => !binding.IsFetchingData);
+			addButton.Command = binding.OpenNewTask;
 
 
 			ToolbarItems.Add(addButton);

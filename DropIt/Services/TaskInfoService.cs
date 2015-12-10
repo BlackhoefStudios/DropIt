@@ -18,7 +18,9 @@ namespace DropIt.Services
 		{
 		}
 
+
 		public async Task<TaskInfo> GetTask(Guid id){
+			await GetAll ();
 			return await Task.Run (() => All.FirstOrDefault (t => t.Id == id));
 		}
 
@@ -26,9 +28,9 @@ namespace DropIt.Services
 
 			return await Task.Run(async () => {
 				await GetAll();
-				Filtered = new List<TaskInfo>(All.Where(c => c.ParentForeignKey == categoryId));
+				var filtered = new List<TaskInfo>(All.Where(c => c.ParentForeignKey == categoryId));
 
-				return Filtered
+				return filtered
 					.Select(p => new TaskItemViewModel{
 						Id = p.Id,
 						ModelId = p.Id,
@@ -39,11 +41,9 @@ namespace DropIt.Services
 
 		public async Task<TaskItemViewModel> SaveTask(TaskInfo toSave) {
 			await Task.Run (async () => {
+				await GetAll();
 
-				Filtered.Add(toSave);
 				All.Add(toSave);
-
-
 
 				await Save();
 			});
@@ -62,7 +62,7 @@ namespace DropIt.Services
 				foreach (var id in toDelete) {
 					var toRemove = All.FirstOrDefault(c => c.Id == id);
 					if(toRemove != null){
-						Filtered.Remove(toRemove);
+						//Filtered.Remove(toRemove);
 						All.Remove(toRemove);
 						removed = true;
 					}
@@ -79,7 +79,7 @@ namespace DropIt.Services
 				var toRemove = All.FirstOrDefault(p => p.Id == toDelete);
 
 				if(toRemove != null){
-					Filtered.Remove(toRemove);
+					//Filtered.Remove(toRemove);
 					All.Remove(toRemove);
 
 					await Save();

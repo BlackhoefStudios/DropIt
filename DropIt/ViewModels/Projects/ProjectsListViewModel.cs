@@ -16,6 +16,7 @@ using BlackhoefStudios.Common.Interfaces.Services;
 using BlackhoefStudios.Common.ViewModels.Bases;
 using DropIt.Services;
 using System.Collections.ObjectModel;
+using DropIt.ViewModels.Tasks;
 
 namespace DropIt.ViewModels.Projects
 {
@@ -93,6 +94,13 @@ namespace DropIt.ViewModels.Projects
                 //refresh the items in the list.
                 Refresh.Execute(null);
             });
+
+			MessagingCenter.Subscribe<TaskDetailsViewModel, Guid> (this, "IncrementTaskCount",
+				(taskDetails, projectId) => {
+					var toUpdate = DataSource.First(p => p.Id == projectId);
+					var oldValue = int.Parse(toUpdate.Subtitle);
+					toUpdate.Subtitle = (++oldValue).ToString();
+				});
 
             MessagingCenter.Subscribe<ProjectViewModel>(this, ProjectViewModel.DeleteMessage, async (project) =>
             {

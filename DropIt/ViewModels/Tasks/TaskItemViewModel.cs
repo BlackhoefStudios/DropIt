@@ -10,8 +10,10 @@ namespace DropIt.ViewModels.Tasks
 {
     public sealed class TaskItemViewModel : BaseListItemViewModel
     {
+		public bool IsComplete { get; set; }
         public TaskItemViewModel()
         {
+			IsComplete = false;
             Selected = new Command(() =>
             {
                 MessagingCenter.Send(this, "TaskTapped");

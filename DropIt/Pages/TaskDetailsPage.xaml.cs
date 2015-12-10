@@ -13,7 +13,7 @@ namespace DropIt.Pages
     public partial class TaskDetailsPage : ContentPage
     {
 
-        public TaskDetailsPage(Guid projectId, TaskInfo toEdit = null)
+        public TaskDetailsPage(Guid projectId, TaskInfo toEdit)
         {
 			var binding = new TaskDetailsViewModel (projectId, toEdit);
 			BindingContext = binding;

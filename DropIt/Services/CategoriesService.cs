@@ -20,25 +20,52 @@ namespace DropIt.Services
 		{
 		}
 
-		public async Task<IEnumerable<CategoryListItemViewModel>> GetCategories(Guid projectId) {
+		public async Task<IEnumerable<CategoryListItemViewModel>> GetCategories(Guid projectId, bool includeTasks) {
 
 			return await Task.Run(async () => {
 				await GetAll();
-				Filtered = new List<Category>(All.Where(c => c.ParentForeignKey == projectId));
+				var filtered = new List<Category>(All.Where(c => c.ParentForeignKey == projectId));
+				var toReturn = new List<CategoryListItemViewModel>();
 
-				return Filtered
-					.Select(p => new CategoryListItemViewModel{
-						Id = p.Name,
-						ModelId = p.Id,
-						Name = p.Name
-					});
+				if(includeTasks){
+					var taskService = ServiceResolver.Tasks;
+
+					foreach (var category in filtered) {
+						var toAdd = new CategoryListItemViewModel(){
+							Id = category.Name,
+							ModelId = category.Id,
+							Name = category.Name
+						};
+
+						foreach (var taskId in category.NavigationIds) {
+							var taskInfo = await taskService.GetTask(taskId);
+							if(taskInfo != null){
+								toAdd.Add(new TaskItemViewModel(){
+									Id = taskInfo.Id,
+									Name = taskInfo.Description,
+									Subtitle = taskInfo.AssignedTo
+								});
+							}
+						}
+
+						toReturn.Add(toAdd);
+					}
+				}
+				else {
+					toReturn = filtered.Select(c => new CategoryListItemViewModel(){
+						Id = c.Name,
+						ModelId = c.Id,
+						Name = c.Name
+					}).ToList();
+				}
+				return toReturn;
 			});
 		}
 
 		public async Task<CategoryListItemViewModel> SaveCategory(Category toSave) {
 			await Task.Run (async () => {
 
-				Filtered.Add(toSave);
+				All.Add(toSave);
 				await Save();
 			});
 
@@ -58,7 +85,7 @@ namespace DropIt.Services
 				foreach (var id in toDelete) {
 					var toRemove = All.FirstOrDefault(c => c.Id == id);
 					if(toRemove != null){
-						Filtered.Remove(toRemove);
+						All.Remove(toRemove);
 						await taskService.DeleteTasks(toRemove.NavigationIds);
 						removed = true;
 					}

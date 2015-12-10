@@ -11,20 +11,21 @@
  			<RowDefinition Height="auto" />
  			<RowDefinition Height="auto" />
  			<RowDefinition Height="auto" />
+ 			<RowDefinition Height="auto" />
  			<RowDefinition Height="400" />
  			<RowDefinition Height="auto" />
  	</Grid.RowDefinitions>
- 	    <Label Grid.Row="0" Text="{Binding DateCreated, StringFormat='Date Created: {0:d}'}" HorizontalOptions="FillAndExpand" />
+ 	    <Label Grid.Row="0" Text="{Binding DateCreated, StringFormat='Date Created: {0:d}'}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" />
 
-	    <StackLayout Grid.Row="1" Orientation="Horizontal">
-	      <Label Text="Assigned To: " HorizontalOptions="Fill"/>
+	    <StackLayout Grid.Row="1">
+	      <Label Text="Assigned To" FontAttributes="Bold"/>
 	      <controls:BindablePicker ItemsSource="{Binding Users}"
 	      		SelectedItem="{Binding AssignedTo, Mode=TwoWay}"
 	      		HorizontalOptions="FillAndExpand" />
 	    </StackLayout>
 
-	    <StackLayout Grid.Row="2" Orientation="Horizontal">
-	      <Label Text="Category: " HorizontalOptions="Fill"/>
+	    <StackLayout Grid.Row="2">
+	      	<Label Text="Category" FontAttributes="Bold"/>
 	      		
 	      	 <controls:BindablePicker ItemsSource="{Binding Categories}"
 	      		SelectedItem="{Binding Category, Mode=TwoWay}"
@@ -32,17 +33,26 @@
 	    </StackLayout>
 
 	    <StackLayout Grid.Row="3">
-	    	<Label Text="Description" />
-	    	<controls:BorderedEditor Text="{Binding Description, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
+	    	<Label Text="Description" FontAttributes="Bold" />
+	    	<Entry Text="{Binding Description, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
 	    </StackLayout>
 
-	    <StackLayout Grid.Row="4">
-	    	<Label Text="Discussion" />
-		    <ListView HasUnevenRows="true" ItemsSource="{Binding Comments, Mode=TwoWay}">
+		<StackLayout Grid.Row="4">
+	    	<Label Text="Is Complete" FontAttributes="Bold"/>
+	    	<Switch IsToggled="{Binding IsComplete, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
+	    </StackLayout>
+
+	    <StackLayout Grid.Row="5">
+		    <ListView HasUnevenRows="true" Header="Discussion" ItemsSource="{Binding Comments, Mode=TwoWay}">
+		    	<ListView.HeaderTemplate>
+		    		<DataTemplate>
+	    				<Label Text="Discussion" FontAttributes="Bold"/>
+		    		</DataTemplate>
+		    	</ListView.HeaderTemplate>
 		     	<ListView.ItemTemplate>
 			      	<DataTemplate>
 						<ViewCell>
-			      			<Editor Text="{Binding Name}" IsEnabled="false" />
+			      			<Editor Text="{Binding ., StringFormat='{0}'}" IsEnabled="false" />
 						</ViewCell>
 			    	</DataTemplate>
 		      	</ListView.ItemTemplate>
@@ -50,9 +60,9 @@
 	    </StackLayout>
 
 
-	    <StackLayout Grid.Row="5">
-	    	<Label Text="Comment"/>
-			<controls:BorderedEditor Text="{Binding CurrentComment.Subtitle, Mode=TwoWay}" Keyboard="Chat" />
+	    <StackLayout Grid.Row="6">
+	    	<Label Text="Comment" FontAttributes="Bold"/>
+			<Entry Text="{Binding CurrentComment.Subtitle, Mode=TwoWay}" Keyboard="Chat" />
 			<Button Text="Comment" Command="{Binding CurrentComment.Selected}" />
 	    </StackLayout>
 

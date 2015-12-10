@@ -17,7 +17,6 @@ namespace DropIt.Services
 		
 		protected string FileName { get; private set; }
 		protected ISaveAndLoad DeviceStorage { get; set; }
-		protected List<TSource> Filtered { get; set; }
 		protected List<TSource> All { get; set; }
 
 
@@ -25,7 +24,6 @@ namespace DropIt.Services
 		{
 			FileName = fileName;
 			DeviceStorage = DependencyService.Get<ISaveAndLoad>();
-			Filtered = new List<TSource> ();
 			All = null;
 		}
 
@@ -48,7 +46,7 @@ namespace DropIt.Services
 
 		protected async Task Save() {
 			await Task.Run (() => {
-				var json = JsonConvert.SerializeObject (Filtered);
+				var json = JsonConvert.SerializeObject (All);
 				DeviceStorage.SaveText (FileName, json);
 			});
 		}

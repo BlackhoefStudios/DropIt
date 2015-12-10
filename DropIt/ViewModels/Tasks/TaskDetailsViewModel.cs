@@ -14,24 +14,22 @@ using System.Linq;
 
 namespace DropIt.ViewModels.Tasks
 {
-	public class TaskDetailsViewModel : ObservableViewModel, ISubscriber
+	public class TaskDetailsViewModel : BaseViewModel<TaskInfo>, ISubscriber
 	{
-		TaskInfo data;
-
 		public const string SaveMessage = "SaveTask";
 
 		public DateTime DateCreated {
-			get { return data.DateCreated; }
+			get { return DataSource.DateCreated; }
 			set {
-				data.DateCreated = value;
+				DataSource.DateCreated = value;
 				OnPropertyChanged ("DateCreated");
 			}
 		}
 
 		public string Description {
-			get { return data.Description; }
+			get { return DataSource.Description; }
 			set {
-				data.Description = value;
+				DataSource.Description = value;
 				OnPropertyChanged ("Description");
 				SaveCommand.ChangeCanExecute ();
 
@@ -52,10 +50,10 @@ namespace DropIt.ViewModels.Tasks
 		public string AssignedTo 
 		{
 			get {
-				return data.AssignedTo;
+				return DataSource.AssignedTo;
 			}
 			set {
-				data.AssignedTo = value;
+				DataSource.AssignedTo = value;
 				OnPropertyChanged ("AssignedTo");
 				SaveCommand.ChangeCanExecute ();
 
@@ -79,7 +77,7 @@ namespace DropIt.ViewModels.Tasks
 			}
 			set {
 				category = value;
-				data.ParentForeignKey = category.ModelId;
+				DataSource.ParentForeignKey = category.ModelId;
 				OnPropertyChanged ("Category");
 				SaveCommand.ChangeCanExecute ();
 
@@ -97,42 +95,70 @@ namespace DropIt.ViewModels.Tasks
 			}
 		}
 
+		public bool IsComplete {
+			get { return DataSource.IsComplete; } 
+			set {
+				DataSource.IsComplete = value;
+				OnPropertyChanged ("IsComplete");
+			}
+		}
+
 		public bool IsValid {
 			get {
 				return !String.IsNullOrEmpty (Description)
 				&& !String.IsNullOrEmpty (AssignedTo)
+				&& Category != null
 				&& Category.ModelId != Guid.Empty;
 			}
 		}
 
 		public Command SaveCommand { get; private set; }
 
-		public TaskDetailsViewModel (Guid projectId, TaskInfo info)
+		bool IsNew { get; set; }
+
+		public TaskDetailsViewModel (Guid projectId, TaskInfo info) : base(null)
 		{
-			data = info ?? new TaskInfo();
+			IsNew = info == null;
+
+			DataSource = info ?? new TaskInfo();
 			DateCreated = DateTime.UtcNow;
 			Users = new List<string> () {
 				"chris.willette@wsu.edu",
 				LoginService.CurrentUser.Email
 			};
 
-			Command c = new Command (async() => {
-				Categories = await ServiceResolver.Categories.GetCategories(projectId);
-				if (data.ParentForeignKey == Guid.Empty)
+			Command loadCategories = new Command (async() => {
+				Categories = await ServiceResolver.Categories.GetCategories(projectId, false);
+				if (DataSource.ParentForeignKey == Guid.Empty)
 					Category = Categories.ElementAt(0);
+				else {
+					Category = Categories.First(cat => cat.ModelId == DataSource.ParentForeignKey);
+				}
 			});
 
 			SetupNewComment ();
-			Comments = new ObservableCollection<CommentViewModel> ();
+			Comments = new ObservableCollection<CommentViewModel>(DataSource.Comments.Select(c => new CommentViewModel {
+				Id = c.Id,
+				Name = c.CommenterName,
+				Subtitle = c.Description
+			}));
+
 			SaveCommand = new Command (async (sender) => {
 				var service = ServiceResolver.Tasks;
-				await service.SaveTask(data);
+				await service.SaveTask(DataSource);
 
-				await ServiceResolver.Categories.AddTask(data);
+				if(IsNew){
+					//add to category
+					await ServiceResolver.Categories.AddTask(DataSource);
+					if(!IsComplete){
+						//update the task count on the project list view
+						MessagingCenter.Send<TaskDetailsViewModel, Guid>(this, "IncrementTaskCount", projectId);
+					}
+				}
 
 				MessagingCenter.Send(this, SaveMessage);
 			}, (sender) => IsValid);
-			c.Execute (null);
+			loadCategories.Execute (null);
 		}
 
 		void SetupNewComment(){
@@ -148,15 +174,13 @@ namespace DropIt.ViewModels.Tasks
 						return;
 					}
 
-					CurrentComment.Name = string.Format("{0}: {1}", 
-						currentComment.Name,
-						currentComment.Subtitle);
+					DataSource.Comments.Add(new Comment(){
+						CommenterName = CurrentComment.Name,
+						Description = CurrentComment.Subtitle
+					});
 					
 					Comments.Add(CurrentComment);
-					data.Comments.Add(new Comment(){
-						CommenterName = CurrentComment.Name,
-						Descriptions = CurrentComment.Subtitle
-					});
+
 					SetupNewComment();
 				});
 		}

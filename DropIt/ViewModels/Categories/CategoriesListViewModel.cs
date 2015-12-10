@@ -20,12 +20,14 @@ namespace DropIt.ViewModels.Categories
     {
 		ProjectViewModel data;
 
+		public Command OpenNewTask { get; private set; }
+
         public void Subscribe()
         {
             MessagingCenter.Subscribe<TaskItemViewModel>(this, "TaskTapped",
                 async (task) =>
                 {
-					var taskToEdit = await ServiceResolver.Tasks.GetTask(task.ModelId);
+					var taskToEdit = await ServiceResolver.Tasks.GetTask(task.Id);
 					await base.Navigation.PushAsync(new TaskDetailsPage(data.Id, taskToEdit));
 					Selected = null;
                 });
@@ -53,16 +55,31 @@ namespace DropIt.ViewModels.Categories
         {
 			data = project;
             Title = project.Name;
+			IsBusy = IsFetchingData = true;
+
+			OpenNewTask = new Command (async () => {
+				await Navigation.PushAsync (new TaskDetailsPage (project.Id, null));
+			}, () => !IsFetchingData);
 
 			Refresh = new Command (async () => {
 				IsBusy = IsFetchingData = true;
+				OpenNewTask.ChangeCanExecute();
+
+				if(DataSource.Count > 0) {
+					IsBusy = IsFetchingData = false;
+					OpenNewTask.ChangeCanExecute();
+
+					return;
+				}
 
 				var categoryService = ServiceResolver.Categories;
-				var categories = await categoryService.GetCategories (project.Id);
+
+				var categories = await categoryService.GetCategories (project.Id, true);
 
 				DataSource = new ObservableCollection<CategoryListItemViewModel>(categories);
 
 				IsBusy = IsFetchingData = false;
+				OpenNewTask.ChangeCanExecute();
 			});
 
         }

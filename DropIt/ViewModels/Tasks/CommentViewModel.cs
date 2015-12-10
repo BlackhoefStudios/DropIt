@@ -13,6 +13,11 @@ namespace DropIt.ViewModels.Tasks
 				MessagingCenter.Send(this, CommentSelected); 
 			});
 		}
+
+		public override string ToString ()
+		{
+			return string.Format ("{0}: {1}", Name, Subtitle);
+		}
 	}
 }
 

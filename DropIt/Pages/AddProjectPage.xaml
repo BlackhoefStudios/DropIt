@@ -9,6 +9,7 @@
 			<TableRoot>
 				<TableSection>
 					<EntryCell Label="Project Name" Text="{Binding Name}" />
+					<EntryCell Label="Default Category Name" Text="{Binding DefaultCategory}" />
 				</TableSection>
 			</TableRoot>
 		</TableView>

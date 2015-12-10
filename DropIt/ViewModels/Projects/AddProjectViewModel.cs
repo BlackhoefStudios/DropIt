@@ -4,6 +4,7 @@ using DropIt.Data;
 using System.Windows.Input;
 using Xamarin.Forms;
 using DropIt.Services;
+using DropIt.Pages;
 
 namespace DropIt.ViewModels.Projects
 {
@@ -19,6 +20,16 @@ namespace DropIt.ViewModels.Projects
 			}
 		}
 
+		string defaultCategoryName;
+		public string DefaultCategory {
+			get { return defaultCategoryName; }
+			set {
+				defaultCategoryName = value;
+				OnPropertyChanged ("DefaultCategory");
+				Save.ChangeCanExecute ();
+			}
+		}
+
 		public Command Save { get; private set; }
 
 		public AddProjectViewModel ()
@@ -29,7 +40,7 @@ namespace DropIt.ViewModels.Projects
 
 				var toAdd = new Category(){
 					ParentForeignKey = model.Id,
-					Name = "My Test Category"
+					Name = DefaultCategory
 				};
 
 				model.NavigationIds.Add(toAdd.Id);
@@ -38,8 +49,8 @@ namespace DropIt.ViewModels.Projects
 				await categories.SaveCategory(toAdd);
 
 				MessagingCenter.Send<ProjectViewModel>(toShow, ProjectViewModel.AddedMessage);
-				await App.Current.MainPage.Navigation.PopAsync();
-			}, (sender) => !String.IsNullOrEmpty(Name));
+				await (App.Current.MainPage as RootTabPage).CurrentPage.Navigation.PopAsync();
+			}, (sender) => !String.IsNullOrEmpty(Name) && !String.IsNullOrEmpty(DefaultCategory));
 
 
 			model = new Project ();
