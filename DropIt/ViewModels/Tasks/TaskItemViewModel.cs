@@ -18,6 +18,10 @@ namespace DropIt.ViewModels.Tasks
             {
                 MessagingCenter.Send(this, "TaskTapped");
             });
+
+			Delete = new Command (() => {
+				MessagingCenter.Send(this, "TaskDeleted");
+			});
         }
         public Guid ModelId { get; set; }
     }

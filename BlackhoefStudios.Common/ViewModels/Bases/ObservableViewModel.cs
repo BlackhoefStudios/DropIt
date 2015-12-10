@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace BlackhoefStudios.Common.ViewModels.Bases
 {
@@ -11,7 +12,6 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
     {
 
         #region Property Changed Implementation
-
         /// <summary>
         /// The event for when a property changes.
         /// </summary>

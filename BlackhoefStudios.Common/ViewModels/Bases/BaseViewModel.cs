@@ -3,6 +3,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using BlackhoefStudios.Common.Interfaces.Pages;
+using Newtonsoft.Json;
 
 namespace BlackhoefStudios.Common.ViewModels.Bases
 {
@@ -20,6 +21,7 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
 		}
 
 		bool isBusy;
+		[JsonIgnore]
 
         /// <summary>
         /// When set, it changes the Network icon to show active.
@@ -50,6 +52,7 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
 		}
 
         string title;
+		[JsonIgnore]
 
         /// <summary>
         /// When set, it changes the Title of the page.
@@ -71,6 +74,7 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
         }
 
 		string icon;
+		[JsonIgnore]
 
 		/// <summary>
 		/// When set, it changes the Icon of the page.
@@ -90,6 +94,7 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
 				OnPropertyChanged("Icon");
 			}
 		}
+		[JsonIgnore]
 
         /// <summary>
         /// Gets the navigation item for the given application. Usefull for when wanting to push or pop pages.
@@ -124,7 +129,9 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
 		{
 
 		}
+			
 		private T dataSource;
+		[JsonIgnore]
         /// <summary>
         /// The Object that is usually used for edits/creates on a page.
         /// </summary>

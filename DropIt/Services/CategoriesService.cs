@@ -20,6 +20,11 @@ namespace DropIt.Services
 		{
 		}
 
+		public async Task<Category> GetCategory(Guid id){
+			await GetAll ();
+			return await Task.Run (() => All.FirstOrDefault (t => t.Id == id));
+		}
+
 		public async Task<IEnumerable<CategoryListItemViewModel>> GetCategories(Guid projectId, bool includeTasks) {
 
 			return await Task.Run(async () => {
@@ -98,6 +103,11 @@ namespace DropIt.Services
 
 		public async Task AddTask(TaskInfo toAdd){
 			All.First (c => c.Id == toAdd.ParentForeignKey).NavigationIds.Add (toAdd.Id);
+			await Save ();
+		}
+
+		public async Task RemoveTask(TaskInfo toAdd){
+			All.First (c => c.Id == toAdd.ParentForeignKey).NavigationIds.Remove (toAdd.Id);
 			await Save ();
 		}
 

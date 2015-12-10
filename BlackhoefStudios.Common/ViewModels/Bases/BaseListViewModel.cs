@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Newtonsoft.Json;
 
 namespace BlackhoefStudios.Common.ViewModels.Bases
 {
@@ -15,6 +16,7 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
     public abstract class BaseListViewModel<T> : BaseViewModel where T : class
     {
         private ObservableCollection<T> dataSource;
+		[JsonIgnore]
 
         /// <summary>
         /// Represents a list of objects to be used as the ListView Source.
@@ -30,6 +32,8 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
         }
 
         private T selected;
+		[JsonIgnore]
+
         /// <summary>
         /// The currently selected ListView item.
         /// </summary>
@@ -46,6 +50,8 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
             }
         }
 
+		[JsonIgnore]
+
         /// <summary>
         /// The command to call when the Swipe to Refresh (or Pull to Refresh) happens.
         /// </summary>
@@ -55,6 +61,7 @@ namespace BlackhoefStudios.Common.ViewModels.Bases
         }
 
 		bool fetchingData;
+		[JsonIgnore]
 		public bool IsFetchingData {
 			get {
 				return fetchingData;

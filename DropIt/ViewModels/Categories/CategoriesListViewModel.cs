@@ -32,11 +32,26 @@ namespace DropIt.ViewModels.Categories
 					Selected = null;
                 });
 
+			MessagingCenter.Subscribe<TaskItemViewModel>(this, "TaskDeleted",
+				async (task) =>
+				{
+					var taskToRemove = await ServiceResolver.Tasks.GetTask(task.Id);
+					await ServiceResolver.Tasks.DeleteTask(task.Id);
+
+					//remove from listview
+					var taskCategory = DataSource.First(t => t.ModelId == taskToRemove.ParentForeignKey);
+					var taskInList = taskCategory.First(t => t.Id == task.Id);
+					taskCategory.Remove(taskInList);
+
+				});
+
 			MessagingCenter.Subscribe<TaskDetailsViewModel> (this, TaskDetailsViewModel.SaveMessage,
 				async (saved) => {
 					var newListItem = new TaskItemViewModel{
-						Name = saved.Description,
-						Subtitle = saved.AssignedTo
+						Id = saved.DataSource.Id,
+						ModelId = saved.DataSource.Id,
+						Name = saved.DataSource.Description,
+						Subtitle = saved.DataSource.AssignedTo
 					};
 
 					var category = DataSource.FirstOrDefault(c => c.ModelId == saved.Category.ModelId);
@@ -47,8 +62,10 @@ namespace DropIt.ViewModels.Categories
         }
 
         public void Unsubscribe()
-        {
-            MessagingCenter.Unsubscribe<TaskItemViewModel>(this, "TaskTapped");
+		{
+			MessagingCenter.Unsubscribe<TaskItemViewModel>(this, "TaskDeleted");
+			MessagingCenter.Unsubscribe<TaskItemViewModel>(this, "TaskTapped");
+			MessagingCenter.Unsubscribe<TaskDetailsViewModel>(this, TaskDetailsViewModel.SaveMessage);
         }
 
         public CategoriesListViewModel(IApplication app, ProjectViewModel project) : base(app)

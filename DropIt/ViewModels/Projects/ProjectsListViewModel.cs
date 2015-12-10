@@ -42,8 +42,12 @@ namespace DropIt.ViewModels.Projects
             }
         }
 
+
         public ProjectsListViewModel(IApplication app) : base(app)
         {
+
+
+
             Refresh = new Command(async () =>
             {
 				IsFetchingData = true;
@@ -95,6 +99,11 @@ namespace DropIt.ViewModels.Projects
                 Refresh.Execute(null);
             });
 
+			MessagingCenter.Subscribe<ProjectViewModel> (this, ProjectViewModel.EditMessage,
+				async (project) => {
+					await Navigation.PushAsync(new EditProjectPage(project.Id));
+				});
+
 			MessagingCenter.Subscribe<TaskDetailsViewModel, Guid> (this, "IncrementTaskCount",
 				(taskDetails, projectId) => {
 					var toUpdate = DataSource.First(p => p.Id == projectId);
@@ -139,7 +148,8 @@ namespace DropIt.ViewModels.Projects
         {
             MessagingCenter.Unsubscribe<ProjectsListViewModel>(this, "NeedsLogIn");
             MessagingCenter.Unsubscribe<ProjectViewModel>(this, ProjectViewModel.DeleteMessage);
-            MessagingCenter.Unsubscribe<ProjectViewModel>(this, ProjectViewModel.SelectedMessage);
+			MessagingCenter.Unsubscribe<ProjectViewModel>(this, ProjectViewModel.SelectedMessage);
+            MessagingCenter.Unsubscribe<ProjectViewModel>(this, ProjectViewModel.EditMessage);
         }
     }
 }

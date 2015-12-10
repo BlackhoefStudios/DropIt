@@ -13,11 +13,18 @@ namespace DropIt.ViewModels.Projects
     {
 		public const string AddedMessage = "ProjectAdded";
         public const string DeleteMessage = "DeleteProject";
-        public const string SelectedMessage = "SelectedProject";
+		public const string SelectedMessage = "SelectedProject";
+        public const string EditMessage = "EditProject";
+
+		public ICommand Edit { get; private set; }
 
         public ProjectViewModel()
         {
 			Subtitle = 0.ToString ();
+
+			Edit = new Command (() => {
+				MessagingCenter.Send(this, EditMessage);
+			});
             Delete = new Command(() =>
             {
                 MessagingCenter.Send(this, DeleteMessage);

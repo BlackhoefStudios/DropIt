@@ -33,9 +33,6 @@ namespace DropIt.Pages
 						await Navigation.PushAsync(new AddProjectPage());
 					}));
                 }
-				else {
-					binding.IsBusy = binding.IsFetchingData = false;
-				}
             };
         }
     }

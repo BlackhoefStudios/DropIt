@@ -17,8 +17,8 @@
           <TextCell.ContextActions>
             <MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
                Text="Delete" IsDestructive="True" />
-            <MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
-                Text="Move" />
+<!--            <MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
+                Text="Move" />-->
           </TextCell.ContextActions>
         </TextCell>
       </DataTemplate>

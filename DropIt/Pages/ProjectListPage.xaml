@@ -16,6 +16,8 @@
         <TextCell Text="{Binding Name}" Detail="{Binding Subtitle, StringFormat='Tasks Remaining: {0}'}"
                   Command="{Binding Selected}">
           <TextCell.ContextActions>
+           <MenuItem Command="{Binding Edit}" CommandParameter="{Binding}"
+                Text="Edit" />
             <MenuItem Command="{Binding Delete}" CommandParameter="{Binding}"
                Text="Delete" IsDestructive="True" />
           </TextCell.ContextActions>

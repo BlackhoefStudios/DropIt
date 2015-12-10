@@ -79,10 +79,12 @@ namespace DropIt.Services
 				var toRemove = All.FirstOrDefault(p => p.Id == toDelete);
 
 				if(toRemove != null){
-					//Filtered.Remove(toRemove);
 					All.Remove(toRemove);
 
 					await Save();
+
+					//now remove from category
+					await ServiceResolver.Categories.RemoveTask(toRemove);
 					return true;
 				}
 
@@ -92,10 +94,9 @@ namespace DropIt.Services
 
 
 		public async Task<int> CountTasks(Guid categoryId){
-			return await Task.Run (() => {
-				if (All != null)
-					return All.Count (t => t.ParentForeignKey == categoryId);
-				return 0;
+			return await Task.Run (async () => {
+				await GetAll();
+				return All.Count (t => t.ParentForeignKey == categoryId);
 			});
 		}
 	}

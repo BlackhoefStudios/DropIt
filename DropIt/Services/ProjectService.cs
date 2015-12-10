@@ -20,6 +20,11 @@ namespace DropIt.Services
 		{
 		}
 
+		public async Task<Project> GetProject(Guid id){
+			await GetAll ();
+			return await Task.Run (() => All.FirstOrDefault (t => t.Id == id));
+		}
+
 		public async Task<IEnumerable<ProjectViewModel>> GetProjects() {
 			
 			return await Task.Run<IEnumerable<ProjectViewModel>>(async () => {
@@ -47,7 +52,13 @@ namespace DropIt.Services
 
 		public async Task<ProjectViewModel> SaveProject(Project toSave) {
 			await Task.Run (async () => {
-				All.Add(toSave);
+				var existing = All.FirstOrDefault(p => p.Id == toSave.Id);
+				if(existing == null)
+					All.Add(toSave);
+				else {
+					All.Remove(existing);
+					All.Add(toSave);
+				}
 				await Save();
 			});
 
