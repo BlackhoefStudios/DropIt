@@ -22,7 +22,7 @@ namespace DropIt.Services
 
 		public async Task<Category> GetCategory(Guid id){
 			await GetAll ();
-			return await Task.Run (() => All.FirstOrDefault (t => t.Id == id));
+			return await Task.Run (() => All.DefaultIfEmpty(null).FirstOrDefault (t => t.Id == id));
 		}
 
 		public async Task<IEnumerable<CategoryListItemViewModel>> GetCategories(Guid projectId, bool includeTasks) {
@@ -69,7 +69,7 @@ namespace DropIt.Services
 
 		public async Task<CategoryListItemViewModel> SaveCategory(Category toSave) {
 			await Task.Run (async () => {
-
+				await GetAll();
 				All.Add(toSave);
 				await Save();
 			});

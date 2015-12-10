@@ -4,6 +4,9 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using DropIt.Services;
+using DropIt.iOS.Dependencies;
+using DropIt.Data.Services;
 
 namespace DropIt.iOS
 {
@@ -20,6 +23,11 @@ namespace DropIt.iOS
 			#endif
 
 			LoadApplication (new App ());
+
+			//logout
+			var accountService =new AccountHelper(new SecureStorage());
+			accountService.ClearCredentials ();
+
 
 			return base.FinishedLaunching (app, options);
 		}

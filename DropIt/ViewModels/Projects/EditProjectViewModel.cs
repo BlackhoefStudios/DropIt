@@ -47,8 +47,10 @@ namespace DropIt.ViewModels.Projects
 				//now get categories for editing
 				foreach (var categoryId in DataSource.NavigationIds) {
 					var category = await ServiceResolver.Categories.GetCategory(categoryId);
-					var editModel = new EditCategoryViewModel(category);
-					temp.Add(editModel);
+					if(category != null){
+						var editModel = new EditCategoryViewModel(category);
+						temp.Add(editModel);
+					}
 				}
 				Categories = new ObservableCollection<EditCategoryViewModel>(temp);
 				OnPropertyChanged("Name");
@@ -72,10 +74,10 @@ namespace DropIt.ViewModels.Projects
 
 				foreach (var category in toRemove) {
 					category.ParentForeignKey = project.Id;
-					await categoryService.RemoveCategory(category);
+					//await categoryService.RemoveCategory(category);
 				}
 
-				projectService.SaveProject(project);
+				await projectService.SaveProject(project);
 
 			}, (sender) => !String.IsNullOrEmpty(Name));
 			fetchModelCommand.Execute (null);
