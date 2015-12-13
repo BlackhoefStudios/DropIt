@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="238f5504-00e6-4f4f-92ca-eeb6ce830019" name="DropIt" linkedPackageId="75e092f8-e047-476c-8b4e-db43b2d15169" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="238f5504-00e6-4f4f-92ca-eeb6ce830019" name="DropIt" linkedPackageId="75e092f8-e047-476c-8b4e-db43b2d15169" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="ff9de74a-b9f5-4d92-a924-4acd75e14cf6" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="d335f89d-08aa-45ba-b777-87e33b45d5d2" />
@@ -119,7 +119,7 @@
           <behaviorExecutionSpecification Id="f423bcbf-38d1-40a8-94bd-23ddcd350f3e" name="BehaviorExecutionSpecification43">
             <elementDefinition Id="d7617046-f128-46e6-a1bd-0001236cf6de" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="aa421d84-4799-47fd-835d-bdaf88c007af" LastKnownName="ExecutionOccurrenceSpecification86" />
@@ -140,7 +140,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="fe8ca146-94c3-4a4d-81a1-4c6671c27910" name="MessageOccurrenceSpecification108">
@@ -152,7 +152,7 @@
           <messageOccurrenceSpecification Id="8c46aaea-242c-4ea7-b5fd-94f3f8ef9153" name="MessageOccurrenceSpecification109">
             <elementDefinition Id="2c524daa-e275-49d5-9a54-e902a3b2a05d" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="adb3f2e6-19d7-4034-8304-5163e20e5985" name="BehaviorExecutionSpecification44">
@@ -193,16 +193,16 @@
               <lifelineMoniker Id="ee8bf630-cb1b-4418-83f9-7f5ec8838732" LastKnownName="Authenticated User" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="da5d8fdf-720a-43c8-bfde-523d0322444f" name="MessageOccurrenceSpecification110">
-            <elementDefinition Id="23c918d8-e4a2-4a8f-bc7d-c39b4d68fd6f" />
-            <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="f3faf3eb-5a56-4e82-a8c9-ee83d2f8a78a" name="MessageOccurrenceSpecification111">
             <elementDefinition Id="cd02e549-fb5f-4401-9473-8735a7c3e8c4" />
             <covered>
               <lifelineMoniker Id="ee8bf630-cb1b-4418-83f9-7f5ec8838732" LastKnownName="Authenticated User" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="da5d8fdf-720a-43c8-bfde-523d0322444f" name="MessageOccurrenceSpecification110">
+            <elementDefinition Id="23c918d8-e4a2-4a8f-bc7d-c39b4d68fd6f" />
+            <covered>
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="aa421d84-4799-47fd-835d-bdaf88c007af" name="ExecutionOccurrenceSpecification86">
@@ -213,7 +213,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="397a5448-0d56-4749-826c-3d40eff5317c" name="BehaviorExecutionSpecification22">
@@ -307,7 +307,7 @@
           <behaviorExecutionSpecification Id="9c5da551-9de7-416d-97a2-5e872d7214fd" name="BehaviorExecutionSpecification48">
             <elementDefinition Id="35241910-4534-4f0c-8e38-de2ad927780e" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="60088e5b-a3c7-43b0-9877-898c7ca105f7" LastKnownName="ExecutionOccurrenceSpecification96" />
@@ -328,13 +328,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="464d70aa-0502-4d46-bd30-c2059fedae2f" name="MessageOccurrenceSpecification121">
             <elementDefinition Id="27ffc65c-89bd-46cf-aedf-15dd9fbdc6dc" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="5da47cfc-8e41-4dbb-ae1f-ed45828fea40" name="MessageOccurrenceSpecification120">
@@ -363,7 +363,7 @@
           <messageOccurrenceSpecification Id="da62cf87-e9d1-429e-abf3-b401e24b55be" name="MessageOccurrenceSpecification122">
             <elementDefinition Id="7b4977fe-25ec-4cb3-b337-bf2a478d20b5" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="60088e5b-a3c7-43b0-9877-898c7ca105f7" name="ExecutionOccurrenceSpecification96">
@@ -374,7 +374,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="0478a9a7-1c27-431d-b1e6-43ed628082f1" name="MessageOccurrenceSpecification128">
@@ -419,7 +419,7 @@
           <behaviorExecutionSpecification Id="88a8c5cc-f165-4636-bb3f-1557af6e6108" name="BehaviorExecutionSpecification52">
             <elementDefinition Id="aaa96cf4-f7b5-4f6c-9a58-f43659f2bbf2" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="5e9b5696-71eb-423c-9a41-6684c13536c1" LastKnownName="ExecutionOccurrenceSpecification104" />
@@ -439,13 +439,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="1d512d57-e6d1-4a44-a76b-2694b2ed10da" name="MessageOccurrenceSpecification131">
             <elementDefinition Id="dcdab310-b521-4a26-bc5e-d3575506788a" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="813ca983-bd9b-4a71-ada6-cddad176ddf9" name="MessageOccurrenceSpecification130">
@@ -473,7 +473,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="5705573f-e937-47ae-966e-115fdbed691b" name="ExecutionOccurrenceSpecification94">
@@ -490,7 +490,7 @@
           <behaviorExecutionSpecification Id="c90a9a8a-6627-47c8-8ce2-30e5b1fed110" name="BehaviorExecutionSpecification23">
             <elementDefinition Id="47fa23e1-0570-41bc-983c-03c33f1a27f8" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="01191393-7874-4e1b-815e-0d6bf64894ec" LastKnownName="ExecutionOccurrenceSpecification46" />
@@ -511,13 +511,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="7975adac-ba95-476a-9d1d-98314610bf7f" name="MessageOccurrenceSpecification65">
             <elementDefinition Id="237289dc-e328-4e5a-b61b-100d6fe7a292" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="66134a14-db05-4b14-bb28-601d78744367" name="MessageOccurrenceSpecification64">
@@ -529,7 +529,7 @@
           <messageOccurrenceSpecification Id="e389f7b3-fb02-45c6-bf47-e201ec40b726" name="MessageOccurrenceSpecification66">
             <elementDefinition Id="1bc720d7-a188-4ad0-a521-4b6b365fbff2" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="18ce3e0f-96fe-4925-a93a-d3b6507dfcdd" name="MessageOccurrenceSpecification67">
@@ -546,7 +546,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="cc38edd5-da82-4e29-9a41-2aaddf8bb69c" name="MessageOccurrenceSpecification96">
@@ -591,7 +591,7 @@
           <behaviorExecutionSpecification Id="bad41ac5-1c91-41bc-93ac-02be791cb564" name="BehaviorExecutionSpecification38">
             <elementDefinition Id="f87a8bbf-9593-4d3a-8bf6-d24ba980b5b8" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="3cc98fbf-f4dc-4daf-96f0-a3fdbcc3e2ea" LastKnownName="ExecutionOccurrenceSpecification76" />
@@ -611,7 +611,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="fc3f4765-a383-44b0-a8a5-e44e8e20c06c" name="MessageOccurrenceSpecification98">
@@ -623,7 +623,7 @@
           <messageOccurrenceSpecification Id="8ea532f3-4698-43d9-b679-dbac2dc6b552" name="MessageOccurrenceSpecification99">
             <elementDefinition Id="cb02665a-6fb0-4bff-a0c1-8eac9b844d05" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="d73b5de3-e401-406c-9130-3f574963d42d" name="ExecutionOccurrenceSpecification74">
@@ -645,7 +645,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="3f2bfacf-73bb-4990-8b93-5740f2813444" name="BehaviorExecutionSpecification25">
@@ -695,7 +695,7 @@
           <behaviorExecutionSpecification Id="2b59cce0-3981-465c-9c40-881004b86489" name="BehaviorExecutionSpecification26">
             <elementDefinition Id="ff6b4c39-3730-4d7e-9ccf-ae8cbd2c05c7" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="b203a75e-3719-4a91-93bd-f2fb6559eb83" LastKnownName="ExecutionOccurrenceSpecification52" />
@@ -716,7 +716,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="0a256d2e-7aaa-4b78-84e5-695a25f654c0" name="ExecutionOccurrenceSpecification44">
@@ -739,13 +739,13 @@
           <messageOccurrenceSpecification Id="fdcb0553-6ad3-482a-8467-78e61c686062" name="MessageOccurrenceSpecification73">
             <elementDefinition Id="9e347e12-8920-4fe8-937d-24ef396fefad" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="7bd672e9-ea24-4a94-8b22-6d730c553540" name="MessageOccurrenceSpecification74">
             <elementDefinition Id="a5b03905-6ff8-4f80-93c2-76084184c6dc" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="8da56c87-1dea-486a-845a-9ea7cb1ceaf4" name="MessageOccurrenceSpecification75">
@@ -762,7 +762,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="288eda22-75e5-4bc0-a5c1-59b236d665a5" name="MessageOccurrenceSpecification102">
@@ -807,7 +807,7 @@
           <behaviorExecutionSpecification Id="d71d0382-d5b0-4adf-9679-b4cce6e2c8b5" name="BehaviorExecutionSpecification41">
             <elementDefinition Id="7afd1d26-a980-4761-a9e5-97b860b8c156" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="3fe8229e-4915-423d-8f5c-44be97f762f2" LastKnownName="ExecutionOccurrenceSpecification82" />
@@ -827,13 +827,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="dd123277-e950-44cd-a613-3925187160fa" name="MessageOccurrenceSpecification105">
             <elementDefinition Id="18ddf524-d1c9-4061-9323-0d0e025273ca" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="1d6805a6-63a3-45ad-a330-caaedabd2019" name="MessageOccurrenceSpecification104">
@@ -861,7 +861,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="928a3e3a-3657-44f4-959a-226f349001e2" name="BehaviorExecutionSpecification27">
@@ -893,16 +893,16 @@
               <lifelineMoniker Id="6974e3d0-3e74-4403-b954-a225c5e689af" LastKnownName="Tasks" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="ccbe395e-bb5a-4d2e-bc9d-24652f8fa52a" name="MessageOccurrenceSpecification76">
-            <elementDefinition Id="466ce73c-6867-4c19-b762-de44ae06a976" />
-            <covered>
-              <lifelineMoniker Id="3b965280-c89e-4eeb-905a-81a182815ddb" LastKnownName="Categories" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="16b2b3e1-24fb-4ff8-beb5-3153b1750ac1" name="MessageOccurrenceSpecification77">
             <elementDefinition Id="73de893e-8dbc-4f61-8c41-205f7bf5a84c" />
             <covered>
               <lifelineMoniker Id="6974e3d0-3e74-4403-b954-a225c5e689af" LastKnownName="Tasks" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ccbe395e-bb5a-4d2e-bc9d-24652f8fa52a" name="MessageOccurrenceSpecification76">
+            <elementDefinition Id="466ce73c-6867-4c19-b762-de44ae06a976" />
+            <covered>
+              <lifelineMoniker Id="3b965280-c89e-4eeb-905a-81a182815ddb" LastKnownName="Categories" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="c3d7dab1-cdd2-4576-970a-1b83b20fb4c4" name="ExecutionOccurrenceSpecification50">
@@ -958,7 +958,7 @@
           <behaviorExecutionSpecification Id="a8b411be-ac4d-4f12-b15a-ab0d988563b8" name="BehaviorExecutionSpecification29">
             <elementDefinition Id="76090e0a-63f2-474a-974e-5b1607c656b0" />
             <coveredLifelines>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="ae7a6988-a122-4ee4-94f0-1aa679d677b2" LastKnownName="ExecutionOccurrenceSpecification58" />
@@ -978,7 +978,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="19a11b48-b051-45fb-ab1f-2c5eb06eb665" name="MessageOccurrenceSpecification80">
@@ -990,7 +990,7 @@
           <messageOccurrenceSpecification Id="1008fba1-c232-40c8-81c0-35de0dcd3c06" name="MessageOccurrenceSpecification81">
             <elementDefinition Id="216241b0-3292-4a9e-8a47-f2d8233b923c" />
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="eeca46cc-4688-4fb5-93b8-b08198661aaa" name="ExecutionOccurrenceSpecification56">
@@ -1012,7 +1012,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+              <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="9ca56c12-39bb-4deb-9ed9-ba159d0ca2e9" name="ExecutionOccurrenceSpecification54">
@@ -1079,7 +1079,7 @@
               <executionOccurrenceSpecificationMoniker Id="9ca56c12-39bb-4deb-9ed9-ba159d0ca2e9" LastKnownName="ExecutionOccurrenceSpecification54" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" name="Azure Mobile Services" isActor="false" lifelineDisplayName="Azure Mobile Services">
+          <lifeline Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" name="Device File Storage" isActor="false" lifelineDisplayName="Device File Storage">
             <elementDefinition Id="d70d9c4d-8775-477c-845f-7c390b14b68a" />
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="30236d4c-7505-4eff-86c8-c76747174245" LastKnownName="ExecutionOccurrenceSpecification85" />
@@ -1111,7 +1111,7 @@
               <messageOccurrenceSpecificationMoniker Id="cf1d67d2-59b6-451a-987b-7ab744b75fd3" LastKnownName="MessageOccurrenceSpecification107" />
             </receiveEvent>
           </message>
-          <message Id="b2d04f83-634a-4365-8ef8-9ca3942ef49d" name="Authenticate Azure" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
+          <message Id="b2d04f83-634a-4365-8ef8-9ca3942ef49d" name="Authenticate Device" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
             <elementDefinition Id="4047d77f-fc20-4cbb-96fc-2b34ca893cce" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="fe8ca146-94c3-4a4d-81a1-4c6671c27910" LastKnownName="MessageOccurrenceSpecification108" />
@@ -1174,7 +1174,7 @@
               <messageOccurrenceSpecificationMoniker Id="7f4cd622-bfcd-46ab-9e3d-f6e8f21d80a6" LastKnownName="MessageOccurrenceSpecification129" />
             </receiveEvent>
           </message>
-          <message Id="f7c8f543-4750-40a6-8aba-e4ed11093f98" name="Update Database" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
+          <message Id="f7c8f543-4750-40a6-8aba-e4ed11093f98" name="Update File" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
             <elementDefinition Id="8fb10a15-72c7-442c-b197-8f35e6b1fc79" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="813ca983-bd9b-4a71-ada6-cddad176ddf9" LastKnownName="MessageOccurrenceSpecification130" />
@@ -1210,7 +1210,7 @@
               <messageOccurrenceSpecificationMoniker Id="59f0ff73-6e6e-426e-8144-e904ffcf495f" LastKnownName="MessageOccurrenceSpecification97" />
             </receiveEvent>
           </message>
-          <message Id="121356bc-180b-456a-838c-32b2245c401f" name="Update Database" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
+          <message Id="121356bc-180b-456a-838c-32b2245c401f" name="Update File" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
             <elementDefinition Id="1875e963-1607-4774-abd8-f2ba615a3571" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="fc3f4765-a383-44b0-a8a5-e44e8e20c06c" LastKnownName="MessageOccurrenceSpecification98" />
@@ -1255,7 +1255,7 @@
               <messageOccurrenceSpecificationMoniker Id="147acb36-3b2f-4e91-abf9-6b08f97f174c" LastKnownName="MessageOccurrenceSpecification103" />
             </receiveEvent>
           </message>
-          <message Id="a3c91687-5bb8-4253-8301-4ec91e475f8f" name="Update Database" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
+          <message Id="a3c91687-5bb8-4253-8301-4ec91e475f8f" name="Update File" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
             <elementDefinition Id="cdb1af99-8ef3-46ad-9710-331f8881e805" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="1d6805a6-63a3-45ad-a330-caaedabd2019" LastKnownName="MessageOccurrenceSpecification104" />

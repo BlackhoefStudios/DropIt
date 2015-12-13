@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="3d630edb-3337-47c3-962c-dff5243b7e0c"
   name="Designs" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -3728,7 +3728,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -3768,7 +3768,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -3788,7 +3788,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3861,22 +3861,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="23c918d8-e4a2-4a8f-bc7d-c39b4d68fd6f"
-            name="MessageOccurrenceSpecification110">
-            <covered>
-              <lifelineMoniker
-                Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
-                LastKnownLocation="Designs.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="cd02e549-fb5f-4401-9473-8735a7c3e8c4"
             name="MessageOccurrenceSpecification111">
             <covered>
               <lifelineMoniker
                 Id="b3cc6f94-34fe-4876-b3a1-7e0f163ce2b7"
                 LastKnownName="Authenticated User"
+                LastKnownLocation="Designs.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="23c918d8-e4a2-4a8f-bc7d-c39b4d68fd6f"
+            name="MessageOccurrenceSpecification110">
+            <covered>
+              <lifelineMoniker
+                Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3894,7 +3894,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4084,7 +4084,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -4124,7 +4124,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4134,7 +4134,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4182,7 +4182,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4200,7 +4200,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4280,7 +4280,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -4316,7 +4316,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4326,7 +4326,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4372,7 +4372,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4400,7 +4400,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -4440,7 +4440,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4450,7 +4450,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4470,7 +4470,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4498,7 +4498,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4578,7 +4578,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -4614,7 +4614,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4634,7 +4634,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4670,7 +4670,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4770,7 +4770,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -4810,7 +4810,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4848,7 +4848,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4858,7 +4858,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4886,7 +4886,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4966,7 +4966,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -5002,7 +5002,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -5012,7 +5012,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5058,7 +5058,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -5121,22 +5121,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="466ce73c-6867-4c19-b762-de44ae06a976"
-            name="MessageOccurrenceSpecification76">
-            <covered>
-              <lifelineMoniker
-                Id="fe407974-fb03-402f-bb5e-56abe5f1e0f8"
-                LastKnownName="Categories"
-                LastKnownLocation="Designs.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="73de893e-8dbc-4f61-8c41-205f7bf5a84c"
             name="MessageOccurrenceSpecification77">
             <covered>
               <lifelineMoniker
                 Id="efabbd3f-3e21-40a3-b822-6f407a04146d"
                 LastKnownName="Tasks"
+                LastKnownLocation="Designs.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="466ce73c-6867-4c19-b762-de44ae06a976"
+            name="MessageOccurrenceSpecification76">
+            <covered>
+              <lifelineMoniker
+                Id="fe407974-fb03-402f-bb5e-56abe5f1e0f8"
+                LastKnownName="Categories"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5234,7 +5234,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </coveredLifelines>
             <finish>
@@ -5270,7 +5270,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -5290,7 +5290,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5326,7 +5326,7 @@
             <covered>
               <lifelineMoniker
                 Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-                LastKnownName="Azure Mobile Services"
+                LastKnownName="Device File Storage"
                 LastKnownLocation="Designs.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -5465,9 +5465,9 @@
           </lifeline>
           <lifeline
             Id="d70d9c4d-8775-477c-845f-7c390b14b68a"
-            name="Azure Mobile Services"
+            name="Device File Storage"
             isActor="false"
-            lifelineDisplayName="Azure Mobile Services">
+            lifelineDisplayName="Device File Storage">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="73c332da-79de-4841-bff4-f59193c1d1b1"
@@ -5558,7 +5558,7 @@
           </message>
           <message
             Id="4047d77f-fc20-4cbb-96fc-2b34ca893cce"
-            name="Authenticate Azure"
+            name="Authenticate Device"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -5691,7 +5691,7 @@
           </message>
           <message
             Id="8fb10a15-72c7-442c-b197-8f35e6b1fc79"
-            name="Update Database"
+            name="Update File"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -5767,7 +5767,7 @@
           </message>
           <message
             Id="1875e963-1607-4774-abd8-f2ba615a3571"
-            name="Update Database"
+            name="Update File"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -5862,7 +5862,7 @@
           </message>
           <message
             Id="cdb1af99-8ef3-46ad-9710-331f8881e805"
-            name="Update Database"
+            name="Update File"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -7110,6 +7110,749 @@
         Id="da42dc1e-dd12-4001-b1c3-bd92f6b2d8f0"
         LastKnownName="BlackhoefStudios.Common.Interfaces.Services"
         LastKnownLocation="Package_2314.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dedf8330-b712-472b-be4d-98cba3133f94"
+        LastKnownName="Data.Services"
+        LastKnownLocation="Package_1205.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ec347355-5236-4ab5-bbe1-77f3686a1123"
+        LastKnownName="iOS.Services"
+        LastKnownLocation="Package_1213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6d1b2d3a-1ad9-4cf1-b491-a31338849988"
+        LastKnownName="Droid.Services"
+        LastKnownLocation="Package_1214.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2ec83fec-d350-4f57-b583-3cb6105d8c7e"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="8709a6ac-7766-4ce0-86a8-18c9cbce44b8"
+            LastKnownName="Login"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="cdf36e1c-3d32-4534-8b65-6b7572f79811"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="025aba52-998d-4191-ae17-61b5cb8f1024"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Existing User"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="73b69267-3777-4547-86d9-e6c4af7abc63"
+              LastKnownName="Existing User"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a942c27-f359-49ae-b875-77720cb948db"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="27d71c8d-1350-45aa-9056-bb72d0ddba97"
+                  name="Existing User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e2244678-4c78-459d-9d10-0707d9a672d8"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="New user"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="3f57c4c7-721a-4f19-9fbb-f130774d6066"
+              LastKnownName="New user"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6efa11fb-c0d5-49c5-826c-a99ff7c4cc11"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0df6dc5-16b5-4213-b2e2-7c802c9f1afb"
+                  name="New user"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="3f57c4c7-721a-4f19-9fbb-f130774d6066"
+        name="New user"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="2b8e1dcb-06e2-4c0a-b275-0ccc04e94920"
+            isDerived="false"
+            sourceEndRoleName="New user"
+            targetEndRoleName="Create Account"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c0de8dac-7f39-482a-8577-24cf7093df8d"
+              LastKnownName="Create Account"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1216e36f-b695-4b96-9077-1c426b405089"
+                  name="New user"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0450f2a3-00bf-48bd-8d1b-c3580f62c6cb"
+                  name="Create Account"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="73b69267-3777-4547-86d9-e6c4af7abc63"
+        name="Existing User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="6bffff97-4643-4431-aa9f-8f0918c8b7d1"
+            isDerived="false"
+            sourceEndRoleName="Existing User"
+            targetEndRoleName="Reset Password"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="74edf23a-168f-46a8-9c40-2401363d2f82"
+              LastKnownName="Reset Password"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="abcb4a35-dc2f-488d-b0f7-dcc568662a9e"
+                  name="Existing User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="137eeee7-16ba-4554-bdb5-2d09caaae639"
+                  name="Reset Password"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="74edf23a-168f-46a8-9c40-2401363d2f82"
+        name="Reset Password"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a5be2f3d-af05-4b18-9f79-1bb2ea1b5e43">
+            <useCaseMoniker
+              Id="2ec83fec-d350-4f57-b583-3cb6105d8c7e"
+              LastKnownName="Login"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="8709a6ac-7766-4ce0-86a8-18c9cbce44b8"
+            LastKnownName="Login"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c0de8dac-7f39-482a-8577-24cf7093df8d"
+        name="Create Account"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c406594b-9cd4-42ab-86c6-a5c72f05365e">
+            <useCaseMoniker
+              Id="2ec83fec-d350-4f57-b583-3cb6105d8c7e"
+              LastKnownName="Login"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="8709a6ac-7766-4ce0-86a8-18c9cbce44b8"
+            LastKnownName="Login"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="8709a6ac-7766-4ce0-86a8-18c9cbce44b8"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="13e87cc4-0951-4e42-a579-7334b2d23e88"
+        name="Projects"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ecc6d48a-4329-4cc2-b8f7-8fa07b76fc7a"
+        name="Logged In User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ba6986ab-a689-43c8-9d73-a6db2374662b"
+            isDerived="false"
+            sourceEndRoleName="Logged In User"
+            targetEndRoleName="View Projects"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8e504d93-8431-422f-b0be-552ef437c1c2"
+              LastKnownName="View Project (s)"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d389bfc1-348d-42e0-995f-b9f599f23029"
+                  name="Logged In User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fdcd84d2-ace2-4c14-b672-821a3503f017"
+                  name="View Projects"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6e7938e1-83fb-49b9-b531-d07baef11698"
+            isDerived="false"
+            sourceEndRoleName="Logged In User"
+            targetEndRoleName="Edit Project"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="443ca5bb-43fa-4614-b215-026b0c888431"
+              LastKnownName="Edit Project"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9890cc53-480e-4711-9e0f-bed0855b977a"
+                  name="Logged In User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e30680b1-7c29-446e-8ed8-4730f008b7c9"
+                  name="Edit Project"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8e504d93-8431-422f-b0be-552ef437c1c2"
+        name="View Project (s)"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="13e87cc4-0951-4e42-a579-7334b2d23e88"
+            LastKnownName="Projects"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f5d7ecce-92b2-4cdc-adcc-c7ced37f872b"
+        name="Create Project"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="5a0b4d42-a38c-4508-a202-f56e6690f6aa">
+            <useCaseMoniker
+              Id="443ca5bb-43fa-4614-b215-026b0c888431"
+              LastKnownName="Edit Project"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="13e87cc4-0951-4e42-a579-7334b2d23e88"
+            LastKnownName="Projects"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="443ca5bb-43fa-4614-b215-026b0c888431"
+        name="Edit Project"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="13e87cc4-0951-4e42-a579-7334b2d23e88"
+            LastKnownName="Projects"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bfc23bde-afa5-4071-bd2a-21755f4725d0"
+        name="Delete Project"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c903533a-05e0-4db7-af4c-42f89f95cb46">
+            <useCaseMoniker
+              Id="443ca5bb-43fa-4614-b215-026b0c888431"
+              LastKnownName="Edit Project"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="13e87cc4-0951-4e42-a579-7334b2d23e88"
+            LastKnownName="Projects"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2f1d02c6-dd0d-4b8d-8396-a7eea41b459a"
+        name="Add Default Category"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="e0c7338a-045f-4e4c-a472-5478ad4ccdf7">
+            <useCaseMoniker
+              Id="f5d7ecce-92b2-4cdc-adcc-c7ced37f872b"
+              LastKnownName="Create Project"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="13e87cc4-0951-4e42-a579-7334b2d23e88"
+            LastKnownName="Projects"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="80c76154-7097-4005-bc9f-7b5244b45459"
+        name="Tasks"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="2c28d687-c0ae-46e8-94c6-0827d57718d5"
+        name="Logged In User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="11d9eda8-70cb-4648-9c99-81873245400d"
+            isDerived="false"
+            sourceEndRoleName="Logged In User"
+            targetEndRoleName="Edit Task"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="eb8ae484-ec8e-4e33-a7f9-e2cdaf545b2a"
+              LastKnownName="Edit Task"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="608312f1-19d3-41fd-af87-d302ec1a122c"
+                  name="Logged In User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="514160e5-9a14-404d-a968-11bb79b9cf43"
+                  name="Edit Task"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1396e1d7-3544-46ea-ae3c-76bdeeed8f2a"
+            isDerived="false"
+            sourceEndRoleName="Logged In User"
+            targetEndRoleName="Delete Task"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9e793dab-ba70-449d-81ef-0942771b8c85"
+              LastKnownName="Delete Task"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="135c8fd6-9fb5-4977-a9bb-7e147e47a9ee"
+                  name="Logged In User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9cc3db5b-09c7-415a-9f5b-f916f9736dca"
+                  name="Delete Task"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bbbd7607-ba43-4e5d-a9f0-451ccaa1e21e"
+            isDerived="false"
+            sourceEndRoleName="Logged In User"
+            targetEndRoleName="Create Task"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="112e58e0-d6e8-4d1c-a728-038a014be691"
+              LastKnownName="Create Task"
+              LastKnownLocation="Designs.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a79dfb97-10ca-42e3-81d5-b1ef3c0f6a96"
+                  name="Logged In User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="abcec691-c924-4446-ab3a-4e3dfe7eaf74"
+                  name="Create Task"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="eb8ae484-ec8e-4e33-a7f9-e2cdaf545b2a"
+        name="Edit Task"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="80c76154-7097-4005-bc9f-7b5244b45459"
+            LastKnownName="Tasks"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="112e58e0-d6e8-4d1c-a728-038a014be691"
+        name="Create Task"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="bbd4f152-929a-43ab-b094-9d7bf6932ca9">
+            <useCaseMoniker
+              Id="eb8ae484-ec8e-4e33-a7f9-e2cdaf545b2a"
+              LastKnownName="Edit Task"
+              LastKnownLocation="Designs.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="80c76154-7097-4005-bc9f-7b5244b45459"
+            LastKnownName="Tasks"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9e793dab-ba70-449d-81ef-0942771b8c85"
+        name="Delete Task"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="80c76154-7097-4005-bc9f-7b5244b45459"
+            LastKnownName="Tasks"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6be033b5-d6ee-4ce0-9f1f-013eeb5f10e2"
+        name="Assign User"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a3dfe174-2b76-44df-9af6-d2625a65b961">
+            <useCaseMoniker
+              Id="eb8ae484-ec8e-4e33-a7f9-e2cdaf545b2a"
+              LastKnownName="Edit Task"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="80c76154-7097-4005-bc9f-7b5244b45459"
+            LastKnownName="Tasks"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="34783421-0e63-4bbc-a2e9-625222e27c24"
+        name="Assign Category"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="9e6b8e87-c8df-4ea9-a67a-e27f13e49211">
+            <useCaseMoniker
+              Id="eb8ae484-ec8e-4e33-a7f9-e2cdaf545b2a"
+              LastKnownName="Edit Task"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="80c76154-7097-4005-bc9f-7b5244b45459"
+            LastKnownName="Tasks"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="46d5e678-a132-4480-8a35-47d57fcb0155"
+        name="Create Comment"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="d7a5a246-5acc-499a-9656-4b8ff98376a0">
+            <useCaseMoniker
+              Id="eb8ae484-ec8e-4e33-a7f9-e2cdaf545b2a"
+              LastKnownName="Edit Task"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="80c76154-7097-4005-bc9f-7b5244b45459"
+            LastKnownName="Tasks"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3122ab2b-b1bf-49aa-acc6-92e72c358ec4"
+        name="Modify Description"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="fc0afd04-b275-4c77-8774-c503d284bc3a">
+            <useCaseMoniker
+              Id="eb8ae484-ec8e-4e33-a7f9-e2cdaf545b2a"
+              LastKnownName="Edit Task"
+              LastKnownLocation="Designs.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="80c76154-7097-4005-bc9f-7b5244b45459"
+            LastKnownName="Tasks"
+            LastKnownLocation="Designs.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

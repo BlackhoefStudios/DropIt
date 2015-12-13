@@ -106,6 +106,9 @@
       <SubType>Content</SubType>
       <DependentUpon>Class Diagrams\ViewModels\ViewModelInterfaces.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ModelDefinition\Package1_1213.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package1_2200.uml">
       <SubType>Content</SubType>
     </Content>
@@ -119,6 +122,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_0029.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1205.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1213.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1214.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_2029.uml">

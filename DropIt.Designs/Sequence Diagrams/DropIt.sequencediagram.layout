@@ -23,13 +23,13 @@
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="57b64c56-9973-4698-8b38-0e12782ab2dd" absoluteBounds="10.770833333333332, 1, 0.15, 10.866145833333338" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+      <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
       <relativeChildShapes>
         <lifelineHoverShape Id="e6be8e53-1af7-4470-8719-35d50b3f4115" absoluteBounds="10.770833333333332, 1, 0, 10.875">
-          <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+          <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
         </lifelineHoverShape>
-        <umlLifelineHeadShape Id="384e12bb-acde-47e4-beaf-c0edc48d6b0b" absoluteBounds="10.345833333333331, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Azure Mobile Services" />
+        <umlLifelineHeadShape Id="384e12bb-acde-47e4-beaf-c0edc48d6b0b" absoluteBounds="10.170746913750966, 0.6, 1.3501728391647339, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="7ee991cf-142d-428c-83c1-183d7d8ed89e" LastKnownName="Device File Storage" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <umlExecutionSpecificationShape Id="f69d32a9-ed76-485b-a4c6-ebee8259a476" absoluteBounds="10.770833333333332, 1.6072916666666666, 0.15, 0.59999999999999987" customColor="184, 204, 215" visualStyleMode="Modified">
